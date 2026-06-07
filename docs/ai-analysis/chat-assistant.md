@@ -6,15 +6,15 @@ sidebar_position: 2
 
 # AI Chat Assistant
 
-![AI Chat Assistant — technique context chat with ATT&CK description pre-loaded](/img/screenshots/34_ai_chat_assistant.png)
-
 Every technique in the detail panel has an embedded AI chat. This is not a generic chatbot — it is a threat intelligence assistant with the full ATT&CK description of the selected technique already in context.
 
 ## Opening the Chat
 
 Click any technique cell in the Navigator to open the detail panel on the right. The chat input is at the bottom of the panel. Select your preferred provider before sending your first message.
 
-## Prompts That Work Well
+## Practical Prompts That Work Well
+
+![AI Chat Assistant — technique context chat with ATT&CK description pre-loaded](/img/screenshots/34_ai_chat_assistant.png)
 
 ### Detection engineering
 

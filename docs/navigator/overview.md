@@ -10,11 +10,11 @@ The Navigator is the central hub. It renders the full ATT&CK matrix as an intera
 
 ## Building a Layer
 
-![ATT&CK Navigator — building a layer by clicking technique cells](/img/screenshots/22_navigator_building_layer.png)
-
 Click any technique cell to add it to your layer — it turns **red**. Click again to deselect.
 
 For sub-techniques, click the small **▶** arrow to expand the parent cell and see the sub-technique rows.
+
+![ATT&CK Navigator — building a layer by clicking technique cells](/img/screenshots/22_navigator_building_layer.png)
 
 **Search**: use the search box to find techniques by name or ID without manually scanning the matrix.
 - Type `T1059` to jump to all Command and Scripting Interpreter techniques
@@ -30,15 +30,15 @@ The technique counter in the toolbar shows how many unique technique IDs you hav
 
 ![Navigator with APT group overlay — red (yours), blue (group), amber (shared)](/img/screenshots/23_navigator_overlay.png)
 
-![Navigator overlay detail — gap analysis view](/img/screenshots/24_navigator_overlay2.png)
-
-The matrix uses three colours:
+The matrix now uses three colours:
 
 | Colour | Meaning |
 |---|---|
 | **Red** | In your layer only |
 | **Blue** | In the APT group's profile only |
 | **Amber** | In both — the overlap |
+
+![Navigator overlay detail — gap analysis view](/img/screenshots/24_navigator_overlay2.png)
 
 This visual immediately answers: *"Which of this group's known techniques am I not already detecting?"*
 

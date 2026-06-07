@@ -6,17 +6,13 @@ sidebar_position: 2
 
 # Mode 1 — Groups (DB 1)
 
-![Mode 1 Groups — ranked list of all ATT&CK groups by Jaccard similarity](/img/screenshots/27_compare_groups1.png)
-
-![Mode 1 Groups — group detail view with shared techniques](/img/screenshots/28_compare_groups2.png)
-
-![Mode 1 Groups — gap analysis tab](/img/screenshots/29_compare_groups3.png)
-
 With techniques selected in Navigator (or injected from an AI analysis), navigate to **Compare**, make sure **Groups (DB 1)** is selected, and click **Compare vs APT Groups**. This ranks all 174+ threat groups by Jaccard similarity.
 
 ## The Four-Tab Detail View
 
-Click any group in the ranked list to open its detail view.
+Click any group in the ranked list to open the four-tab detail view:
+
+![Mode 1 Groups — ranked list of all ATT&CK groups by Jaccard similarity](/img/screenshots/27_compare_groups1.png)
 
 ### Overview
 
@@ -30,9 +26,13 @@ Stacked bar per kill-chain phase: shared / user-only / APT-only.
 
 Reveals *where* in the kill chain the overlap is concentrated. If your techniques are in Execution and Persistence but the APT group's unique techniques are in Discovery and Lateral Movement, that tells you something about where your visibility gaps are.
 
+![Mode 1 Groups — tactic breakdown stacked bar chart](/img/screenshots/28_compare_groups2.png)
+
 ### Visual Diff
 
 Compact colour-strip matrix showing the full overlap. Best for presentations — it gives the "at a glance" picture of where in the matrix the behavioural similarity sits.
+
+![Mode 1 Groups — compact visual diff matrix](/img/screenshots/29_compare_groups3.png)
 
 ### Gap Analysis
 

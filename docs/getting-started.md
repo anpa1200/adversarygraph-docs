@@ -43,8 +43,6 @@ This downloads ~35 MB instead of ~105 MB.
 
 ## Step 2: Start
 
-![docker compose up — first start with ATT&CK ingestion in progress](/img/screenshots/12_setup_start.png)
-
 ```bash
 docker compose up
 ```
@@ -64,18 +62,19 @@ Finished ingesting enterprise-attack v19.1
 INFO:     Application startup complete.
 ```
 
+![docker compose up — first start with ATT&CK ingestion in progress](/img/screenshots/12_setup_start.png)
+
 This takes 5–15 minutes depending on your network speed. Subsequent startups are instant — data is cached in the PostgreSQL volume.
 
 ## Step 3: Open
 
+Frontend: http://localhost:3000
+
 ![ThreatMapper frontend — Navigator ready after ingestion](/img/screenshots/13_setup_open.png)
 
-![ThreatMapper sidebar navigation](/img/screenshots/14_setup_open2.png)
+API docs (Swagger UI): http://localhost:8000/docs
 
-| Service | URL |
-|---|---|
-| Frontend | http://localhost:3000 |
-| API docs (Swagger UI) | http://localhost:8000/docs |
+![ThreatMapper API docs — Swagger UI for headless access](/img/screenshots/14_setup_open2.png)
 
 ## What's Ready
 

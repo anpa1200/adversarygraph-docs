@@ -14,7 +14,7 @@ sidebar_position: 1
 
 ## The Problem
 
-![The manual ATT&CK mapping problem — slow, repetitive, and fragmented](/img/screenshots/03_the_problem.png)
+![The manual ATT&CK mapping problem — slow, repetitive, fragmented](/img/screenshots/03_the_problem.png)
 
 Every threat intelligence analyst knows the workflow: you receive a malware report, an IR summary, or a threat feed entry, and you need to translate it into ATT&CK technique IDs so you can slot it into a detection backlog or a purple-team plan.
 
@@ -28,42 +28,45 @@ There are commercial platforms that do this — but they are expensive, require 
 
 ## What It Does
 
-![ThreatMapper feature overview infographic](/img/screenshots/02_intro_infographic.png)
+![ThreatMapper — AI analysis with streamed technique extraction](/img/screenshots/04_what_it_does_1.png)
 
 In one sentence: **you give it a threat report, it gives you ATT&CK technique IDs, APT group matches, confidence scores, and a PDF.**
 
-| Feature | Description |
-|---|---|
-| **AI Analysis** | Upload PDF/DOCX/TXT or paste text → streamed LLM extraction of ATT&CK techniques with evidence snippets and confidence scores |
-| **ATT&CK Navigator** | Interactive heatmap of Enterprise, Mobile, and ICS matrices; build, save, and reload named TTP layers |
-| **APT Attribution** | Jaccard similarity ranking against 174+ named threat groups and 56+ named campaigns |
-| **Compare Modes** | Deep side-by-side comparison with visual matrix diff, tactic breakdown, and gap analysis |
-| **PDF Reports** | Multi-page formatted reports for analysis sessions and Navigator layers |
-| **REST API** | Full headless access for CI integration and batch workflows |
+Concretely:
 
-![AI Analysis — streaming extraction with techniques and evidence](/img/screenshots/04_what_it_does_1.png)
+![APT Attribution — Jaccard similarity ranking against all 174+ groups](/img/screenshots/05_what_it_does_2.png)
 
-![APT Attribution — Jaccard similarity ranking against all groups](/img/screenshots/05_what_it_does_2.png)
+**AI Analysis** — upload a PDF, DOCX, or TXT file (or paste text), pick Claude, GPT-4o, or Gemini, and get a streamed extraction of every ATT&CK technique the LLM identifies with evidence snippets and confidence scores.
 
-![Compare deep-dive — technique overlap and gap analysis](/img/screenshots/06_what_it_does_3.png)
+![ATT&CK Navigator — interactive heatmap of the full matrix](/img/screenshots/06_what_it_does_3.png)
 
-![Navigator heatmap — ATT&CK matrix with technique selection](/img/screenshots/07_what_it_does_4.png)
+**ATT&CK Navigator** — an interactive heatmap of the full ATT&CK matrix (Enterprise, Mobile, ICS) where you build and explore your TTP layer.
 
-![APT Library — group profiles with technique sets](/img/screenshots/08_what_it_does_5.png)
+![APT Attribution — automatic Jaccard similarity ranking against 174+ groups and 56+ campaigns](/img/screenshots/07_what_it_does_4.png)
 
-![PDF report — multi-page formatted output](/img/screenshots/09_what_it_does_6.png)
+**APT Attribution** — automatic Jaccard similarity ranking of every extraction against 174+ named ATT&CK threat groups and 56+ named campaigns (e.g. "Operation Ghost", "SolarWinds Compromise").
 
-![REST API and Swagger UI — full headless access](/img/screenshots/10_what_it_does_7.png)
+![Compare — deep side-by-side comparison with matrix diff and gap analysis](/img/screenshots/08_what_it_does_5.png)
+
+**Compare Modes** — deep side-by-side comparison of your TTP set against groups, MITRE named campaigns, or your own stored report library; with visual matrix diff, tactic breakdown chart, and gap analysis.
+
+![PDF Reports — multi-page formatted output for executive briefings](/img/screenshots/09_what_it_does_6.png)
+
+**PDF Reports** — ATT&CK Navigator-compatible JSON layers and multi-page PDF reports suitable for executive briefings.
 
 Everything runs locally in Docker. Your threat reports never leave your machine.
 
+![REST API and Swagger UI — full headless access for CI and batch workflows](/img/screenshots/10_what_it_does_7.png)
+
+**REST API** — full headless access for CI integration and batch workflows.
+
 ---
 
-## Architecture
-
-![ThreatMapper architecture diagram](/img/screenshots/11_architecture.png)
+## Architecture in Brief
 
 ThreatMapper is four containers:
+
+![ThreatMapper architecture diagram — four containers](/img/screenshots/11_architecture.png)
 
 ```
 React / Vite frontend  ←→  FastAPI backend  ←→  PostgreSQL

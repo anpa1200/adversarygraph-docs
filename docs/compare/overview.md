@@ -6,9 +6,9 @@ sidebar_position: 1
 
 # APT Attribution Deep-Dive: Three Compare Modes
 
-![Compare — three mode switcher overview](/img/screenshots/26_compare_overview.png)
-
 The Compare view has three modes selectable from a switcher at the top of the page. Each answers a different attribution question.
+
+![Compare — three mode switcher overview](/img/screenshots/26_compare_overview.png)
 
 | Mode | What you compare | Against |
 |---|---|---|
@@ -31,6 +31,8 @@ similarity = 5 / 12 = 42%
 A match above **25–30%** is worth investigating. Higher is not always better — a group with very few techniques will show a high similarity even on a small overlap.
 
 ## The Practical Attribution Workflow
+
+Use this for retrospective attribution — after AI analysis, or when you've manually built a TTP layer from an incident:
 
 ![Practical attribution workflow — four-step process from analysis to PDF](/img/screenshots/32_attribution_workflow.png)
 
