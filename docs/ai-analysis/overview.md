@@ -45,6 +45,8 @@ When the stream completes, three tabs appear:
 
 The core output. Each row shows:
 
+![Techniques tab — extracted ATT&CK techniques with evidence and confidence scores](/img/screenshots/18_results_apt_matches.png)
+
 | Field | Example |
 |---|---|
 | ATT&CK ID | T1059.001 |
@@ -55,8 +57,6 @@ The core output. Each row shows:
 
 The **evidence** field is a direct quote or paraphrase from your source document — trace every mapping back to its origin in the text.
 
-![Techniques tab — extracted ATT&CK techniques with evidence and confidence scores](/img/screenshots/18_results_apt_matches.png)
-
 - **High confidence (≥ 80%)** — the text explicitly described the behaviour
 - **Medium (50–79%)** — behaviour was clearly implied
 - **Low (< 50%)** — inferred; validate manually before acting on it
@@ -65,13 +65,13 @@ The **evidence** field is a direct quote or paraphrase from your source document
 
 Computed locally using Jaccard similarity between your extracted techniques and every named ATT&CK group's known TTP set. The top 10 are shown with:
 
+![APT Matches tab — top 10 groups ranked by Jaccard similarity](/img/screenshots/19_results_tab3.png)
+
 - Similarity score (0–100%)
 - Shared technique count
 - List of the overlapping technique IDs
 
 A match above 25–30% is worth investigating. Use it as a lead for further research, not definitive attribution.
-
-![APT Matches tab — top 10 groups ranked by Jaccard similarity](/img/screenshots/19_results_tab3.png)
 
 ### Raw Response Tab
 
@@ -83,11 +83,11 @@ The LLM's full JSON output. Useful for debugging when the model outputs somethin
 
 Click **→ Inject into Navigator** to push all extracted techniques into your live Navigator layer. You can then:
 
+![Inject into Navigator button — pushes all extracted techniques to the heatmap](/img/screenshots/21_inject_navigator.png)
+
 - See the techniques highlighted on the full ATT&CK matrix
 - Overlay an APT group to visualise the behavioural overlap
 - Export as ATT&CK Navigator JSON or PDF
-
-![Inject into Navigator button — pushes all extracted techniques to the heatmap](/img/screenshots/21_inject_navigator.png)
 
 ## Download PDF Report
 

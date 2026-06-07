@@ -32,8 +32,6 @@ A match above **25–30%** is worth investigating. Higher is not always better �
 
 ## The Practical Attribution Workflow
 
-Use this for retrospective attribution — after AI analysis, or when you've manually built a TTP layer from an incident:
-
 ![Practical attribution workflow — four-step process from analysis to PDF](/img/screenshots/32_attribution_workflow.png)
 
 1. Run AI analysis on your incident data (give it a descriptive name)

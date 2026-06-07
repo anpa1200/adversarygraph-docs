@@ -55,14 +55,14 @@ docker compose logs -f api
 
 You'll see something like:
 
+![docker compose up — first start with ATT&CK ingestion in progress](/img/screenshots/12_setup_start.png)
+
 ```
 Parsing enterprise-attack-19.1.json ...
   Parsed: 15 tactics, 760 techniques, 174 groups, 56 campaigns, 9100+ usages
 Finished ingesting enterprise-attack v19.1
 INFO:     Application startup complete.
 ```
-
-![docker compose up — first start with ATT&CK ingestion in progress](/img/screenshots/12_setup_start.png)
 
 This takes 5–15 minutes depending on your network speed. Subsequent startups are instant — data is cached in the PostgreSQL volume.
 
