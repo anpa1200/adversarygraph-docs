@@ -18,6 +18,7 @@ module.exports = {
         'navigator/overview',
         'navigator/layers',
         'navigator/import-export',
+        'navigator/ttp-details',
       ],
     },
     {
@@ -35,6 +36,7 @@ module.exports = {
         'compare/groups',
         'compare/campaigns',
         'compare/reports',
+        'compare/group-vs-group',
       ],
     },
     'two-databases',

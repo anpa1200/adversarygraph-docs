@@ -25,3 +25,9 @@ sidebar_position: 10
 **Use retrospective comparison.** The Reports (DB 2) mode lets you re-compare any past analysis session against the current ATT&CK dataset. After each new ATT&CK release, re-run your key investigations to see if new groups or techniques change the attribution picture.
 
 **Context window matters for long reports.** If your report is very long (40+ pages), consider splitting it into sections and running separate analyses. LLMs have context windows and may lose detail from the middle of very long documents. ThreatMapper supports up to 50 MB files but extraction quality depends on the LLM context window.
+
+**Click technique IDs for instant context.** Every `T1xxx` ID in the UI is clickable — it opens a detail panel with the full ATT&CK description, detection guidance, and links to the Anomaly Detection Atlas, ITDR Handbook (for identity techniques), and CTI Field Manual. Faster than switching to the ATT&CK website tab.
+
+**Use Group vs Group for cluster analysis.** When you have multiple plausible attribution candidates or want to map a threat actor landscape, add 4–6 groups to the Group vs Group page. The Jaccard matrix will quickly surface which groups share tradecraft — high overlap between actors you weren't expecting to overlap often signals the same cluster under different names.
+
+**Group vs Group Technique Table for detection prioritisation.** Filter to "Shared 2+" to find techniques common across multiple APT groups. These are the highest-value detection targets — a single detection rule that fires on these techniques covers the broadest threat landscape.
