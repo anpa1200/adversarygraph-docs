@@ -6,7 +6,7 @@ sidebar_position: 3
 
 # Mode 2 — Campaigns (DB 1)
 
-Switch to **Campaigns (DB 1)** and click **Compare vs Campaigns**. This ranks all 56+ named MITRE operations by Jaccard similarity against your current Navigator selection.
+Switch to **Campaigns (DB 1)** and click **Compare vs Campaigns**. This ranks named operations from the currently ingested ATT&CK release by Jaccard similarity against your current Navigator selection.
 
 ![Mode 2 Campaigns — ranked list of all named MITRE campaigns by similarity](/img/screenshots/30_compare_campaigns.png)
 

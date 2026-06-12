@@ -23,7 +23,7 @@ ThreatMapper parses all of this during ingestion. The result is two searchable, 
 | Dataset | What it contains | ID format |
 |---|---|---|
 | Threat Groups | Aggregate TTP profile of each named threat group | Current ingested ATT&CK release |
-| Campaigns | TTP profile of each named operation | C0001 – C0063+ |
+| Campaigns | TTP profile of each named operation | Current ingested ATT&CK release |
 
 DB 1 is read-only from the user's perspective. It is updated by the daily ATT&CK sync job (or manually via `POST /api/sync/trigger`).
 

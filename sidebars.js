@@ -29,7 +29,7 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'APT Library',
+      label: 'ATT&CK Group Library',
       items: [
         'apt-library/overview',
       ],

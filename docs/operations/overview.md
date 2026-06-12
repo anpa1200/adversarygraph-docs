@@ -30,7 +30,7 @@ actors, TTPs, indicators, notes, and review state:
 
 ## Tracked Actors
 
-Snapshot an actor directly from the APT Library. Subsequent snapshots record added and
+Snapshot an actor directly from the ATT&CK Group Library. Subsequent snapshots record added and
 removed TTPs, creating an explainable behavioral change log.
 
 ## Detection Lifecycle

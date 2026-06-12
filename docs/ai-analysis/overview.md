@@ -57,6 +57,12 @@ The core output. Each row shows:
 
 The **evidence** field is a direct quote or paraphrase from your source document — trace every mapping back to its origin in the text.
 
+:::warning Reviewer-assigned analytic confidence
+Model confidence is extraction confidence, not analytic confidence. Analytic confidence must be assigned by the reviewer after validating source evidence, procedure descriptions, ATT&CK definitions, and telemetry requirements.
+
+LLM mappings may contain false positives, false negatives, or ambiguous technique assignments. Treat the output as a structured first pass, not a final intelligence judgment.
+:::
+
 - **High confidence (≥ 80%)** — the text explicitly described the behaviour
 - **Medium (50–79%)** — behaviour was clearly implied
 - **Low (< 50%)** — inferred; validate manually before acting on it
@@ -86,7 +92,7 @@ Click **→ Inject into Navigator** to push all extracted techniques into your l
 ![Inject into Navigator button — pushes all extracted techniques to the heatmap](/img/screenshots/21_inject_navigator.png)
 
 - See the techniques highlighted on the full ATT&CK matrix
-- Overlay an APT group to visualise the behavioural overlap
+- Overlay a group profile to visualise the behavioural overlap
 - Export as ATT&CK Navigator JSON or PDF
 
 ## Download PDF Report

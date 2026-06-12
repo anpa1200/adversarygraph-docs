@@ -35,7 +35,7 @@ The layer is immediately written to the database. The technique IDs are stored i
 3. Click **Load** — the saved layer **replaces** your current selection entirely
 
 :::note
-Loading replaces your current selection. If you want to merge a saved layer into your existing techniques instead, use the APT Library's **+ Merge into TTPs** button workflow, not the Load dialog.
+Loading replaces your current selection. If you want to merge a saved layer into your existing techniques instead, use the ATT&CK Group Library's **+ Merge into TTPs** button workflow, not the Load dialog.
 :::
 
 ## Deleting a Layer

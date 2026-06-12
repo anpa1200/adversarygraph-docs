@@ -53,7 +53,7 @@ Technique IDs are clickable in every view:
 | View | Location |
 |---|---|
 | **Navigator** | The technique ID (`T1xxx`) shown in each matrix cell |
-| **APT Library** | Every ID in a group's technique list |
+| **ATT&CK Group Library** | Every ID in a group's technique list |
 | **Compare — Groups** | Shared techniques (amber), your-only techniques (red), gap techniques (blue) |
 | **Compare — Campaigns** | Shared technique badges |
 | **Compare — Reports** | Shared technique badges |

@@ -1,6 +1,6 @@
 // @ts-check
 const config = {
-  title: 'ThreatMapper Documentation — CTI-to-Detection Workbench',
+  title: 'ThreatMapper Documentation — CTI-to-Detection Workbench | 1200km',
   tagline: 'CTI-to-detection intelligence platform — investigate behavior, map ATT&CK evidence, compare overlap, and operationalize findings.',
   favicon: 'img/logo.png',
 

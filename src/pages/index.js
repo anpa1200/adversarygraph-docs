@@ -12,7 +12,7 @@ const features = [
 ];
 
 export default function Home() {
-  return <Layout title="ThreatMapper Documentation — CTI-to-Detection Workbench" description="Documentation for ThreatMapper, an AI-assisted ATT&CK mapping and CTI-to-detection workbench with public Web and self-hosted Docker modes.">
+  return <Layout title="ThreatMapper Documentation — CTI-to-Detection Workbench | 1200km" description="Documentation for ThreatMapper AI, a CTI-to-detection workbench with a public Web workspace and a self-hosted Docker platform for AI-assisted ATT&CK mapping.">
     <header className="hero hero--threatmapper"><div className="container" style={{textAlign:'center',padding:'4rem 1rem 3rem'}}>
       <h1 className="hero__title">ThreatMapper Documentation</h1>
       <p className="hero__subtitle">AI-assisted CTI-to-detection workbench for ATT&amp;CK mapping, group and campaign similarity, detection-gap analysis, and analyst-ready outputs.</p>

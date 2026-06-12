@@ -18,7 +18,7 @@ Use for traditional IT infrastructure incidents: Windows/Linux/macOS endpoints, 
 
 - 641 techniques (including sub-techniques)
 - Named threat groups from the currently ingested ATT&CK release
-- 56+ named campaigns
+- Named campaigns from the currently ingested ATT&CK release
 
 This is the default domain and the right choice for most corporate IR and CTI work.
 

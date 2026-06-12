@@ -1,12 +1,12 @@
 ---
 id: overview
-title: APT Library
+title: ATT&CK Group Library
 sidebar_position: 1
 ---
 
-# APT Library
+# ATT&CK Group Library
 
-The APT Library gives you a searchable, browsable view of every threat group and named campaign in the ingested ATT&CK dataset.
+The ATT&CK Group Library gives you a searchable, browsable view of threat groups and named campaigns in the ingested ATT&CK dataset.
 
 ## Browsing Groups
 
