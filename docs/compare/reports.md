@@ -23,13 +23,13 @@ Each session row shows:
 
 Each row has two action buttons below the session info:
 
-**↓ PDF** — download the full multi-page analysis report (cover page, executive summary, technique table, APT attribution, tactic coverage) directly from the browser without re-running analysis.
+**↓ PDF** — download the full multi-page analysis report (cover page, executive summary, technique table, group-similarity leads, tactic coverage) directly from the browser without re-running analysis.
 
 **✕ Remove** — permanently delete the session from DB 2. A browser confirmation prompt guards against accidents. The list refreshes automatically; if the deleted session was selected, the comparison results are cleared.
 
 ## Use Cases
 
-**Retrospective attribution:** You analysed a report before you had a strong hypothesis about the actor. A new ATT&CK version was released that added new groups or techniques. Re-run the comparison against updated ATT&CK data without re-running the expensive LLM analysis.
+**Retrospective TTP-overlap review:** A new ATT&CK version added groups or techniques after the original analysis. Re-run similarity comparison against updated ATT&CK data without re-running the LLM analysis.
 
 **Cross-incident correlation:** If two reports from different incidents both have high similarity to the same APT group, that's a data point for clustering the incidents under a common actor.
 

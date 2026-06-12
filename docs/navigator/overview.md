@@ -1,59 +1,36 @@
 ---
 id: overview
-title: The Navigator
+title: ATT&CK Workspace
 sidebar_position: 1
 ---
 
-# The ATT&CK Navigator
+# ATT&CK Matrix Workspace
 
-The Navigator is the central hub. It renders the full ATT&CK matrix as an interactive heatmap.
+The matrix is the central workspace for exploring ATT&CK, selecting techniques manually, overlaying group profiles, reviewing coverage gaps, and planning a detection backlog.
 
-## Building a Layer
+## Data Provenance
 
-Click any technique cell to add it to your layer — it turns **red**. Click again to deselect.
+The selected domain and ATT&CK version are displayed in the UI. Docker ingests official MITRE ATT&CK STIX bundles and can synchronize releases through scheduled jobs. Counts depend on the selected domain and ingested release.
 
-For sub-techniques, click the small **▶** arrow to expand the parent cell and see the sub-technique rows.
+## Core Workflow
 
-![ATT&CK Navigator — building a layer by clicking technique cells](/img/screenshots/22_navigator_building_layer.png)
+1. Search or browse the matrix.
+2. Select techniques supported by source evidence.
+3. Overlay a group profile when useful.
+4. Review shared and missing behavior.
+5. Convert uncovered techniques into hunting or detection-backlog tasks.
+6. Export Navigator JSON, JSON/PDF output, or a backlog where supported by the selected mode.
 
-**Search**: use the search box to find techniques by name or ID without manually scanning the matrix.
-- Type `T1059` to jump to all Command and Scripting Interpreter techniques
-- Type `phish` to find all phishing-related techniques
+## Legend
 
-The technique counter in the toolbar shows how many unique technique IDs you have selected.
-
-## Overlaying an APT Group
-
-1. Go to **APT Library** and find your group of interest
-2. Click **Overlay on Navigator**
-3. Return to **Navigator**
-
-![Navigator with APT group overlay — red (yours), blue (group), amber (shared)](/img/screenshots/23_navigator_overlay.png)
-
-The matrix now uses three colours:
-
-| Colour | Meaning |
+| State | Meaning |
 |---|---|
-| **Red** | In your layer only |
-| **Blue** | In the APT group's profile only |
-| **Amber** | In both — the overlap |
+| User-selected | Technique included in the analyst's current layer |
+| Group profile | Technique documented in the selected group overlay |
+| Overlap | Technique exists in both selections |
+| Missing coverage | Target technique absent from imported detection coverage |
+| Detection status | Coverage/maturity state when imported or recorded |
 
-![Navigator overlay detail — gap analysis view](/img/screenshots/24_navigator_overlay2.png)
-
-This visual immediately answers: *"Which of this group's known techniques am I not already detecting?"*
-
-The overlay badge at the bottom-left of the matrix shows the group name and technique count. Click the **✕** button to clear the overlay.
-
-## Technique Detail Panel
-
-Click any technique to open its detail panel on the right side. The panel shows:
-
-- Full ATT&CK name, ID, and tactic
-- Description from STIX
-- Platforms it applies to
-- Sub-technique list (if any)
-- AI chat assistant (see [Chat Assistant](/ai-analysis/chat-assistant))
-
----
+Open a technique detail panel to review ATT&CK description, platforms, telemetry, detection guidance, mitigation, and linked ecosystem research. AI chat is available only in the Docker platform.
 
 Next: [Save and Load Named Layers →](/navigator/layers)

@@ -6,93 +6,37 @@ sidebar_position: 1
 
 # ThreatMapper
 
-**Current release: v0.7.0** · [Open the live intelligence workspace](https://1200km.com/threat-matrix/) · [View source on GitHub](https://github.com/anpa1200/threatmapper)
+**Current release: v0.8.2** · [Project Hub](https://1200km.com/threatmapper/) · [Public Web Workspace](https://1200km.com/threat-matrix/) · [GitHub](https://github.com/anpa1200/threatmapper)
 
-ThreatMapper is the primary 1200km CTI-to-detection platform. The live workspace provides
-immediate actor, ATT&CK technique, report, hunting, mitigation, and coverage research without
-installation. The self-hosted platform adds AI-assisted report analysis, campaign comparison,
-stored investigations, APIs, and private deployment.
+ThreatMapper is an AI-assisted CTI-to-detection workbench for mapping threat reports to MITRE ATT&CK, comparing TTP overlap with known groups and campaigns, identifying detection gaps, and exporting analyst-ready outputs.
 
-The Docker platform is the superset product: it includes the public web analyst workflow
-plus AI report extraction, private report sessions, campaigns, server-saved layers, APIs,
-PDF exports, and automated ATT&CK synchronization.
+ThreatMapper does not perform definitive attribution. TTP overlap and Jaccard similarity are analytical signals for hypothesis generation, prioritization, and further investigation.
 
-*Map adversary behaviour to MITRE ATT&CK in seconds, compare against 174+ APT groups, and generate PDF reports — all running locally with your own LLM keys.*
+## Start Here
 
-![ThreatMapper platform overview](/img/screenshots/01_cover.png)
+1. [Open the Project Hub](https://1200km.com/threatmapper/)
+2. [Explore the Web Workspace](https://1200km.com/threat-matrix/)
+3. [Read the AI Analysis workflow](/ai-analysis/overview)
+4. [Review Group & Campaign Similarity](/compare/overview)
+5. [Deploy the Docker version](/getting-started)
+6. [Export reports and detection backlog](/generating-reports)
 
----
+## Public Web Workspace
 
-## The Problem
+The public Web workspace is browser-native and intended for exploration. It supports matrix exploration, manual TTP layers, group-profile comparison, local workspaces, ecosystem research, coverage-gap analysis, and browser-generated exports. It does not perform LLM report extraction or backend report storage.
 
-![The manual ATT&CK mapping problem — slow, repetitive, fragmented](/img/screenshots/03_the_problem.png)
+Do not upload confidential, customer-sensitive, classified, or internal reports to any public demo.
 
-Every threat intelligence analyst knows the workflow: you receive a malware report, an IR summary, or a threat feed entry, and you need to translate it into ATT&CK technique IDs so you can slot it into a detection backlog or a purple-team plan.
+## Full Docker Platform
 
-Doing this manually is slow. You read the report, recognise a behaviour ("the implant used scheduled tasks for persistence"), pull up the ATT&CK website, search for the technique, copy the ID. Repeat 20 times for a single report. Then someone asks: *"Does this look like APT29?"* — and you start manually cross-referencing technique lists.
+Use Docker for private AI-assisted report analysis, provider-configured LLM extraction, stored reports, campaign comparison, API access, PDF exports, and scheduled ATT&CK synchronization.
 
-There are commercial platforms that do this — but they are expensive, require data to leave your environment, and often treat ATT&CK as a secondary feature behind proprietary kill-chains.
+ThreatMapper is self-hosted. In Docker mode, report content is sent only to the LLM provider configured by the operator. For fully private analysis, use a local or private LLM gateway.
 
-**ThreatMapper** is a self-hosted, privacy-first, open-source option that uses the LLM API keys you already have.
+## ATT&CK Data Provenance
 
----
+ThreatMapper uses official MITRE ATT&CK STIX bundles. The active domain, version, and generated/synchronized timestamp are shown in the relevant UI. Counts depend on the selected domain and release.
 
-## What It Does
+## Validation and Limitations
 
-![ThreatMapper — AI analysis with streamed technique extraction](/img/screenshots/04_what_it_does_1.png)
-
-In one sentence: **you give it a threat report, it gives you ATT&CK technique IDs, APT group matches, confidence scores, and a PDF.**
-
-Concretely:
-
-![APT Attribution — Jaccard similarity ranking against all 174+ groups](/img/screenshots/05_what_it_does_2.png)
-
-**AI Analysis** — upload a PDF, DOCX, or TXT file (or paste text), pick Claude, GPT-4o, or Gemini, and get a streamed extraction of every ATT&CK technique the LLM identifies with evidence snippets and confidence scores.
-
-![ATT&CK Navigator — interactive heatmap of the full matrix](/img/screenshots/06_what_it_does_3.png)
-
-**ATT&CK Navigator** — an interactive heatmap of the full ATT&CK matrix (Enterprise, Mobile, ICS) where you build and explore your TTP layer.
-
-![APT Attribution — automatic Jaccard similarity ranking against 174+ groups and 56+ campaigns](/img/screenshots/07_what_it_does_4.png)
-
-**APT Attribution** — automatic Jaccard similarity ranking of every extraction against 174+ named ATT&CK threat groups and 56+ named campaigns (e.g. "Operation Ghost", "SolarWinds Compromise").
-
-![Compare — deep side-by-side comparison with matrix diff and gap analysis](/img/screenshots/08_what_it_does_5.png)
-
-**Compare Modes** — deep side-by-side comparison of your TTP set against groups, MITRE named campaigns, or your own stored report library; with visual matrix diff, tactic breakdown chart, and gap analysis.
-
-![PDF Reports — multi-page formatted output for executive briefings](/img/screenshots/09_what_it_does_6.png)
-
-**PDF Reports** — ATT&CK Navigator-compatible JSON layers and multi-page PDF reports suitable for executive briefings.
-
-Everything runs locally in Docker. Your threat reports never leave your machine.
-
-![REST API and Swagger UI — full headless access for CI and batch workflows](/img/screenshots/10_what_it_does_7.png)
-
-**REST API** — full headless access for CI integration and batch workflows.
-
----
-
-## Architecture in Brief
-
-ThreatMapper is four containers:
-
-![ThreatMapper architecture diagram — four containers](/img/screenshots/11_architecture.png)
-
-```
-React / Vite frontend  ←→  FastAPI backend  ←→  PostgreSQL
-                                  ↕
-                           Redis + Celery
-                        (background jobs, daily ATT&CK sync)
-```
-
-The backend ingests ATT&CK STIX 2.1 bundles directly from MITRE's GitHub repository using pure Python — no third-party ATT&CK library, fully compatible with Python 3.12. All three domains (Enterprise, Mobile, ICS) are parsed and stored in PostgreSQL.
-
-LLM calls go directly from the FastAPI backend to Anthropic / OpenAI / Google using their official SDKs. Your API keys never touch a third-party service beyond the LLM provider itself.
-
----
-
-## Next
-
-- [Set up in 10 minutes →](/getting-started)
-- [Core workflow: AI Analysis →](/ai-analysis/overview)
+LLM-generated mappings may contain false positives, false negatives, or ambiguous technique assignments. Analysts must validate mappings against source evidence, procedure descriptions, telemetry requirements, and ATT&CK definitions. See [Evaluation and Analyst Validation](/evaluation).

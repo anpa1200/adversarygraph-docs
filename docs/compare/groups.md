@@ -6,7 +6,11 @@ sidebar_position: 2
 
 # Mode 1 — Groups (DB 1)
 
-With techniques selected in Navigator (or injected from an AI analysis), navigate to **Compare**, make sure **Groups (DB 1)** is selected, and click **Compare vs APT Groups**. This ranks all 174+ threat groups by Jaccard similarity.
+With techniques selected in Navigator (or injected from an AI analysis), navigate to **Compare**, select **Groups (DB 1)**, and click **Compare vs Groups**. This ranks the currently ingested group profiles by Jaccard TTP overlap.
+
+:::warning
+TTP overlap is not attribution evidence by itself. Validate leads with infrastructure, malware, victimology, timing, procedure detail, and external intelligence.
+:::
 
 ## The Four-Tab Detail View
 

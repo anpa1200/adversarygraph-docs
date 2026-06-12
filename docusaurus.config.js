@@ -1,6 +1,6 @@
 // @ts-check
 const config = {
-  title: 'ThreatMapper',
+  title: 'ThreatMapper Documentation — CTI-to-Detection Workbench',
   tagline: 'CTI-to-detection intelligence platform — investigate behavior, map ATT&CK evidence, compare overlap, and operationalize findings.',
   favicon: 'img/logo.png',
 
@@ -53,7 +53,7 @@ const config = {
     metadata: [
       {
         name: 'keywords',
-        content: 'threat intelligence, ATT&CK, MITRE, APT attribution, LLM, Claude, GPT-4o, Gemini, self-hosted, Docker, Jaccard similarity',
+        content: 'cyber threat intelligence, MITRE ATT&CK, CTI-to-detection, detection engineering, threat hunting, TTP mapping, group similarity, campaign similarity, self-hosted CTI platform',
       },
     ],
     navbar: {

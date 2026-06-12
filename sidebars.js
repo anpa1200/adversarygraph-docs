@@ -60,6 +60,7 @@ module.exports = {
       ],
     },
     'tips',
+    'evaluation',
     'security',
     'roadmap',
   ],

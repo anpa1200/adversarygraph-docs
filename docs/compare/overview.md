@@ -1,48 +1,44 @@
 ---
 id: overview
-title: Compare — Three Modes
+title: Group & Campaign Similarity
 sidebar_position: 1
 ---
 
-# APT Attribution Deep-Dive: Three Compare Modes
+# Group & Campaign Similarity Deep-Dive
 
-The Compare view has three modes selectable from a switcher at the top of the page. Each answers a different attribution question.
+ThreatMapper compares a selected technique set with known ATT&CK group and campaign profiles. The result is an analytical lead for prioritization, gap analysis, hypothesis generation, and hunting.
 
-![Compare — three mode switcher overview](/img/screenshots/26_compare_overview.png)
+:::warning Attribution limitation
+A high TTP overlap score does not prove attribution. It indicates that the observed behavior shares ATT&CK techniques with a known group or campaign profile and should be treated as an investigation lead.
+:::
+
+## Three Compare Modes
 
 | Mode | What you compare | Against |
 |---|---|---|
-| **Groups (DB 1)** | Your selected TTPs from Navigator | All 174+ ATT&CK groups |
-| **Campaigns (DB 1)** | Your selected TTPs from Navigator | All 56+ named MITRE campaigns |
-| **Reports (DB 2)** | A stored report's extracted TTPs | All 174+ ATT&CK groups |
+| **Groups (DB 1)** | Selected Navigator TTPs | Currently ingested ATT&CK groups |
+| **Campaigns (DB 1)** | Selected Navigator TTPs | Currently ingested named ATT&CK campaigns |
+| **Reports (DB 2)** | A stored report's extracted TTPs | Currently ingested ATT&CK groups |
 
-## How Jaccard Similarity Works
+## Jaccard Similarity
 
-```
+```text
 similarity = |shared techniques| / |union of all techniques|
 ```
 
-If you have 5 techniques selected and an APT group has 12 techniques, and 5 of them match:
+Jaccard similarity measures technique-set overlap. A high score can result from a small profile, common tradecraft, incomplete reporting, or genuinely similar behavior. Interpret it with infrastructure, malware, victimology, timing, procedure detail, and external intelligence.
 
-```
-similarity = 5 / 12 = 42%
-```
+## Analyst Workflow
 
-A match above **25–30%** is worth investigating. Higher is not always better — a group with very few techniques will show a high similarity even on a small overlap.
+1. Validate report evidence and ATT&CK mappings.
+2. Inject validated techniques into Navigator.
+3. Compare against groups and campaigns.
+4. Review shared techniques and profile gaps.
+5. Build hunting and detection-backlog hypotheses.
+6. Record corroborating and contradictory evidence.
 
-## The Practical Attribution Workflow
+TTP overlap is not attribution evidence by itself. Attribution requires additional evidence and explicit confidence reasoning.
 
-![Practical attribution workflow — four-step process from analysis to PDF](/img/screenshots/32_attribution_workflow.png)
-
-1. Run AI analysis on your incident data (give it a descriptive name)
-2. Inject extracted techniques into Navigator
-3. Compare → **Groups**: look for similarity > 25%
-4. Compare → **Campaigns**: check if the top group has a campaign that fits the timeline
-5. Gap Analysis tab: use the technique gap as a structured hunt checklist
-6. Download the PDF report for your findings
-
----
-
-- [Mode 1: Groups →](/compare/groups)
-- [Mode 2: Campaigns →](/compare/campaigns)
-- [Mode 3: Reports →](/compare/reports)
+- [Compare Groups →](/compare/groups)
+- [Compare Campaigns →](/compare/campaigns)
+- [Compare Stored Reports →](/compare/reports)

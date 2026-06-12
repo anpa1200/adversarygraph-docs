@@ -1,48 +1,38 @@
 ---
 id: security
-title: Security Considerations
+title: Security and Deployment
 sidebar_position: 11
 ---
 
-# Security Considerations
+# Security and Deployment
 
-ThreatMapper is designed for internal/intranet use. Local mode does not require authentication.
-For team deployments, v0.8.0 supports trusted identity headers from an OIDC-aware reverse proxy.
+## Public Web Workspace Security
 
-## For a Team Deployment
+ThreatMapper Web runs in the browser and is intended for public exploration. It does not perform LLM report extraction or backend report storage. Do not upload confidential, customer-sensitive, classified, or internal reports to any public demo.
 
-1. Set a strong `DB_PASS` in `.env`
-2. Put ThreatMapper behind nginx, Caddy, oauth2-proxy, or another OIDC-aware reverse proxy with TLS
-3. Configure the proxy to strip inbound identity headers, then set `X-Auth-User` and `X-Auth-Roles`
-4. Set `AUTH_ENABLED=true`; use `admin`, `analyst`, and `viewer` roles
-5. Run the Docker containers on an internal network that is not directly internet-accessible
-6. The `.env` file containing your LLM API keys should have `chmod 600` and **never be committed to git**
+## Docker Deployment Security
 
-Never expose trusted identity headers directly to clients. ThreatMapper assumes the reverse proxy
-has authenticated the user and removed any client-supplied values.
+ThreatMapper Docker is self-hosted. Report content is sent only to the LLM provider configured by the operator. For fully private analysis, use a local or private LLM gateway. Reports and analyses may be stored in PostgreSQL.
 
-## Data Handling
+Trusted-header authentication and `admin`, `analyst`, and `viewer` roles are supported when `AUTH_ENABLED=true`, but they depend on a correctly configured authenticating reverse proxy. Never expose trusted identity headers directly to clients.
 
-Your threat intelligence reports are stored in PostgreSQL inside a Docker volume (`threatmapper_postgres_data`). If you need to comply with data handling policies, deploy ThreatMapper on infrastructure that meets those policies — since it's self-hosted, you retain full control.
+## API Key Handling
 
-To wipe all stored analyses and layers:
+- Store provider keys in `.env` environment variables and never commit `.env`.
+- Restrict provider keys where possible and rotate exposed credentials.
+- Protect the API and database; keys do not make an internet-facing deployment safe.
 
-```bash
-docker compose down -v
-```
+## Production Hardening Checklist
 
-This destroys the PostgreSQL volume. Next start will re-ingest ATT&CK data from scratch.
+- Put the service behind VPN, SSO, OAuth proxy, or an access-controlled reverse proxy.
+- Enable `AUTH_ENABLED=true` and configure trusted identity headers correctly.
+- Use TLS and strong secrets.
+- Do not expose PostgreSQL publicly.
+- Do not expose the API directly without authentication.
+- Restrict CORS and network access.
+- Limit upload size and configure retention.
+- Back up PostgreSQL and test restore procedures.
+- Review application, proxy, and provider logs.
+- Rotate LLM API keys.
 
-## LLM API Keys
-
-API keys are passed to the LLM provider directly from the FastAPI backend using the official Anthropic / OpenAI / Google SDKs. No key material touches any intermediate service.
-
-The keys are stored in the `.env` file and injected as environment variables into the `api` container. They are never written to the database.
-
-## Network Exposure
-
-Default Docker Compose exposes:
-- Port 3000 (frontend) — bind to `127.0.0.1:3000` in `docker-compose.yml` to restrict to localhost
-- Port 8000 (API) — bind to `127.0.0.1:8000` for localhost-only
-
-For team use, expose only through a reverse proxy with TLS.
+ThreatMapper is suitable for local labs, private analyst workstations, internal CTI workflows, and controlled self-hosted deployments. Internet-facing deployments require additional access control and hardening.

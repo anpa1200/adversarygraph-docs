@@ -61,11 +61,11 @@ The **evidence** field is a direct quote or paraphrase from your source document
 - **Medium (50–79%)** — behaviour was clearly implied
 - **Low (< 50%)** — inferred; validate manually before acting on it
 
-### APT Matches Tab
+### Group Similarity Leads Tab
 
 Computed locally using Jaccard similarity between your extracted techniques and every named ATT&CK group's known TTP set. The top 10 are shown with:
 
-![APT Matches tab — top 10 groups ranked by Jaccard similarity](/img/screenshots/19_results_tab3.png)
+![Group similarity leads ranked by Jaccard TTP overlap](/img/screenshots/19_results_tab3.png)
 
 - Similarity score (0–100%)
 - Shared technique count
@@ -91,7 +91,7 @@ Click **→ Inject into Navigator** to push all extracted techniques into your l
 
 ## Download PDF Report
 
-Click **↓ PDF report** in the results summary bar to download a formatted multi-page report including the cover page, executive summary, techniques table, APT attribution, and tactic coverage breakdown. The report is generated on the backend and returned as a direct browser download.
+Click **↓ PDF report** in the results summary bar to download a formatted multi-page report including the cover page, executive summary, techniques table, group-similarity leads, and tactic coverage breakdown. The report is generated on the backend and returned as a direct browser download.
 
 Previous analysis sessions can be re-downloaded at any time from [Compare → Reports (DB 2)](/compare/reports).
 

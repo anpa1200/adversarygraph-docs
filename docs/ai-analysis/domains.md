@@ -17,7 +17,7 @@ Switch domains using the **Domain** dropdown in the Navigator toolbar or the Ana
 Use for traditional IT infrastructure incidents: Windows/Linux/macOS endpoints, cloud workloads, Active Directory environments.
 
 - 641 techniques (including sub-techniques)
-- 174+ named threat groups
+- Named threat groups from the currently ingested ATT&CK release
 - 56+ named campaigns
 
 This is the default domain and the right choice for most corporate IR and CTI work.

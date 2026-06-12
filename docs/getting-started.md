@@ -59,7 +59,7 @@ You'll see something like:
 
 ```
 Parsing enterprise-attack-19.1.json ...
-  Parsed: 15 tactics, 760 techniques, 174 groups, 56 campaigns, 9100+ usages
+  Parsed: current tactics, techniques, groups, campaigns, and relationships
 Finished ingesting enterprise-attack v19.1
 INFO:     Application startup complete.
 ```
@@ -80,7 +80,7 @@ API docs (Swagger UI): http://localhost:8000/docs
 
 Once the ingestion log shows `Application startup complete`, you have:
 
-- The full MITRE ATT&CK Enterprise matrix (760+ techniques, 174+ groups, 56+ campaigns)
+- The currently ingested MITRE ATT&CK Enterprise release; counts depend on the release
 - The ATT&CK Navigator ready for technique selection
 - The AI Analysis endpoint ready (as long as at least one API key is set)
 - Jaccard comparison against all ATT&CK groups and campaigns

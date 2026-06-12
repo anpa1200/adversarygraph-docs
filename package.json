@@ -1,8 +1,8 @@
 {
   "name": "threatmapper-docs",
-  "version": "0.8.0",
+  "version": "0.8.2",
   "private": true,
-  "description": "Documentation site for ThreatMapper — self-hosted AI threat intelligence platform for ATT&CK mapping, APT attribution, and PDF report generation.",
+  "description": "Documentation for ThreatMapper, an AI-assisted ATT&CK mapping and CTI-to-detection workbench with public Web and self-hosted Docker modes.",
   "scripts": {
     "start": "docusaurus start",
     "build": "docusaurus build",
@@ -20,8 +20,18 @@
   },
   "devDependencies": {},
   "browserslist": {
-    "production": [">0.5%", "not dead", "not op_mini all"],
-    "development": ["last 3 chrome version", "last 3 firefox version", "last 5 safari version"]
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 5 safari version"
+    ]
   },
-  "engines": { "node": ">=18.0" }
+  "engines": {
+    "node": ">=18.0"
+  }
 }

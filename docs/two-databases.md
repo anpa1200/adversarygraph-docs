@@ -22,21 +22,21 @@ ThreatMapper parses all of this during ingestion. The result is two searchable, 
 
 | Dataset | What it contains | ID format |
 |---|---|---|
-| APT Groups | Aggregate TTP profile of each named threat group | G0001 – G0174+ |
+| Threat Groups | Aggregate TTP profile of each named threat group | Current ingested ATT&CK release |
 | Campaigns | TTP profile of each named operation | C0001 – C0063+ |
 
 DB 1 is read-only from the user's perspective. It is updated by the daily ATT&CK sync job (or manually via `POST /api/sync/trigger`).
 
 ## DB 2: Your Report Library
 
-Every time you run an AI analysis, the result is stored: the extracted techniques, the summary, the APT matches, and the provider/model used. DB 2 is this library of past analyses.
+Every time you run an AI analysis, the result is stored: the extracted techniques, summary, group-similarity leads, and provider/model used. DB 2 is this library of past analyses.
 
 DB 2 also stores named Navigator layers saved via the **↓ Save layer** button.
 
 | Table | What it stores |
 |---|---|
 | `analysis_sessions` | Session metadata: provider, model, domain, filename, status, timestamp |
-| `analysis_results` | Extracted techniques, summary, APT matches (JSONB) |
+| `analysis_results` | Extracted techniques, summary, group-similarity leads (JSONB) |
 | `user_layers` | Named Navigator layers: name, domain, technique IDs (JSONB) |
 
 DB 2 is append-mostly. Sessions can be deleted via the **✕ Remove** button in Compare → Reports or via `DELETE /api/analyze/sessions/{id}`. Layers can be deleted via the Load dialog or via `DELETE /api/layers/{id}`.

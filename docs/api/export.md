@@ -18,7 +18,7 @@ Returns a binary PDF for an existing analysis session. Use as a direct browser l
 curl "http://localhost:8000/api/export/analysis/$SESSION_ID" -o analysis.pdf
 ```
 
-The PDF includes: cover page, executive summary, techniques table, APT attribution, tactic coverage.
+The PDF includes: cover page, executive summary, techniques table, group-similarity leads, and tactic coverage.
 
 ## Navigator Layer PDF
 

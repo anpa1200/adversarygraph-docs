@@ -18,7 +18,7 @@ The report includes:
 - **Cover page** — provider, model, domain, session ID, and timestamp
 - **Executive summary** — the AI-generated TL;DR
 - **Extracted techniques table** sorted by confidence descending
-- **APT attribution section** with the top 10 Jaccard matches and shared technique lists
+- **Group similarity section** with the top Jaccard-overlap leads and shared technique lists
 - **Tactic coverage breakdown** showing how the techniques distribute across the ATT&CK kill chain
 
 Previous analysis sessions can be re-downloaded at any time from **Compare → Reports (DB 2)** using the **↓ PDF** button on each session row — no need to re-run the analysis.
