@@ -6,14 +6,20 @@ sidebar_position: 11
 
 # Security Considerations
 
-ThreatMapper is designed for internal/intranet use. It has **no built-in authentication** — anyone who can reach the Docker network can use it.
+ThreatMapper is designed for internal/intranet use. Local mode does not require authentication.
+For team deployments, v0.8.0 supports trusted identity headers from an OIDC-aware reverse proxy.
 
 ## For a Team Deployment
 
 1. Set a strong `DB_PASS` in `.env`
-2. Put ThreatMapper behind nginx or Caddy with TLS and HTTP Basic Auth (or integrate with your identity provider via OAuth)
-3. Run the Docker containers on an internal network that is not directly internet-accessible
-4. The `.env` file containing your LLM API keys should have `chmod 600` and **never be committed to git**
+2. Put ThreatMapper behind nginx, Caddy, oauth2-proxy, or another OIDC-aware reverse proxy with TLS
+3. Configure the proxy to strip inbound identity headers, then set `X-Auth-User` and `X-Auth-Roles`
+4. Set `AUTH_ENABLED=true`; use `admin`, `analyst`, and `viewer` roles
+5. Run the Docker containers on an internal network that is not directly internet-accessible
+6. The `.env` file containing your LLM API keys should have `chmod 600` and **never be committed to git**
+
+Never expose trusted identity headers directly to clients. ThreatMapper assumes the reverse proxy
+has authenticated the user and removed any client-supplied values.
 
 ## Data Handling
 

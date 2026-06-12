@@ -6,7 +6,7 @@ module.exports = {
     {
       type: 'category',
       label: 'Operations',
-      items: ['operations/operations-overview'],
+      items: ['operations/operations-overview', 'operations/intelligence-pipeline'],
     },
     {
       type: 'category',
