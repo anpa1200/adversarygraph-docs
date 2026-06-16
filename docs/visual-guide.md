@@ -10,6 +10,9 @@ Screenshots, diagrams, and workflow infographics from the published
 ThreatMapper v2.0 article. These assets are mirrored locally in the official
 docs so the guide does not depend on Medium image hosting.
 
+Read the ecosystem article:
+[ThreatMapper v2.0 - Self-Hosted AI CTI Platform](https://1200km.com/articles/threatmapper-v2-self-hosted-ai-cti-platform.html).
+
 ## Overview
 
 ![ThreatMapper v2.0 article cover](/img/threatmapper-v2/01-31Nq2VMJ9Mm9lgryHGJRQQ.webp)

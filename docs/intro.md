@@ -6,7 +6,7 @@ sidebar_position: 1
 
 # ThreatMapper
 
-**Current release: v2.0.0** · [Project Hub](https://1200km.com/threatmapper/) · [Public Web Workspace](https://1200km.com/threat-matrix/) · [GitHub](https://github.com/anpa1200/threatmapper)
+**Current release: v2.0.0** · [Project Hub](https://1200km.com/threatmapper/) · [Public Web Workspace](https://1200km.com/threat-matrix/) · [1200km Article](https://1200km.com/articles/threatmapper-v2-self-hosted-ai-cti-platform.html) · [GitHub](https://github.com/anpa1200/threatmapper)
 
 ThreatMapper is an AI-assisted CTI-to-detection workbench for mapping threat reports to MITRE ATT&CK, comparing TTP overlap with known groups and campaigns, identifying detection gaps, and exporting analyst-ready outputs.
 
@@ -18,9 +18,10 @@ ThreatMapper does not perform definitive attribution. TTP overlap and Jaccard si
 2. [Explore the Web Workspace](https://1200km.com/threat-matrix/)
 3. [Read the AI Analysis workflow](/ai-analysis/overview)
 4. [Review the visual guide](/visual-guide)
-5. [Review Group & Campaign Similarity](/compare/overview)
-6. [Deploy the Docker version](/getting-started)
-7. [Export reports and detection backlog](/generating-reports)
+5. [Read the 1200km article](https://1200km.com/articles/threatmapper-v2-self-hosted-ai-cti-platform.html)
+6. [Review Group & Campaign Similarity](/compare/overview)
+7. [Deploy the Docker version](/getting-started)
+8. [Export reports and detection backlog](/generating-reports)
 
 ## Public Web Workspace
 
