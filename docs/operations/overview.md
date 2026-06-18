@@ -6,7 +6,7 @@ sidebar_position: 1
 
 # Operational Intelligence Workbench
 
-ThreatMapper adds persistent operational workflows beyond ATT&CK exploration.
+AdversaryGraph adds persistent operational workflows beyond ATT&CK exploration.
 Open **Operations** from the Docker platform sidebar.
 
 ## Investigations
@@ -51,5 +51,5 @@ Operational APIs are available under `/api/operations`:
 - `/detections`
 - `/tracked-actors`
 
-ThreatMapper v0.8.0 also adds the [Intelligence Pipeline](./intelligence-pipeline.md) for
+AdversaryGraph v0.8.0 also adds the [Intelligence Pipeline](./intelligence-pipeline.md) for
 reviewed collection, observables, enrichment, versioned detection rules, team identity, and audit.

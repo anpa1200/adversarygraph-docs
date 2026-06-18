@@ -6,7 +6,7 @@ sidebar_position: 8
 
 # Two Databases: Actor Profiles and Your Report Library
 
-ThreatMapper maintains two separate databases that feed the Compare workflow.
+AdversaryGraph maintains two separate databases that feed the Compare workflow.
 
 ## DB 1: MITRE Actor Profiles and Named Campaigns
 
@@ -18,7 +18,7 @@ The STIX bundle contains more than just group TTP profiles. It also includes:
 - **`attributed-to` relationships** — which group conducted which campaign
 - **`uses` relationships at the campaign level** — the specific techniques observed in each named operation
 
-ThreatMapper parses all of this during ingestion. The result is two searchable, comparable datasets that both live in DB 1:
+AdversaryGraph parses all of this during ingestion. The result is two searchable, comparable datasets that both live in DB 1:
 
 | Dataset | What it contains | ID format |
 |---|---|---|

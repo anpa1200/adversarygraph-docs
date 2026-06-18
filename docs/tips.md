@@ -14,7 +14,7 @@ sidebar_position: 10
 
 **Chat is good for detection rules.** The AI assistant is particularly strong at generating SIGMA rules, KQL queries, and Splunk SPL from ATT&CK technique IDs. Give it the full ATT&CK technique description plus context from your environment (OS, logging stack) and you'll get useful starting points rather than generic templates.
 
-**Import your existing layers.** If your team already maintains ATT&CK Navigator layers — a "what we detect" layer, a "what we've seen" layer — import them via **↑ Import layer**. ThreatMapper will let you compare them against APT profiles and run AI chat against the techniques in the layer.
+**Import your existing layers.** If your team already maintains ATT&CK Navigator layers — a "what we detect" layer, a "what we've seen" layer — import them via **↑ Import layer**. AdversaryGraph will let you compare them against APT profiles and run AI chat against the techniques in the layer.
 
 **Save named layers as investigation checkpoints.** After any significant piece of work — a completed AI analysis, a finished APT comparison, a purple-team prep layer — click **↓ Save layer** and give it a meaningful name. This takes 10 seconds and means you never lose work between sessions. Reload any saved layer instantly from **📂 Load layer**.
 
@@ -24,7 +24,7 @@ sidebar_position: 10
 
 **Use retrospective comparison.** The Reports (DB 2) mode lets you re-compare any past analysis session against the current ATT&CK dataset. After each new ATT&CK release, re-run your key investigations to see if new groups or techniques change the attribution picture.
 
-**Context window matters for long reports.** If your report is very long (40+ pages), consider splitting it into sections and running separate analyses. LLMs have context windows and may lose detail from the middle of very long documents. ThreatMapper supports up to 50 MB files but extraction quality depends on the LLM context window.
+**Context window matters for long reports.** If your report is very long (40+ pages), consider splitting it into sections and running separate analyses. LLMs have context windows and may lose detail from the middle of very long documents. AdversaryGraph supports up to 50 MB files but extraction quality depends on the LLM context window.
 
 **Click technique IDs for instant context.** Every `T1xxx` ID in the UI is clickable — it opens a detail panel with the full ATT&CK description, detection guidance, and links to the Anomaly Detection Atlas, ITDR Handbook (for identity techniques), and CTI Field Manual. Faster than switching to the ATT&CK website tab.
 

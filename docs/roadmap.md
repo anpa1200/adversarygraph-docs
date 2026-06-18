@@ -6,7 +6,7 @@ sidebar_position: 12
 
 # What's Coming Next
 
-ThreatMapper is functional and actively developed.
+AdversaryGraph is functional and actively developed.
 
 ## Recently Shipped (v0.7.0)
 
@@ -27,9 +27,9 @@ and detection candidates through `/api/operations`.
 
 **Clickable TTP detail panels** — every technique ID in the UI (Navigator, ATT&CK Group Library, Compare, Group vs Group) opens a slide-in panel with description, detection guidance, Anomaly Detection Atlas links, ecosystem links, and CTI Field Manual. [See docs →](/navigator/ttp-details)
 
-**Ecosystem sidebar links** — one-click navigation to ThreatMapper Web Tool (no-Docker browser version), CTI Knowledge Base, and 1200km.com directly from the sidebar.
+**Ecosystem sidebar links** — one-click navigation to AdversaryGraph Web Tool (no-Docker browser version), CTI Knowledge Base, and 1200km.com directly from the sidebar.
 
-## Also Shipped — ThreatMapper Web
+## Also Shipped — AdversaryGraph Web
 
 **Multi-domain ATT&CK** — the browser tool now covers four frameworks: Enterprise, Mobile, ICS, and MITRE ATLAS (AI/ML adversarial techniques). A domain switcher in the header lazy-loads each framework on first click and caches it for instant re-switching.
 
@@ -53,6 +53,6 @@ and detection candidates through `/api/operations`.
 
 The project is open source under the MIT licence.
 
-- **GitHub:** https://github.com/anpa1200/threatmapper
+- **GitHub:** https://github.com/anpa1200/adversarygraph
 - **Issues and feature requests:** open an issue on GitHub
-- **Medium article:** [ThreatMapper: I Built a Self-Hosted AI Threat Intelligence Platform](https://medium.com/@1200km/threatmapper-i-built-a-self-hosted-ai-threat-intelligence-platform-heres-how-to-use-it-0aa7673e6bd8)
+- **Medium article:** [AdversaryGraph: I Built a Self-Hosted AI Threat Intelligence Platform](https://medium.com/km)

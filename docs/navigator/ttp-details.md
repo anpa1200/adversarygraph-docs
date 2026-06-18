@@ -6,7 +6,7 @@ sidebar_position: 4
 
 # TTP Detail Panel
 
-Every technique ID displayed anywhere in ThreatMapper is clickable. Clicking one opens a **slide-in detail panel** on the right side of the screen with intelligence and links for that specific technique.
+Every technique ID displayed anywhere in AdversaryGraph is clickable. Clicking one opens a **slide-in detail panel** on the right side of the screen with intelligence and links for that specific technique.
 
 ---
 
@@ -38,7 +38,7 @@ Links relevant to the technique from the broader 1200km.com ecosystem:
 | **Anomaly Detection Atlas** | Techniques with indexed coverage |
 | **ITDR Handbook** | Identity techniques (T1078, T1098, T1110, T1111, T1136, T1531, T1539, T1550, T1552, T1555, T1556, T1558, T1606, T1621) |
 | **CTI Analyst Field Manual** | Always |
-| **ThreatMapper Web Tool** | Always |
+| **AdversaryGraph Web Tool** | Always |
 
 ### Add to TTPs / In my TTPs
 

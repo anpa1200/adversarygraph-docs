@@ -1,14 +1,14 @@
 // @ts-check
 const config = {
-  title: 'ThreatMapper Documentation — CTI-to-Detection Workbench | 1200km',
+  title: 'AdversaryGraph Documentation — CTI-to-Detection Workbench | 1200km',
   tagline: 'CTI-to-detection intelligence platform — investigate behavior, map ATT&CK evidence, compare overlap, and operationalize findings.',
   favicon: 'img/logo.png',
 
   url: 'https://1200km.com',
-  baseUrl: '/threatmapper-docs/',
+  baseUrl: '/adversarygraph-docs/',
   scripts: [{src: 'https://1200km.com/assets/docusaurus-ecosystem.js?v=20260614-3', defer: true}],
   organizationName: 'anpa1200',
-  projectName: 'threatmapper-docs',
+  projectName: 'adversarygraph-docs',
 
   headTags: [
     {
@@ -41,7 +41,7 @@ const config = {
           path: 'docs',
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/anpa1200/threatmapper-docs/edit/main/',
+          editUrl: 'https://github.com/anpa1200/adversarygraph-docs/edit/main/',
         },
         blog: false,
         theme: { customCss: require.resolve('./src/css/custom.css') },
@@ -58,7 +58,7 @@ const config = {
       },
     ],
     navbar: {
-      title: 'ThreatMapper',
+      title: 'AdversaryGraph',
       logo: { alt: '1200km', src: 'img/logo.png' },
       items: [
         { href: 'https://1200km.com/threat-matrix/', label: 'Live Workspace', position: 'left' },
@@ -78,7 +78,7 @@ const config = {
           ],
         },
         { href: 'https://medium.com/@1200km', label: 'Medium', position: 'right' },
-        { href: 'https://github.com/anpa1200/threatmapper', label: 'GitHub', position: 'right' },
+        { href: 'https://github.com/anpa1200/adversarygraph', label: 'GitHub', position: 'right' },
         { href: 'https://1200km.com/', label: 'Main Page', position: 'right', className: 'navbar-portfolio-btn' },
       ],
     },
@@ -104,7 +104,7 @@ const config = {
         {
           title: 'Ecosystem',
           items: [
-            { label: 'ThreatMapper Live Workspace', href: 'https://1200km.com/threat-matrix/' },
+            { label: 'AdversaryGraph Live Workspace', href: 'https://1200km.com/threat-matrix/' },
             { label: 'CTI Analyst Field Manual', href: 'https://1200km.com/cti-analyst-field-manual/' },
             { label: 'CTI as a Code', href: 'https://1200km.com/CTI_as_a_Code/' },
             { label: 'Operation Desert Hydra', href: 'https://1200km.com/operation-desert-hydra/' },
@@ -123,7 +123,7 @@ const config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Andrey Pautov. ThreatMapper AI — CTI-to-detection workbench and self-hosted ATT&CK analysis platform.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Andrey Pautov. AdversaryGraph AI — CTI-to-detection workbench and self-hosted ATT&CK analysis platform.`,
     },
     prism: {
       additionalLanguages: ['bash', 'json', 'python', 'yaml'],

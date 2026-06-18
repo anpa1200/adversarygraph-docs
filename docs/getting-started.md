@@ -14,8 +14,8 @@ sidebar_position: 2
 ## Step 1: Clone and configure
 
 ```bash
-git clone https://github.com/anpa1200/threatmapper.git
-cd threatmapper
+git clone https://github.com/anpa1200/adversarygraph.git
+cd adversarygraph
 cp .env.example .env
 ```
 
@@ -70,11 +70,11 @@ This takes 5–15 minutes depending on your network speed. Subsequent startups a
 
 Frontend: http://localhost:3000
 
-![ThreatMapper frontend — Navigator ready after ingestion](/img/screenshots/13_setup_open.png)
+![AdversaryGraph frontend — Navigator ready after ingestion](/img/screenshots/13_setup_open.png)
 
 API docs (Swagger UI): http://localhost:8000/docs
 
-![ThreatMapper API docs — Swagger UI for headless access](/img/screenshots/14_setup_open2.png)
+![AdversaryGraph API docs — Swagger UI for headless access](/img/screenshots/14_setup_open2.png)
 
 ## What's Ready
 

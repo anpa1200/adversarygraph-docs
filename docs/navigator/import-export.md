@@ -8,7 +8,7 @@ sidebar_position: 3
 
 ## Import an Existing Layer
 
-If your team already maintains ATT&CK Navigator layers, click **↑ Import layer** and upload the JSON. ThreatMapper loads it as your active layer, which you can then enrich with AI analysis or compare against APT profiles.
+If your team already maintains ATT&CK Navigator layers, click **↑ Import layer** and upload the JSON. AdversaryGraph loads it as your active layer, which you can then enrich with AI analysis or compare against APT profiles.
 
 The import supports the standard ATT&CK Navigator `.json` layer format (versions 4.x).
 

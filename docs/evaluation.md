@@ -6,7 +6,7 @@ sidebar_position: 10
 
 # Evaluation and Analyst Validation
 
-ThreatMapper output is a first-pass structured analysis, not a substitute for analyst validation.
+AdversaryGraph output is a first-pass structured analysis, not a substitute for analyst validation.
 
 ## Why Validation Matters
 
@@ -21,7 +21,7 @@ LLM-generated mappings can contain false positives, false negatives, and ambiguo
 5. Validate group/campaign similarity with non-TTP evidence.
 6. Hand validated gaps to detection engineering with an owner and status.
 
-Use ThreatMapper output as a first-pass structured analysis. Analysts should validate technique mappings against source evidence, procedure descriptions, telemetry requirements, and ATT&CK definitions.
+Use AdversaryGraph output as a first-pass structured analysis. Analysts should validate technique mappings against source evidence, procedure descriptions, telemetry requirements, and ATT&CK definitions.
 
 ## Sample Evaluation Format
 

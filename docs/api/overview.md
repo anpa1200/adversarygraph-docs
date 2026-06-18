@@ -6,7 +6,7 @@ sidebar_position: 1
 
 # REST API
 
-ThreatMapper exposes a full REST API. Drive the entire workflow programmatically — headless analysis, batch comparisons, layer management.
+AdversaryGraph exposes a full REST API. Drive the entire workflow programmatically — headless analysis, batch comparisons, layer management.
 
 ## Base URL
 
@@ -30,7 +30,7 @@ Interactive Swagger UI: **http://localhost:8000/docs**
 
 ## Authentication
 
-No authentication is built in — ThreatMapper is designed for internal/intranet use. Protect the API with nginx, Caddy, or your identity provider if you deploy it for a team. See [Security](/security).
+No authentication is built in — AdversaryGraph is designed for internal/intranet use. Protect the API with nginx, Caddy, or your identity provider if you deploy it for a team. See [Security](/security).
 
 ## Content Types
 

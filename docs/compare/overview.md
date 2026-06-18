@@ -6,7 +6,7 @@ sidebar_position: 1
 
 # Group & Campaign Similarity Deep-Dive
 
-ThreatMapper compares a selected technique set with known ATT&CK group and campaign profiles. The result is an analytical lead for prioritization, gap analysis, hypothesis generation, and hunting.
+AdversaryGraph compares a selected technique set with known ATT&CK group and campaign profiles. The result is an analytical lead for prioritization, gap analysis, hypothesis generation, and hunting.
 
 :::warning Attribution limitation
 A high TTP overlap score does not prove attribution. It indicates that the observed behavior shares ATT&CK techniques with a known group or campaign profile and should be treated as an investigation lead.

@@ -6,7 +6,7 @@ sidebar_position: 2
 
 # Intelligence Pipeline
 
-ThreatMapper v0.8.0 adds an analyst-controlled collection, enrichment, and detection
+AdversaryGraph v0.8.0 adds an analyst-controlled collection, enrichment, and detection
 engineering pipeline to the self-hosted Docker platform. Open **Pipeline** in the sidebar.
 
 ## Collection
@@ -50,7 +50,7 @@ against representative telemetry before it enters production.
 
 ## Team Authentication and Audit
 
-Local mode remains available by default. For teams, place ThreatMapper behind an OIDC-aware
+Local mode remains available by default. For teams, place AdversaryGraph behind an OIDC-aware
 reverse proxy that sets:
 
 ```text

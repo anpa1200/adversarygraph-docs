@@ -64,7 +64,7 @@ Click any technique ID anywhere on the page to open the detail panel. It slides 
 - Tactic and platform tags
 - **Anomaly Detection Atlas** — direct links to relevant analysis pages
 - **ITDR Handbook** — auto-linked for identity techniques (T1078, T1098, T1110, T1111, etc.)
-- **CTI Analyst Field Manual** and **ThreatMapper Web Tool** links
+- **CTI Analyst Field Manual** and **AdversaryGraph Web Tool** links
 
 Close with **Esc** or click the backdrop.
 

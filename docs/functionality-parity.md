@@ -4,11 +4,11 @@ title: Web vs Docker Functionality
 sidebar_position: 3
 ---
 
-# ThreatMapper Web vs ThreatMapper Docker
+# AdversaryGraph Web vs AdversaryGraph Docker
 
-This page is the canonical capability reference. ThreatMapper Web is the public browser-native ATT&CK/CTI workspace. ThreatMapper Docker is the full self-hosted AI-assisted platform.
+This page is the canonical capability reference. AdversaryGraph Web is the public browser-native ATT&CK/CTI workspace. AdversaryGraph Docker is the full self-hosted AI-assisted platform.
 
-| Feature | ThreatMapper Web | ThreatMapper Docker | Notes |
+| Feature | AdversaryGraph Web | AdversaryGraph Docker | Notes |
 |---|---|---|---|
 | ATT&CK matrix exploration and technique search | Supported | Supported | Counts depend on selected domain and ingested release |
 | Manual layer creation | Browser-local | Supported | Web state is stored in the browser; Docker also supports server workflows |
@@ -27,4 +27,4 @@ This page is the canonical capability reference. ThreatMapper Web is the public 
 | Authentication/RBAC | Not applicable | Partial | Trusted-header roles require a correctly configured authenticating reverse proxy |
 | Production hardening | Not applicable | Requires self-hosted deployment | Use TLS, access control, restricted networks, backups, retention, and secrets management |
 
-ThreatMapper is suitable for local labs, private analyst workstations, internal CTI workflows, and controlled self-hosted deployments. Internet-facing Docker deployments require additional access control and hardening.
+AdversaryGraph is suitable for local labs, private analyst workstations, internal CTI workflows, and controlled self-hosted deployments. Internet-facing Docker deployments require additional access control and hardening.

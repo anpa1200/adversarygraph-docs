@@ -8,11 +8,11 @@ sidebar_position: 11
 
 ## Public Web Workspace Security
 
-ThreatMapper Web runs in the browser and is intended for public exploration. It does not perform LLM report extraction or backend report storage. Do not upload confidential, customer-sensitive, classified, or internal reports to any public demo.
+AdversaryGraph Web runs in the browser and is intended for public exploration. It does not perform LLM report extraction or backend report storage. Do not upload confidential, customer-sensitive, classified, or internal reports to any public demo.
 
 ## Docker Deployment Security
 
-ThreatMapper Docker is self-hosted. Report content is sent only to the LLM provider configured by the operator. For fully private analysis, use a local or private LLM gateway. Reports and analyses may be stored in PostgreSQL.
+AdversaryGraph Docker is self-hosted. Report content is sent only to the LLM provider configured by the operator. For fully private analysis, use a local or private LLM gateway. Reports and analyses may be stored in PostgreSQL.
 
 Trusted-header authentication and `admin`, `analyst`, and `viewer` roles are supported when `AUTH_ENABLED=true`, but they depend on a correctly configured authenticating reverse proxy. Never expose trusted identity headers directly to clients.
 
@@ -35,4 +35,4 @@ Trusted-header authentication and `admin`, `analyst`, and `viewer` roles are sup
 - Review application, proxy, and provider logs.
 - Rotate LLM API keys.
 
-ThreatMapper is suitable for local labs, private analyst workstations, internal CTI workflows, and controlled self-hosted deployments. Internet-facing deployments require additional access control and hardening.
+AdversaryGraph is suitable for local labs, private analyst workstations, internal CTI workflows, and controlled self-hosted deployments. Internet-facing deployments require additional access control and hardening.

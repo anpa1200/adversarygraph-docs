@@ -12,15 +12,15 @@ const features = [
 ];
 
 export default function Home() {
-  return <Layout title="ThreatMapper Documentation — CTI-to-Detection Workbench | 1200km" description="Documentation for ThreatMapper AI, a CTI-to-detection workbench with a public Web workspace and a self-hosted Docker platform for AI-assisted ATT&CK mapping.">
-    <header className="hero hero--threatmapper"><div className="container" style={{textAlign:'center',padding:'4rem 1rem 3rem'}}>
-      <h1 className="hero__title">ThreatMapper Documentation</h1>
+  return <Layout title="AdversaryGraph Documentation — CTI-to-Detection Workbench | 1200km" description="Documentation for AdversaryGraph AI, a CTI-to-detection workbench with a public Web workspace and a self-hosted Docker platform for AI-assisted ATT&CK mapping.">
+    <header className="hero hero--adversarygraph"><div className="container" style={{textAlign:'center',padding:'4rem 1rem 3rem'}}>
+      <h1 className="hero__title">AdversaryGraph Documentation</h1>
       <p className="hero__subtitle">AI-assisted CTI-to-detection workbench for ATT&amp;CK mapping, group and campaign similarity, detection-gap analysis, and analyst-ready outputs.</p>
-      <p>ThreatMapper assists analysts but does not replace analyst validation. TTP overlap is an investigation lead, not attribution proof.</p>
+      <p>AdversaryGraph assists analysts but does not replace analyst validation. TTP overlap is an investigation lead, not attribution proof.</p>
       <div style={{display:'flex',gap:'1rem',justifyContent:'center',flexWrap:'wrap'}}>
         <Link className="button button--primary button--lg" href="https://1200km.com/threat-matrix/">Open Web Workspace</Link>
         <Link className="button button--secondary button--lg" to="/getting-started">Deploy Docker</Link>
-        <Link className="button button--secondary button--lg" href="https://1200km.com/threatmapper/">Project Hub</Link>
+        <Link className="button button--secondary button--lg" href="https://1200km.com/adversarygraph/">Project Hub</Link>
       </div>
     </div></header>
     <main>

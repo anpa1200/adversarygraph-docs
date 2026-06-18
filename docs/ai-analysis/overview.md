@@ -6,7 +6,7 @@ sidebar_position: 1
 
 # AI Analysis
 
-This is the core feature. Upload a threat report — or paste raw text — and ThreatMapper extracts every ATT&CK technique the LLM identifies, with evidence snippets and confidence scores, in real time.
+This is the core feature. Upload a threat report — or paste raw text — and AdversaryGraph extracts every ATT&CK technique the LLM identifies, with evidence snippets and confidence scores, in real time.
 
 ## Supported Input Formats
 

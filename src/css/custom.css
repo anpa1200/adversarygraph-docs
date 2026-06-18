@@ -11,18 +11,18 @@
   --ifm-code-font-size: 95%;
 }
 
-.hero--threatmapper {
+.hero--adversarygraph {
   background: linear-gradient(135deg, #0d0d0d 0%, #1a0505 40%, #2d0a0a 100%);
   border-bottom: 2px solid #e94560;
   color: #fff;
 }
 
-.hero--threatmapper .hero__title {
+.hero--adversarygraph .hero__title {
   font-size: 3rem;
   letter-spacing: -0.02em;
 }
 
-.hero--threatmapper .hero__subtitle {
+.hero--adversarygraph .hero__subtitle {
   color: #b0b8c8;
   max-width: 640px;
   margin: 0 auto 1.5rem;

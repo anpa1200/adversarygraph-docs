@@ -8,7 +8,7 @@ sidebar_position: 9
 
 ![Generating PDF Reports — download from analysis results bar](/img/screenshots/33_generating_reports.png)
 
-ThreatMapper generates two types of PDF reports, both produced on the backend using fpdf2 and returned as direct browser downloads.
+AdversaryGraph generates two types of PDF reports, both produced on the backend using fpdf2 and returned as direct browser downloads.
 
 ## Analysis Report
 
