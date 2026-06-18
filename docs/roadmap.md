@@ -51,7 +51,7 @@ and detection candidates through `/api/operations`.
 
 ## Contributing
 
-The project is open source under the MIT licence.
+The project is source-available. Personal/private use is free; business or organizational use requires approval from Andrey Pautov.
 
 - **GitHub:** https://github.com/anpa1200/adversarygraph
 - **Issues and feature requests:** open an issue on GitHub

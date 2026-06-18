@@ -4,18 +4,18 @@ title: Visual Guide
 sidebar_position: 3
 ---
 
-# AdversaryGraph v2.0 Visual Guide
+# AdversaryGraph v2.5 Visual Guide
 
 Screenshots, diagrams, and workflow infographics from the published
-AdversaryGraph v2.0 article. These assets are mirrored locally in the official
+AdversaryGraph v2 article. These assets are mirrored locally in the official
 docs so the guide does not depend on Medium image hosting.
 
 Read the ecosystem article:
-[AdversaryGraph v2.0 - Self-Hosted AI CTI Platform](https://1200km.com/articles/adversarygraph-v2-self-hosted-ai-cti-platform.html).
+[AdversaryGraph v2.5 - Self-Hosted AI CTI Platform](https://1200km.com/articles/adversarygraph-v2-self-hosted-ai-cti-platform.html).
 
 ## Overview
 
-![AdversaryGraph v2.0 article cover](/img/adversarygraph-v2/01-31Nq2VMJ9Mm9lgryHGJRQQ.webp)
+![AdversaryGraph v2 article cover](/img/adversarygraph-v2/01-31Nq2VMJ9Mm9lgryHGJRQQ.webp)
 
 ![Problem overview: CTI reports to ATT&CK evidence](/img/adversarygraph-v2/02-69nMwI7Xj8eNIWHv_C_KVg.webp)
 

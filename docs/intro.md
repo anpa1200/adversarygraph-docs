@@ -6,9 +6,11 @@ sidebar_position: 1
 
 # AdversaryGraph
 
-**Current release: v2.1.0** · [Project Hub](https://1200km.com/adversarygraph/) · [Public Web Workspace](https://1200km.com/threat-matrix/) · [1200km Article](https://1200km.com/articles/adversarygraph-v2-self-hosted-ai-cti-platform.html) · [GitHub](https://github.com/anpa1200/adversarygraph)
+**Current release: v2.5.0** · [Project Hub](https://1200km.com/adversarygraph/) · [Public Web Workspace](https://1200km.com/threat-matrix/) · [1200km Article](https://1200km.com/articles/adversarygraph-v2-self-hosted-ai-cti-platform.html) · [GitHub](https://github.com/anpa1200/adversarygraph)
 
-AdversaryGraph is an AI-assisted CTI-to-detection workbench for mapping threat reports to MITRE ATT&CK, comparing TTP overlap with known groups and campaigns, identifying detection gaps, and exporting analyst-ready outputs.
+AdversaryGraph is an AI-assisted CTI-to-detection workbench for mapping threat reports and IOC context to MITRE ATT&CK, comparing TTP overlap with known groups and campaigns, identifying detection gaps, and exporting analyst-ready outputs.
+
+Current release v2.5.0 adds the IOC Library, searchable multi-select actor filtering, VirusTotal IOC enrichment, STIX/TAXII import/export, MISP JSON import, custom IOC feeds, Sigma/YARA rule-feed sync, and sandbox behavior enrichment.
 
 AdversaryGraph does not perform definitive attribution. TTP overlap and Jaccard similarity are analytical signals for hypothesis generation, prioritization, and further investigation.
 
