@@ -3,6 +3,7 @@ module.exports = {
     'intro',
     'getting-started',
     'functionality-parity',
+    'use-cases',
     {
       type: 'category',
       label: 'Operations',
