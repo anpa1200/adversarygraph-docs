@@ -10,6 +10,29 @@ AdversaryGraph is built for CTI, detection engineering, SOC, incident response, 
 
 The examples below show the main ways to use the platform. They are written as practical analyst workflows rather than feature descriptions.
 
+## Individual Use-Case Pages
+
+1. [Map A New Threat Report To MITRE ATT&CK](/use-cases/map-threat-report-to-attack)
+2. [Build A Client-Facing CTI Briefing](/use-cases/client-facing-cti-briefing)
+3. [Compare An Incident To Known APT Groups](/use-cases/compare-incident-to-apt-groups)
+4. [Compare Two Or More Threat Reports](/use-cases/compare-threat-reports)
+5. [Turn CTI Into A Detection Backlog](/use-cases/cti-to-detection-backlog)
+6. [Create ATT&CK Navigator Layers](/use-cases/attack-navigator-layers)
+7. [Review Detection Coverage Gaps](/use-cases/detection-coverage-gaps)
+8. [Track Actor Relevance By Sector](/use-cases/sector-actor-relevance)
+9. [Build A Sector-Specific Threat Model](/use-cases/sector-threat-model)
+10. [Enrich Actor Profiles With Current IOCs](/use-cases/actor-ioc-enrichment)
+11. [Maintain A Central IOC Library](/use-cases/central-ioc-library)
+12. [Enrich An IOC With VirusTotal](/use-cases/virustotal-ioc-enrichment)
+13. [Pull Intelligence From OTX, Malpedia, And ThreatFox](/use-cases/otx-malpedia-threatfox-context)
+14. [Import Custom Private Feeds](/use-cases/custom-private-feeds)
+15. [Import And Export STIX/TAXII Intelligence](/use-cases/stix-taxii-exchange)
+16. [Connect MISP JSON Exports](/use-cases/misp-json-import)
+17. [Sync Sigma And YARA Rule Feeds](/use-cases/sigma-yara-rule-feeds)
+18. [Enrich Malware Behavior From Sandbox Feeds](/use-cases/sandbox-malware-behavior)
+19. [Extract IOCs From Uploaded Reports](/use-cases/extract-iocs-from-reports)
+20. [Analyze DFIR Report Examples](/use-cases/dfir-report-examples)
+
 ## 1. Map A New Threat Report To MITRE ATT&CK
 
 **Question:** Which techniques are described in this report, and what evidence supports each mapping?
