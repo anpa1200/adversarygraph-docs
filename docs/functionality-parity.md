@@ -31,7 +31,7 @@ The supported platform scope is:
 | Capability | Status |
 |---|---|
 | Private PDF/DOCX/TXT report analysis | Supported |
-| Claude/OpenAI/Gemini/local LLM providers | Supported when configured |
+| Claude/OpenAI/Gemini/MiniMax/local LLM providers | Supported when configured |
 | Stored analysis history | PostgreSQL-backed |
 | ATT&CK Enterprise/Mobile/ICS sync | Supported |
 | MITRE ATLAS sync | Supported |

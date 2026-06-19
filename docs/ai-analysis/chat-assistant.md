@@ -46,4 +46,4 @@ The context field accepts up to **8,000 characters**.
 
 ## Switching Providers Mid-Chat
 
-Each message uses the currently selected provider. You can switch between Claude, GPT-4o, and Gemini within the same chat session to compare responses or use different models for different tasks (e.g. Claude for detection rules, GPT-4o for red team context).
+Each message uses the currently selected provider. You can switch between Claude, OpenAI, Gemini, MiniMax, and Local within the same chat session to compare responses or use different models for different tasks.

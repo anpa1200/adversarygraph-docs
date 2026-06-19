@@ -9,7 +9,7 @@ sidebar_position: 2
 ## Prerequisites
 
 - Docker + Docker Compose
-- An API key for at least one of: Anthropic (Claude), OpenAI, Google Gemini
+- An API key for at least one of: Anthropic (Claude), OpenAI, Google Gemini, MiniMax
 
 ## Step 1: Clone and configure
 
@@ -29,6 +29,9 @@ Open `.env` and add your keys. You only need one:
 ANTHROPIC_API_KEY=sk-ant-...
 # OPENAI_API_KEY=sk-...
 # GEMINI_API_KEY=AIza...
+# MINIMAX_API_KEY=sk-...
+# MINIMAX_MODEL=MiniMax-M3
+# MINIMAX_BASE_URL=https://api.minimax.io/v1
 
 DB_PASS=choose_a_strong_password
 ```

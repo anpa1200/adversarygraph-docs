@@ -41,6 +41,7 @@ Supported model paths:
 - Claude through Anthropic
 - OpenAI
 - Gemini
+- MiniMax
 - local/private OpenAI-compatible LLM gateways
 
 The output is not treated as final truth. Each mapping should be reviewed by an analyst.

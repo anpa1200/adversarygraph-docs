@@ -48,6 +48,9 @@ Add at least one AI provider if you want report analysis:
 ANTHROPIC_API_KEY=
 OPENAI_API_KEY=
 GEMINI_API_KEY=
+MINIMAX_API_KEY=
+MINIMAX_MODEL=MiniMax-M3
+MINIMAX_BASE_URL=https://api.minimax.io/v1
 ```
 
 For a local or private OpenAI-compatible LLM gateway:
@@ -245,6 +248,7 @@ Choose a configured provider:
 - Claude
 - OpenAI
 - Gemini
+- MiniMax
 - local OpenAI-compatible LLM
 
 Review every mapping. Accept only mappings supported by behavior evidence.

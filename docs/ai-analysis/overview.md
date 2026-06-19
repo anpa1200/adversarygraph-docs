@@ -25,7 +25,7 @@ Navigate to **Analyze** in the sidebar. You'll see:
 
 ![AI Analysis — upload form with provider and domain selection](/img/screenshots/15_upload_report.png)
 
-1. Select your **LLM Provider** (Claude / GPT-4o / Gemini)
+1. Select your **LLM Provider** (Claude / OpenAI / Gemini / MiniMax / Local)
 2. Select the **Domain** — `enterprise-attack` for most corporate IR work
 3. Optionally enter a **name** for this session (shows in the Reports library later)
 4. Paste text or upload a file
