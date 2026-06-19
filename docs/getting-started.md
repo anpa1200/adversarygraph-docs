@@ -33,6 +33,40 @@ ANTHROPIC_API_KEY=sk-ant-...
 DB_PASS=choose_a_strong_password
 ```
 
+For local/private LLM analysis, use an OpenAI-compatible endpoint:
+
+```env
+LOCAL_LLM_BASE_URL=http://host.docker.internal:11434/v1
+LOCAL_LLM_API_KEY=local
+LOCAL_LLM_MODEL=llama3.1:8b
+```
+
+Optional enrichment platform keys:
+
+```env
+# abuse.ch ThreatFox recent IOC sync
+THREATFOX_AUTH_KEY=your_abuse_ch_auth_key
+AUTO_THREATFOX_SYNC_ON_STARTUP=true
+AUTO_THREATFOX_SYNC_DAYS=7
+
+# AlienVault OTX actor-attributed pulse enrichment
+OTX_API_KEY=your_otx_key
+
+# VirusTotal on-demand IOC reputation and relationship lookup
+VIRUSTOTAL_API_KEY=your_virustotal_key
+
+# Daily dynamic DB refresh schedule in UTC
+DYNAMIC_DB_SYNC_HOUR=3
+DYNAMIC_DB_SYNC_MINUTE=30
+DYNAMIC_DB_IOC_SYNC_DAYS=7
+```
+
+These enrichment keys are optional. MITRE ATT&CK / ATLAS reference sync and the built-in public MISP Galaxy metadata sync do not require API keys. MISP JSON exports, STIX/TAXII collection URLs, custom JSON/CSV/TXT feeds, Sigma/YARA feeds, and sandbox behavior feeds are connected later from the UI/API as source URLs or tokens.
+
+:::warning
+Never commit a filled `.env` file. For team deployments, inject secrets through your deployment platform or secret manager.
+:::
+
 If you want a faster first start and only need Enterprise ATT&CK, set:
 
 ```env
