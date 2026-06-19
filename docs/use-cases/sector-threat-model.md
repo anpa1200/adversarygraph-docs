@@ -6,31 +6,71 @@ sidebar_position: 9
 
 # Build A Sector-Specific Threat Model
 
-**Analyst question:** Which actors, TTPs, campaigns, and technologies matter for this customer?
+**Analyst question:** Which actors, TTPs, campaigns, and technologies matter most for this customer?
 
-## When To Use This
+**Primary users:** Security architect, CTI analyst, vCISO, or detection lead.
 
-Use this workflow when you need a repeatable, evidence-aware way to move from raw intelligence to structured CTI output inside AdversaryGraph.
+## Scenario
 
-## Workflow
+Before a customer engagement or internal planning cycle, the team needs a threat model grounded in sector relevance and actual ATT&CK behavior.
 
-1. Select the customer sector and environment technologies.
-2. Filter by region and activity window.
-3. Review actor cards and evidence reasons.
-4. Open actor pages and relevant TTPs.
-5. Export or summarize the resulting threat model.
+## Inputs
+
+- Sector and business context
+- Geography
+- Technology stack
+- Recent incident concerns
+- Relevant actors and TTPs from Sector Intel
+
+## Prerequisites
+
+- Sector and technology filters are prepared
+- Actor library is synchronized
+- Detection or telemetry constraints are known
+- The model scope is clear
+
+## Detailed Workflow
+
+1. Select sector, region, technology, and activity window.
+2. Review the top actors and their evidence reasons.
+3. Open actor pages for descriptions, aliases, campaigns, reports, IOCs, and TTP coverage.
+4. Show relevant TTPs on matrix.
+5. Group TTPs by tactic and detection feasibility.
+6. Produce a threat model summary with assumptions and confidence.
+
+## Analyst Decisions
+
+- Which actors are relevant because of sector targeting versus capability?
+- Which technologies create exposure?
+- Which threats are strategic versus immediate?
+- Which assumptions require future validation?
+
+## Expected Outputs
+
+- Sector threat model
+- Actor priority list
+- ATT&CK matrix overlay
+- Detection and monitoring priorities
+
+## Common Pitfalls
+
+- Building a generic sector report with no environment context
+- Ignoring recency
+- Presenting historical actors as current without evidence
+- Skipping assumptions
 
 
-## Expected Output
+## Handoff Guidance
 
-Customer-specific threat model with actor context and ATT&CK behavior map.
+Use the threat model as the starting point for detection roadmap, tabletop scenarios, and customer-facing CTI briefings.
 
-## Quality Checks
+## Review Standard
 
-- Validate every technique against the source evidence.
-- Treat similarity and enrichment as analytical signals, not final conclusions.
-- Mark weak mappings as `needs-evidence` or `rejected` instead of forcing them into the final layer.
-- Export only reviewed data when using results for customer, SOC, or detection engineering handoff.
+- Keep evidence attached to every accepted finding.
+- Separate observed behavior from enrichment and hypothesis.
+- Use `needs-evidence` for plausible but unproven mappings.
+- Treat actor similarity, IOC enrichment, and rule matches as analytical signals until corroborated.
+- Export only reviewed results for customer, SOC, incident response, or detection engineering use.
 
 ## Related Platform Areas
 
@@ -39,4 +79,5 @@ Customer-specific threat model with actor context and ATT&CK behavior map.
 - ATT&CK Group Library
 - IOC Library
 - Reference Sync
-- Report export
+- Operations / Pipeline
+- PDF, JSON, CSV, STIX, or Navigator export depending on workflow

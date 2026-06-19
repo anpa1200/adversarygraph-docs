@@ -6,31 +6,70 @@ sidebar_position: 17
 
 # Sync Sigma And YARA Rule Feeds
 
-**Analyst question:** Which detection rules mention the same malware, behavior, or indicator?
+**Analyst question:** Which detection rules mention the same malware, behavior, or indicators?
 
-## When To Use This
+**Primary users:** Detection engineer, malware analyst, SOC content engineer, or CTI analyst.
 
-Use this workflow when you need a repeatable, evidence-aware way to move from raw intelligence to structured CTI output inside AdversaryGraph.
+## Scenario
 
-## Workflow
+An IOC or malware family is known, but the analyst needs to know whether public or private detection content already exists.
+
+## Inputs
+
+- Sigma feed URL/path
+- YARA feed URL/path
+- IOC or malware family names
+- Optional TTP mappings
+
+## Prerequisites
+
+- Rule feed sources are configured
+- Rule syntax is parsable enough for metadata extraction
+- Source licenses are acceptable
+- Detection feed sync is working
+
+## Detailed Workflow
 
 1. Add Sigma and YARA feed sources.
-2. Sync detection feeds.
-3. Review rule names, tags, and descriptions in enrichment context.
-4. Connect rule context to malware and TTPs where possible.
-5. Use the result for detection engineering handoff.
+2. Run detection feed sync.
+3. Open IOC or malware enrichment context.
+4. Review matching rule names, tags, references, and descriptions.
+5. Connect rule context to relevant TTPs where supported.
+6. Use matches as detection research starting points, not final production rules.
+
+## Analyst Decisions
+
+- Is the rule relevant to this malware or just a broad signature?
+- Can the rule run in the organization detection stack?
+- Is the rule production-safe or research-only?
+- Which ATT&CK technique does the rule support?
+
+## Expected Outputs
+
+- Matched Sigma/YARA rule context
+- Detection research leads
+- TTP support notes
+- Rule source references
+
+## Common Pitfalls
+
+- Copying rules into production without testing
+- Ignoring license restrictions
+- Treating weak string matches as strong evidence
+- Missing environment-specific tuning
 
 
-## Expected Output
+## Handoff Guidance
 
-Detection-rule context for IOCs, malware families, and ATT&CK techniques.
+Give detection engineers rule references, related IOCs, and ATT&CK context so they can create tested production content.
 
-## Quality Checks
+## Review Standard
 
-- Validate every technique against the source evidence.
-- Treat similarity and enrichment as analytical signals, not final conclusions.
-- Mark weak mappings as `needs-evidence` or `rejected` instead of forcing them into the final layer.
-- Export only reviewed data when using results for customer, SOC, or detection engineering handoff.
+- Keep evidence attached to every accepted finding.
+- Separate observed behavior from enrichment and hypothesis.
+- Use `needs-evidence` for plausible but unproven mappings.
+- Treat actor similarity, IOC enrichment, and rule matches as analytical signals until corroborated.
+- Export only reviewed results for customer, SOC, incident response, or detection engineering use.
 
 ## Related Platform Areas
 
@@ -39,4 +78,5 @@ Detection-rule context for IOCs, malware families, and ATT&CK techniques.
 - ATT&CK Group Library
 - IOC Library
 - Reference Sync
-- Report export
+- Operations / Pipeline
+- PDF, JSON, CSV, STIX, or Navigator export depending on workflow

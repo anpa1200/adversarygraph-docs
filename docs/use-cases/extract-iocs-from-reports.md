@@ -8,29 +8,68 @@ sidebar_position: 19
 
 **Analyst question:** Which observables appear in this report and how should they be stored?
 
-## When To Use This
+**Primary users:** CTI analyst, IR analyst, SOC analyst, or malware analyst.
 
-Use this workflow when you need a repeatable, evidence-aware way to move from raw intelligence to structured CTI output inside AdversaryGraph.
+## Scenario
 
-## Workflow
+A report includes domains, IPs, URLs, hashes, file names, or mutexes. The team needs to extract them, preserve source context, and decide which are useful.
 
-1. Upload or paste the report.
-2. Run analysis and extract observables.
-3. Map IOCs to actors or malware when evidence exists.
-4. Store report-derived IOCs in the library.
-5. Enrich and export the selected indicators.
+## Inputs
+
+- Report text or file
+- IOC extraction patterns
+- Optional actor/malware context
+- IOC Library storage
+
+## Prerequisites
+
+- Report processing is allowed
+- IOC Library is available
+- Private-data rules are understood
+- Enrichment keys are configured if needed
+
+## Detailed Workflow
+
+1. Upload or paste the report in AI Analysis or report workflow.
+2. Extract observables and review normalized types.
+3. Remove false positives such as documentation IPs or placeholders.
+4. Map indicators to actors or malware only when evidence supports it.
+5. Store report-derived IOCs with source context.
+6. Enrich selected indicators and export relevant subsets.
+
+## Analyst Decisions
+
+- Is the string a real IOC or example text?
+- Is it current enough for operational use?
+- Should it be mapped to an actor, malware family, campaign, or remain unmapped?
+- Can it be sent to external enrichment services?
+
+## Expected Outputs
+
+- Report-derived IOC set
+- Source report context
+- Actor/malware links where supported
+- CSV/STIX export options
+
+## Common Pitfalls
+
+- Extracting false positives from code blocks or examples
+- Mapping indicators without attribution evidence
+- Enriching sensitive customer IOCs externally
+- Keeping stale indicators without last-seen context
 
 
-## Expected Output
+## Handoff Guidance
 
-Report-derived IOCs with source report context and optional actor/TTP links.
+Give SOC teams cleaned, source-labeled IOCs with action guidance and confidence notes.
 
-## Quality Checks
+## Review Standard
 
-- Validate every technique against the source evidence.
-- Treat similarity and enrichment as analytical signals, not final conclusions.
-- Mark weak mappings as `needs-evidence` or `rejected` instead of forcing them into the final layer.
-- Export only reviewed data when using results for customer, SOC, or detection engineering handoff.
+- Keep evidence attached to every accepted finding.
+- Separate observed behavior from enrichment and hypothesis.
+- Use `needs-evidence` for plausible but unproven mappings.
+- Treat actor similarity, IOC enrichment, and rule matches as analytical signals until corroborated.
+- Export only reviewed results for customer, SOC, incident response, or detection engineering use.
 
 ## Related Platform Areas
 
@@ -39,4 +78,5 @@ Report-derived IOCs with source report context and optional actor/TTP links.
 - ATT&CK Group Library
 - IOC Library
 - Reference Sync
-- Report export
+- Operations / Pipeline
+- PDF, JSON, CSV, STIX, or Navigator export depending on workflow
