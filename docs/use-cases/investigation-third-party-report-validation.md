@@ -10,6 +10,10 @@ sidebar_position: 25
 
 **Goal:** Validate a vendor or public CTI report before using it operationally.
 
+## Real-Life Scenario
+
+A vendor report makes strong actor and technique claims, and the internal CTI team must validate which findings are evidence-backed before sending them to SOC operations.
+
 ## When To Use This
 
 Use this workflow when you need an end-to-end platform workflow across multiple AdversaryGraph modules and want the output to remain traceable to evidence.

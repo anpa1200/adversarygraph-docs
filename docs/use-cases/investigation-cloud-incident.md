@@ -10,6 +10,10 @@ sidebar_position: 22
 
 **Goal:** Investigate a cloud/Kubernetes incident using sector, TTP, IOC, and detection context.
 
+## Real-Life Scenario
+
+A Kubernetes workload starts beaconing externally after suspicious service account activity, and the team needs to combine cloud context, TTPs, IOCs, and telemetry requirements.
+
 ## When To Use This
 
 Use this workflow when you need an end-to-end platform workflow across multiple AdversaryGraph modules and want the output to remain traceable to evidence.

@@ -10,6 +10,10 @@ sidebar_position: 17
 
 **Goal:** Connect detection-rule context to IOCs and malware.
 
+## Real-Life Scenario
+
+A malware analyst finds a suspicious hash and wants to know whether public or internal YARA/Sigma rules already describe related behavior.
+
 ## When To Use This
 
 Use this workflow when you need a structured analyst workflow and want the output to remain traceable to evidence.

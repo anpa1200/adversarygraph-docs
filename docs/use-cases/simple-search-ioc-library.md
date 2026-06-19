@@ -10,6 +10,10 @@ sidebar_position: 4
 
 **Goal:** Find whether an observable already exists in local or synced intelligence.
 
+## Real-Life Scenario
+
+An incident responder finds an IP address in proxy logs and needs to know whether it already exists in synced ThreatFox, MISP, OTX, or private customer feeds.
+
 ## When To Use This
 
 Use this workflow when you need a fast, low-friction action and want the output to remain traceable to evidence.

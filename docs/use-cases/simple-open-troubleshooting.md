@@ -10,6 +10,10 @@ sidebar_position: 10
 
 **Goal:** Move from a popup error to practical remediation.
 
+## Real-Life Scenario
+
+An enrichment action fails because an API key is missing, and the analyst needs a direct path from popup error to the relevant fix instructions.
+
 ## When To Use This
 
 Use this workflow when you need a fast, low-friction action and want the output to remain traceable to evidence.

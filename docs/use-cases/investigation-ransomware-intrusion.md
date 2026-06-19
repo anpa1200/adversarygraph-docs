@@ -10,6 +10,10 @@ sidebar_position: 21
 
 **Goal:** Investigate a ransomware report from intake to actor hypothesis and detection handoff.
 
+## Real-Life Scenario
+
+A company reports encrypted servers, suspicious PowerShell, and possible data theft, and the IR/CTI team needs a full path from report intake to actor hypotheses and detection backlog.
+
 ## When To Use This
 
 Use this workflow when you need an end-to-end platform workflow across multiple AdversaryGraph modules and want the output to remain traceable to evidence.

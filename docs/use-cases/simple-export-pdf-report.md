@@ -10,6 +10,10 @@ sidebar_position: 7
 
 **Goal:** Create a shareable analyst report from reviewed findings.
 
+## Real-Life Scenario
+
+A CTI analyst has finished reviewing report mappings and needs a quick PDF for an internal handoff meeting.
+
 ## When To Use This
 
 Use this workflow when you need a fast, low-friction action and want the output to remain traceable to evidence.

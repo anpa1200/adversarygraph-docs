@@ -10,6 +10,10 @@ sidebar_position: 23
 
 **Goal:** Assess whether several reports belong to one campaign cluster.
 
+## Real-Life Scenario
+
+Three reports from different sources describe similar targeting and malware, and the CTI team needs to determine whether they form a campaign cluster.
+
 ## When To Use This
 
 Use this workflow when you need an end-to-end platform workflow across multiple AdversaryGraph modules and want the output to remain traceable to evidence.

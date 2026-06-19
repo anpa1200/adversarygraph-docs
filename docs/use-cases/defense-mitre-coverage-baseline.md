@@ -10,6 +10,10 @@ sidebar_position: 26
 
 **Goal:** Create a baseline of current coverage across MITRE ATT&CK.
 
+## Real-Life Scenario
+
+A security program review requires a current MITRE ATT&CK coverage baseline showing which tactics are covered, weak, or missing.
+
 ## When To Use This
 
 Use this workflow when you need an end-to-end platform workflow across multiple AdversaryGraph modules and want the output to remain traceable to evidence.

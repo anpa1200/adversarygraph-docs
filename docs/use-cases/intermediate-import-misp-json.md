@@ -10,6 +10,10 @@ sidebar_position: 15
 
 **Goal:** Bring MISP event or attribute exports into IOC Library.
 
+## Real-Life Scenario
+
+The CTI team already stores curated events in MISP and wants those observables searchable in AdversaryGraph without manual copy-paste.
+
 ## When To Use This
 
 Use this workflow when you need a structured analyst workflow and want the output to remain traceable to evidence.

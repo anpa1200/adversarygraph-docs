@@ -10,6 +10,10 @@ sidebar_position: 20
 
 **Goal:** Analyze sensitive content without public LLM routing.
 
+## Real-Life Scenario
+
+A customer report contains sensitive incident details, so the analyst must run extraction through a private local LLM gateway instead of a public API.
+
 ## When To Use This
 
 Use this workflow when you need a structured analyst workflow and want the output to remain traceable to evidence.

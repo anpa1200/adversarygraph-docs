@@ -10,6 +10,10 @@ sidebar_position: 28
 
 **Goal:** Create a repeatable SOC enrichment pipeline for incoming IOCs.
 
+## Real-Life Scenario
+
+A SOC receives IOCs from many sources every day and needs a repeatable enrichment pipeline with source labels, recency, actor links, and export options.
+
 ## When To Use This
 
 Use this workflow when you need an end-to-end platform workflow across multiple AdversaryGraph modules and want the output to remain traceable to evidence.

@@ -10,6 +10,10 @@ sidebar_position: 6
 
 **Goal:** Load an existing ATT&CK layer for review or comparison.
 
+## Real-Life Scenario
+
+A detection engineer receives a Navigator layer from another team and wants to compare it with local My TTPs coverage inside AdversaryGraph.
+
 ## When To Use This
 
 Use this workflow when you need a fast, low-friction action and want the output to remain traceable to evidence.

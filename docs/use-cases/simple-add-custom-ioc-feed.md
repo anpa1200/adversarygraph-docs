@@ -10,6 +10,10 @@ sidebar_position: 9
 
 **Goal:** Connect a private or custom IOC feed.
 
+## Real-Life Scenario
+
+A customer sends a short CSV of indicators from their incident response team, and the analyst needs to import it without mixing it with public feed data.
+
 ## When To Use This
 
 Use this workflow when you need a fast, low-friction action and want the output to remain traceable to evidence.

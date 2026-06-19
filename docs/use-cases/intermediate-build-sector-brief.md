@@ -10,6 +10,10 @@ sidebar_position: 13
 
 **Goal:** Create a practical threat brief for one sector/customer.
 
+## Real-Life Scenario
+
+A telecom customer asks which actors and techniques are most relevant to their environment this quarter.
+
 ## When To Use This
 
 Use this workflow when you need a structured analyst workflow and want the output to remain traceable to evidence.

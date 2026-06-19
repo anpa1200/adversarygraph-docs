@@ -10,6 +10,10 @@ sidebar_position: 19
 
 **Goal:** Compare a threat layer to existing coverage.
 
+## Real-Life Scenario
+
+A SOC lead imports current detection coverage and wants to know which high-priority actor TTPs are still not covered.
+
 ## When To Use This
 
 Use this workflow when you need a structured analyst workflow and want the output to remain traceable to evidence.

@@ -10,6 +10,10 @@ sidebar_position: 3
 
 **Goal:** Visualize one actor's known ATT&CK behavior.
 
+## Real-Life Scenario
+
+A detection lead wants to show management what techniques are commonly associated with a specific actor before starting a coverage review.
+
 ## When To Use This
 
 Use this workflow when you need a fast, low-friction action and want the output to remain traceable to evidence.

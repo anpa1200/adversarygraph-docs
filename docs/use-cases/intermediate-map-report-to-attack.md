@@ -10,6 +10,10 @@ sidebar_position: 11
 
 **Goal:** Turn one report into reviewed ATT&CK techniques.
 
+## Real-Life Scenario
+
+A vendor publishes a report about a new intrusion chain, and the CTI team needs reviewed ATT&CK mappings before creating detections or briefing the SOC.
+
 ## When To Use This
 
 Use this workflow when you need a structured analyst workflow and want the output to remain traceable to evidence.

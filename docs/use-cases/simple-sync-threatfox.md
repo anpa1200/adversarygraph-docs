@@ -10,6 +10,10 @@ sidebar_position: 5
 
 **Goal:** Refresh open-source IOC data for actor and malware context.
 
+## Real-Life Scenario
+
+A SOC team starts a shift and wants fresh open-source IOC context before investigating overnight alerts.
+
 ## When To Use This
 
 Use this workflow when you need a fast, low-friction action and want the output to remain traceable to evidence.

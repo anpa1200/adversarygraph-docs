@@ -10,6 +10,10 @@ sidebar_position: 30
 
 **Goal:** Produce an executive report showing threat relevance and coverage posture.
 
+## Real-Life Scenario
+
+A CISO asks for a non-technical view of which relevant threats are covered, which MITRE areas are weak, and what investments should come next.
+
 ## When To Use This
 
 Use this workflow when you need an end-to-end platform workflow across multiple AdversaryGraph modules and want the output to remain traceable to evidence.

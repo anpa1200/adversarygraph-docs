@@ -10,6 +10,10 @@ sidebar_position: 27
 
 **Goal:** Create a detection roadmap for a sector/customer environment.
 
+## Real-Life Scenario
+
+A financial services customer wants a 90-day detection roadmap based on actors, techniques, and technologies relevant to their sector.
+
 ## When To Use This
 
 Use this workflow when you need an end-to-end platform workflow across multiple AdversaryGraph modules and want the output to remain traceable to evidence.

@@ -10,6 +10,10 @@ sidebar_position: 2
 
 **Goal:** Review the core context for one ATT&CK group or actor.
 
+## Real-Life Scenario
+
+A CTI analyst is asked during a standup what APT29 is known for and needs a fast actor summary with aliases, techniques, reports, and observable context.
+
 ## When To Use This
 
 Use this workflow when you need a fast, low-friction action and want the output to remain traceable to evidence.

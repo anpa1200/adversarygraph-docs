@@ -10,6 +10,10 @@ sidebar_position: 18
 
 **Goal:** Assess whether two reports describe related activity.
 
+## Real-Life Scenario
+
+Two public reports mention similar tooling and infrastructure, and the analyst needs to decide whether they describe the same campaign or only common tradecraft.
+
 ## When To Use This
 
 Use this workflow when you need a structured analyst workflow and want the output to remain traceable to evidence.

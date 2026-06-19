@@ -10,6 +10,10 @@ sidebar_position: 14
 
 **Goal:** Add current observable context to one actor profile.
 
+## Real-Life Scenario
+
+A threat hunter is preparing an APT28 hunt and needs current source-labeled IOCs connected to actor context, not a generic stale blocklist.
+
 ## When To Use This
 
 Use this workflow when you need a structured analyst workflow and want the output to remain traceable to evidence.

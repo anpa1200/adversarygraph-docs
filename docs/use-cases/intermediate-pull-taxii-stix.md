@@ -10,6 +10,10 @@ sidebar_position: 16
 
 **Goal:** Exchange structured intelligence with CTI platforms.
 
+## Real-Life Scenario
+
+A partner shares a TAXII collection, and the platform owner wants to import the indicators into the local IOC Library for review and enrichment.
+
 ## When To Use This
 
 Use this workflow when you need a structured analyst workflow and want the output to remain traceable to evidence.

@@ -10,6 +10,10 @@ sidebar_position: 12
 
 **Goal:** Use TTP overlap to generate actor hypotheses.
 
+## Real-Life Scenario
+
+An IR team observes credential theft, remote execution, and exfiltration behaviors and wants to know which known actors have similar TTP patterns.
+
 ## When To Use This
 
 Use this workflow when you need a structured analyst workflow and want the output to remain traceable to evidence.

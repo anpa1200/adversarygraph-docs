@@ -10,6 +10,10 @@ sidebar_position: 29
 
 **Goal:** Turn CTI findings into detection content candidates.
 
+## Real-Life Scenario
+
+A CTI report describes new intrusion behavior, and detection engineers need to convert it into practical Sigma, SIEM, EDR, or hunting tasks.
+
 ## When To Use This
 
 Use this workflow when you need an end-to-end platform workflow across multiple AdversaryGraph modules and want the output to remain traceable to evidence.

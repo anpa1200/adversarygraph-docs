@@ -10,6 +10,10 @@ sidebar_position: 8
 
 **Goal:** Check whether the deployment is healthy before analysis.
 
+## Real-Life Scenario
+
+After a Docker update, the platform owner wants to confirm the API, database, ATT&CK data, and enrichment keys are working before analysts start using the system.
+
 ## When To Use This
 
 Use this workflow when you need a fast, low-friction action and want the output to remain traceable to evidence.
