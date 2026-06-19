@@ -2,7 +2,7 @@
 const config = {
   title: 'AdversaryGraph Documentation — CTI-to-Detection Workbench | 1200km',
   tagline: 'CTI-to-detection intelligence platform — investigate behavior, map ATT&CK evidence, compare overlap, and operationalize findings.',
-  favicon: 'img/logo.png',
+  favicon: 'img/favicon.png',
 
   url: 'https://1200km.com',
   baseUrl: '/adversarygraph-docs/',
@@ -50,7 +50,7 @@ const config = {
   ],
 
   themeConfig: {
-    image: 'img/logo.png',
+    image: 'img/adversarygraph-ai-og.png',
     metadata: [
       {
         name: 'keywords',
@@ -59,7 +59,7 @@ const config = {
     ],
     navbar: {
       title: 'AdversaryGraph',
-      logo: { alt: '1200km', src: 'img/logo.png' },
+      logo: { alt: 'AdversaryGraph AI', src: 'img/adversarygraph-ai-icon-192.png' },
       items: [
         { href: 'https://1200km.com/threat-matrix/', label: 'Live Workspace', position: 'left' },
         { type: 'docSidebar', sidebarId: 'docsSidebar', position: 'left', label: 'Docs' },

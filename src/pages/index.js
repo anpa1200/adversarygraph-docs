@@ -14,6 +14,7 @@ const features = [
 export default function Home() {
   return <Layout title="AdversaryGraph Documentation — CTI-to-Detection Workbench | 1200km" description="Documentation for AdversaryGraph AI, a CTI-to-detection workbench with a public Web workspace and a self-hosted Docker platform for AI-assisted ATT&CK mapping.">
     <header className="hero hero--adversarygraph"><div className="container" style={{textAlign:'center',padding:'4rem 1rem 3rem'}}>
+      <img src="/adversarygraph-docs/img/adversarygraph-ai-banner.png" alt="AdversaryGraph AI" style={{maxWidth:'760px',width:'100%',borderRadius:'8px',marginBottom:'2rem'}} />
       <h1 className="hero__title">AdversaryGraph Documentation</h1>
       <p className="hero__subtitle">AI-assisted CTI-to-detection workbench for ATT&amp;CK mapping, group and campaign similarity, detection-gap analysis, and analyst-ready outputs.</p>
       <p>AdversaryGraph assists analysts but does not replace analyst validation. TTP overlap is an investigation lead, not attribution proof.</p>
