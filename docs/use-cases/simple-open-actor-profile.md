@@ -6,6 +6,8 @@ sidebar_position: 2
 
 # Open One Actor Profile
 
+## Draft
+
 **Level:** Simple
 
 **Goal:** Review the core context for one ATT&CK group or actor.

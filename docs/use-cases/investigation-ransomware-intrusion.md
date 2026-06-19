@@ -6,6 +6,8 @@ sidebar_position: 21
 
 # Investigation: Ransomware Intrusion Triage
 
+## Draft
+
 **Level:** Complex Platform Workflows
 
 **Goal:** Investigate a ransomware report from intake to actor hypothesis and detection handoff.

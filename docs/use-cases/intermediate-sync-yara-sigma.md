@@ -6,6 +6,8 @@ sidebar_position: 17
 
 # Sync YARA And Sigma Feeds
 
+## Draft
+
 **Level:** Intermediate
 
 **Goal:** Connect detection-rule context to IOCs and malware.

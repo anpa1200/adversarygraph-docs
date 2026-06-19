@@ -6,6 +6,8 @@ sidebar_position: 15
 
 # Import MISP JSON
 
+## Draft
+
 **Level:** Intermediate
 
 **Goal:** Bring MISP event or attribute exports into IOC Library.

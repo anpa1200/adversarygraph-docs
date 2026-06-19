@@ -6,6 +6,8 @@ sidebar_position: 18
 
 # Compare Two Reports
 
+## Draft
+
 **Level:** Intermediate
 
 **Goal:** Assess whether two reports describe related activity.

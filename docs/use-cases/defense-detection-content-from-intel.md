@@ -6,6 +6,8 @@ sidebar_position: 29
 
 # Defense: Create Detection Content From CTI
 
+## Draft
+
 **Level:** Complex Platform Workflows
 
 **Goal:** Turn CTI findings into detection content candidates.

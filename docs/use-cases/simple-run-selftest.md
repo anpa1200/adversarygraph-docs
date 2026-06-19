@@ -6,6 +6,8 @@ sidebar_position: 8
 
 # Run Deployment Selftest
 
+## Draft
+
 **Level:** Simple
 
 **Goal:** Check whether the deployment is healthy before analysis.

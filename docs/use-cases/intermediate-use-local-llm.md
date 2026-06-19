@@ -6,6 +6,8 @@ sidebar_position: 20
 
 # Use A Local LLM For Private Reports
 
+## Draft
+
 **Level:** Intermediate
 
 **Goal:** Analyze sensitive content without public LLM routing.

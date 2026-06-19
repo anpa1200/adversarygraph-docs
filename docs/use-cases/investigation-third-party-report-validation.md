@@ -6,6 +6,8 @@ sidebar_position: 25
 
 # Investigation: Validate A Third-Party CTI Report
 
+## Draft
+
 **Level:** Complex Platform Workflows
 
 **Goal:** Validate a vendor or public CTI report before using it operationally.

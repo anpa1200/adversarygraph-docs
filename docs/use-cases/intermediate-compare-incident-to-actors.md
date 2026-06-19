@@ -6,6 +6,8 @@ sidebar_position: 12
 
 # Compare Incident TTPs To Actors
 
+## Draft
+
 **Level:** Intermediate
 
 **Goal:** Use TTP overlap to generate actor hypotheses.

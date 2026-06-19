@@ -6,6 +6,8 @@ sidebar_position: 16
 
 # Pull TAXII Or Import STIX
 
+## Draft
+
 **Level:** Intermediate
 
 **Goal:** Exchange structured intelligence with CTI platforms.

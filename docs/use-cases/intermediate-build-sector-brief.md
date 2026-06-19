@@ -6,6 +6,8 @@ sidebar_position: 13
 
 # Build A Sector Threat Brief
 
+## Draft
+
 **Level:** Intermediate
 
 **Goal:** Create a practical threat brief for one sector/customer.

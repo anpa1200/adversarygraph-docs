@@ -6,6 +6,8 @@ sidebar_position: 14
 
 # Enrich Actor IOCs
 
+## Draft
+
 **Level:** Intermediate
 
 **Goal:** Add current observable context to one actor profile.

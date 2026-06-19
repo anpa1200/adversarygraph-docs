@@ -6,6 +6,8 @@ sidebar_position: 22
 
 # Investigation: Cloud And Kubernetes Incident
 
+## Draft
+
 **Level:** Complex Platform Workflows
 
 **Goal:** Investigate a cloud/Kubernetes incident using sector, TTP, IOC, and detection context.

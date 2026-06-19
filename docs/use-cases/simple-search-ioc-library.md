@@ -6,6 +6,8 @@ sidebar_position: 4
 
 # Search The IOC Library
 
+## Draft
+
 **Level:** Simple
 
 **Goal:** Find whether an observable already exists in local or synced intelligence.

@@ -6,6 +6,8 @@ sidebar_position: 23
 
 # Investigation: Cluster Multiple APT Reports
 
+## Draft
+
 **Level:** Complex Platform Workflows
 
 **Goal:** Assess whether several reports belong to one campaign cluster.

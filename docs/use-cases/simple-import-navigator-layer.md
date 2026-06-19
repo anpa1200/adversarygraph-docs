@@ -6,6 +6,8 @@ sidebar_position: 6
 
 # Import A Navigator Layer
 
+## Draft
+
 **Level:** Simple
 
 **Goal:** Load an existing ATT&CK layer for review or comparison.

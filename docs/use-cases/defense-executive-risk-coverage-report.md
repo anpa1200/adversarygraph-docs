@@ -6,6 +6,8 @@ sidebar_position: 30
 
 # Defense: Executive Risk And Coverage Report
 
+## Draft
+
 **Level:** Complex Platform Workflows
 
 **Goal:** Produce an executive report showing threat relevance and coverage posture.
