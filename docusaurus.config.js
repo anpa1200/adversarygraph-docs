@@ -1,7 +1,7 @@
 // @ts-check
 const config = {
   title: 'AdversaryGraph Documentation — CTI-to-Detection Workbench | 1200km',
-  tagline: 'CTI-to-detection intelligence platform — investigate behavior, map ATT&CK evidence, compare overlap, and operationalize findings.',
+  tagline: 'Self-hosted CTI-to-detection intelligence platform — investigate behavior, map ATT&CK evidence, enrich observables, compare overlap, and operationalize findings.',
   favicon: 'img/favicon.png',
 
   url: 'https://1200km.com',
@@ -61,8 +61,9 @@ const config = {
       title: 'AdversaryGraph',
       logo: { alt: 'AdversaryGraph AI', src: 'img/adversarygraph-ai-icon-192.png' },
       items: [
-        { href: 'https://1200km.com/threat-matrix/', label: 'Live Workspace', position: 'left' },
         { type: 'docSidebar', sidebarId: 'docsSidebar', position: 'left', label: 'Docs' },
+        { to: '/full-flow', label: 'Get Started', position: 'left' },
+        { to: '/capabilities', label: 'Capabilities', position: 'left' },
         { to: '/api/overview', label: 'API', position: 'left' },
         {
           label: 'Projects',
@@ -90,12 +91,14 @@ const config = {
           items: [
             { label: 'Introduction', to: '/intro' },
             { label: 'Setup (10 min)', to: '/getting-started' },
+            { label: 'Full Deployment Flow', to: '/full-flow' },
             { label: 'Core Workflow', to: '/ai-analysis/overview' },
           ],
         },
         {
           title: 'Features',
           items: [
+            { label: 'Platform Capabilities', to: '/capabilities' },
             { label: 'Navigator', to: '/navigator/overview' },
             { label: 'Compare Modes', to: '/compare/overview' },
             { label: 'API Reference', to: '/api/overview' },
@@ -104,7 +107,6 @@ const config = {
         {
           title: 'Ecosystem',
           items: [
-            { label: 'AdversaryGraph Live Workspace', href: 'https://1200km.com/threat-matrix/' },
             { label: 'CTI Analyst Field Manual', href: 'https://1200km.com/cti-analyst-field-manual/' },
             { label: 'CTI as a Code', href: 'https://1200km.com/CTI_as_a_Code/' },
             { label: 'Operation Desert Hydra', href: 'https://1200km.com/operation-desert-hydra/' },

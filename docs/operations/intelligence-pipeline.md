@@ -62,8 +62,9 @@ Set `AUTH_ENABLED=true` in `.env`. Mutation endpoints require `admin` or `analys
 read. Collection runs, imports, enrichment, source changes, and rule generation are recorded in
 the Pipeline audit trail.
 
-## Public Web vs Docker
+## Self-Hosted Pipeline Boundary
 
-The public web Defense Hub exposes safe, static discovery across reports, detection resources,
-hunting references, and the wider 1200km ecosystem. Private ingestion, observables, enrichment,
-team identity, audit events, and AI analysis remain in the self-hosted Docker platform.
+Private ingestion, observables, enrichment, team identity, audit events, report history,
+feed state, and AI analysis belong in the self-hosted AdversaryGraph platform. Keep
+customer reports, internal IOCs, private feeds, and generated analysis inside the Docker
+deployment or another controlled environment.

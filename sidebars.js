@@ -1,6 +1,8 @@
 module.exports = {
   docsSidebar: [
     'intro',
+    'full-flow',
+    'capabilities',
     'getting-started',
     'functionality-parity',
     {

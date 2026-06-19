@@ -6,34 +6,28 @@ sidebar_position: 1
 
 # AdversaryGraph
 
-**Current release: v2.5.0** · [Project Hub](https://1200km.com/adversarygraph/) · [Public Web Workspace](https://1200km.com/threat-matrix/) · [1200km Article](https://1200km.com/articles/adversarygraph-v2-self-hosted-ai-cti-platform.html) · [GitHub](https://github.com/anpa1200/adversarygraph)
+**Current release: v2.5.4** · [Project Hub](https://1200km.com/adversarygraph/) · [1200km Article](https://1200km.com/articles/adversarygraph-v2-self-hosted-ai-cti-platform.html) · [GitHub](https://github.com/anpa1200/adversarygraph)
 
 AdversaryGraph is an AI-assisted CTI-to-detection workbench for mapping threat reports and IOC context to MITRE ATT&CK, comparing TTP overlap with known groups and campaigns, identifying detection gaps, and exporting analyst-ready outputs.
 
-Current release v2.5.0 adds the IOC Library, searchable multi-select actor filtering, VirusTotal IOC enrichment, STIX/TAXII import/export, MISP JSON import, custom IOC feeds, Sigma/YARA rule-feed sync, and sandbox behavior enrichment.
+Current release v2.5.x adds the IOC Library, searchable multi-select actor filtering, VirusTotal IOC enrichment, STIX/TAXII import/export, MISP JSON import, custom IOC feeds, Sigma/YARA rule-feed sync, sandbox behavior enrichment, selftest and troubleshooting support, and stronger IOC-to-TTP evidence priority.
 
 AdversaryGraph does not perform definitive attribution. TTP overlap and Jaccard similarity are analytical signals for hypothesis generation, prioritization, and further investigation.
 
 ## Start Here
 
 1. [Open the Project Hub](https://1200km.com/adversarygraph/)
-2. [Explore the Web Workspace](https://1200km.com/threat-matrix/)
-3. [Read the AI Analysis workflow](/ai-analysis/overview)
-4. [Review the visual guide](/visual-guide)
-5. [Read the 1200km article](https://1200km.com/articles/adversarygraph-v2-self-hosted-ai-cti-platform.html)
-6. [Review Group & Campaign Similarity](/compare/overview)
-7. [Deploy the Docker version](/getting-started)
+2. [Follow the full deployment flow](/full-flow)
+3. [Review all platform capabilities](/capabilities)
+4. [Read the AI Analysis workflow](/ai-analysis/overview)
+5. [Review the visual guide](/visual-guide)
+6. [Read the 1200km article](https://1200km.com/articles/adversarygraph-v2-self-hosted-ai-cti-platform.html)
+7. [Review Group & Campaign Similarity](/compare/overview)
 8. [Export reports and detection backlog](/generating-reports)
 
-## Public Web Workspace
+## Full Self-Hosted Platform
 
-The public Web workspace is browser-native and intended for exploration. It supports matrix exploration, manual TTP layers, group-profile comparison, local workspaces, ecosystem research, coverage-gap analysis, and browser-generated exports. It does not perform LLM report extraction or backend report storage.
-
-Do not upload confidential, customer-sensitive, classified, or internal reports to any public demo.
-
-## Full Docker Platform
-
-Use Docker for private AI-assisted report analysis, provider-configured LLM extraction, stored reports, campaign comparison, API access, PDF exports, and scheduled ATT&CK synchronization.
+Use Docker for private AI-assisted report analysis, provider-configured LLM extraction, stored reports, campaign comparison, IOC enrichment, feed management, API access, PDF exports, and scheduled ATT&CK/ATLAS synchronization.
 
 AdversaryGraph is self-hosted. In Docker mode, report content is sent only to the LLM provider configured by the operator. For fully private analysis, use a local or private LLM gateway.
 

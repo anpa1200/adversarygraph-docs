@@ -6,13 +6,9 @@ sidebar_position: 11
 
 # Security and Deployment
 
-## Public Web Workspace Security
+## Self-Hosted Deployment Security
 
-AdversaryGraph Web runs in the browser and is intended for public exploration. It does not perform LLM report extraction or backend report storage. Do not upload confidential, customer-sensitive, classified, or internal reports to any public demo.
-
-## Docker Deployment Security
-
-AdversaryGraph Docker is self-hosted. Report content is sent only to the LLM provider configured by the operator. For fully private analysis, use a local or private LLM gateway. Reports and analyses may be stored in PostgreSQL.
+AdversaryGraph is self-hosted. Report content is sent only to the LLM provider configured by the operator. For fully private analysis, use a local or private LLM gateway. Reports, IOCs, feed records, enrichment state, and analyses may be stored in PostgreSQL.
 
 Trusted-header authentication and `admin`, `analyst`, and `viewer` roles are supported when `AUTH_ENABLED=true`, but they depend on a correctly configured authenticating reverse proxy. Never expose trusted identity headers directly to clients.
 
