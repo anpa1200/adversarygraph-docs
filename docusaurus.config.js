@@ -64,6 +64,7 @@ const config = {
         { type: 'docSidebar', sidebarId: 'docsSidebar', position: 'left', label: 'Docs' },
         { to: '/full-flow', label: 'Get Started', position: 'left' },
         { to: '/capabilities', label: 'Capabilities', position: 'left' },
+        { to: '/use-cases', label: 'Use Cases', position: 'left' },
         { to: '/api/overview', label: 'API', position: 'left' },
         {
           label: 'Projects',

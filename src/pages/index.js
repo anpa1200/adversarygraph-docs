@@ -21,6 +21,7 @@ export default function Home() {
       <div style={{display:'flex',gap:'1rem',justifyContent:'center',flexWrap:'wrap'}}>
         <Link className="button button--primary button--lg" to="/full-flow">Get Started</Link>
         <Link className="button button--secondary button--lg" to="/capabilities">Capabilities</Link>
+        <Link className="button button--secondary button--lg" to="/use-cases">Use Cases</Link>
         <Link className="button button--secondary button--lg" to="/getting-started">Quick Setup</Link>
         <Link className="button button--secondary button--lg" href="https://1200km.com/adversarygraph/">Project Hub</Link>
       </div>
