@@ -6,7 +6,8 @@ sidebar_position: 7
 
 # Export A PDF Report
 
-## Draft
+![Export PDF Report workflow](/img/use-cases/usecase-07-export-pdf-report.gif)
+
 
 **Level:** Simple
 

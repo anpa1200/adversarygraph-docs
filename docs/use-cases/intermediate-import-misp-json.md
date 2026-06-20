@@ -6,7 +6,8 @@ sidebar_position: 15
 
 # Import MISP JSON
 
-## Draft
+![Import MISP JSON workflow](/img/use-cases/usecase-15-import-misp-json.gif)
+
 
 **Level:** Intermediate
 

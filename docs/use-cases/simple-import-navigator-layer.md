@@ -6,7 +6,8 @@ sidebar_position: 6
 
 # Import A Navigator Layer
 
-## Draft
+![Import Navigator Layer workflow](/img/use-cases/usecase-06-import-navigator-layer.gif)
+
 
 **Level:** Simple
 

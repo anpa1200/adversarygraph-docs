@@ -6,7 +6,8 @@ sidebar_position: 4
 
 # Search The IOC Library
 
-## Draft
+![Search IOC Library workflow](/img/use-cases/usecase-04-search-ioc-library.gif)
+
 
 **Level:** Simple
 

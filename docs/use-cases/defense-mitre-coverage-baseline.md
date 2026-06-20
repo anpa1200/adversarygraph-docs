@@ -6,8 +6,6 @@ sidebar_position: 26
 
 # Defense: Build MITRE Coverage Baseline
 
-## Draft
-
 **Level:** Complex Platform Workflows
 
 **Goal:** Create a baseline of current coverage across MITRE ATT&CK.

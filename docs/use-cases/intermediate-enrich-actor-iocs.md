@@ -6,7 +6,8 @@ sidebar_position: 14
 
 # Enrich Actor IOCs
 
-## Draft
+![Enrich Actor IOCs workflow](/img/use-cases/usecase-14-enrich-actor-iocs.gif)
+
 
 **Level:** Intermediate
 

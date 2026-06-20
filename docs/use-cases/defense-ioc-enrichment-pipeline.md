@@ -6,8 +6,6 @@ sidebar_position: 28
 
 # Defense: Build IOC Enrichment Pipeline
 
-## Draft
-
 **Level:** Complex Platform Workflows
 
 **Goal:** Create a repeatable SOC enrichment pipeline for incoming IOCs.

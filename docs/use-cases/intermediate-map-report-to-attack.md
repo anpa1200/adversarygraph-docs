@@ -6,7 +6,8 @@ sidebar_position: 11
 
 # Map A Report To ATT&CK
 
-## Draft
+![Map Report to ATT&CK workflow](/img/use-cases/usecase-11-map-report-to-attack.gif)
+
 
 **Level:** Intermediate
 

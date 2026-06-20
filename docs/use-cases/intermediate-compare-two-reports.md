@@ -6,7 +6,8 @@ sidebar_position: 18
 
 # Compare Two Reports
 
-## Draft
+![Compare Two Reports workflow](/img/use-cases/usecase-18-compare-two-reports.gif)
+
 
 **Level:** Intermediate
 

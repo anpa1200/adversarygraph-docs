@@ -6,7 +6,8 @@ sidebar_position: 8
 
 # Run Deployment Selftest
 
-## Draft
+![Run Deployment Selftest workflow](/img/use-cases/usecase-08-run-deployment-selftest.gif)
+
 
 **Level:** Simple
 

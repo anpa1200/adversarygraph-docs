@@ -6,7 +6,8 @@ sidebar_position: 3
 
 # Show Actor TTPs On The Matrix
 
-## Draft
+![Show Actor TTPs on Matrix workflow](/img/use-cases/usecase-03-show-actor-ttps-on-matrix.gif)
+
 
 **Level:** Simple
 

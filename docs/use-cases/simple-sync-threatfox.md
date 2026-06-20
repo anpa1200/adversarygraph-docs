@@ -6,8 +6,6 @@ sidebar_position: 5
 
 # Sync ThreatFox IOCs
 
-## Draft
-
 **Level:** Simple
 
 **Goal:** Refresh open-source IOC data for actor and malware context.

@@ -6,7 +6,8 @@ sidebar_position: 13
 
 # Build A Sector Threat Brief
 
-## Draft
+![Build Sector Threat Brief workflow](/img/use-cases/usecase-13-build-sector-threat-brief.gif)
+
 
 **Level:** Intermediate
 

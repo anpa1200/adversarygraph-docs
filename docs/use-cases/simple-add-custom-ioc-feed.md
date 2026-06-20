@@ -6,7 +6,8 @@ sidebar_position: 9
 
 # Add A Custom IOC Feed
 
-## Draft
+![Add Custom IOC Feed workflow](/img/use-cases/usecase-09-add-custom-ioc-feed.gif)
+
 
 **Level:** Simple
 

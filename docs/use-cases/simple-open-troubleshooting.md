@@ -6,8 +6,6 @@ sidebar_position: 10
 
 # Open Troubleshooting For An Error
 
-## Draft
-
 **Level:** Simple
 
 **Goal:** Move from a popup error to practical remediation.

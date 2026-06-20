@@ -6,7 +6,8 @@ sidebar_position: 12
 
 # Compare Incident TTPs To Actors
 
-## Draft
+![Compare Incident TTPs to Actors workflow](/img/use-cases/usecase-12-compare-incident-ttps-to-actors.gif)
+
 
 **Level:** Intermediate
 

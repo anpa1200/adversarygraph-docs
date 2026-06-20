@@ -6,7 +6,8 @@ sidebar_position: 1
 
 # Check One IOC
 
-## Draft
+![Check One IOC workflow](/img/use-cases/usecase-01-check-one-ioc.gif)
+
 
 **Level:** Simple
 

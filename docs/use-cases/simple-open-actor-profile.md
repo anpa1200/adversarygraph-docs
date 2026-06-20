@@ -6,7 +6,8 @@ sidebar_position: 2
 
 # Open One Actor Profile
 
-## Draft
+![Open Actor Profile workflow](/img/use-cases/usecase-02-open-actor-profile.gif)
+
 
 **Level:** Simple
 
