@@ -10,6 +10,124 @@ AdversaryGraph is a self-hosted CTI-to-detection platform. It connects reports, 
 
 The platform is designed for private analyst workstations, internal CTI teams, detection engineering teams, and controlled self-hosted deployments.
 
+## Visual Capability Tour
+
+The current v3 workflow adds a dedicated IOC Investigation workbench. The screenshots below show the main analyst path: submit an artifact, run Tier 1/Tier 2/Tier 3 pivots, review an AI-ready summary, inspect source evidence, map TTP leads, and pivot through a relationship graph.
+
+<figure>
+<img src="/adversarygraph-docs/img/adversarygraph-v3/08-ioc-investigation-workflow.gif" alt="Animated AdversaryGraph IOC Investigation workflow showing artifact submission, enrichment, evidence review, and relationship graph pivots" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Animated IOC Investigation workflow: artifact input, enrichment, summary, graph review, and pivot actions.</figcaption>
+</figure>
+
+<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))', gap: '16px', margin: '24px 0'}}>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/adversarygraph-v3/01-ioc-investigation-empty-form.png" alt="IOC Investigation input form with Tier 1 and Tier 2 depth selection, LLM selector, AI summary checkbox, and investigation target list" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Start from one IP, domain, URL, hash, or suspicious artifact.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/adversarygraph-v3/02-ioc-investigation-saved-history.png" alt="IOC Investigation page showing previous investigation history and saved suspicious artifacts" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Previous investigations are saved locally and can be reopened or deleted.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/adversarygraph-v3/03-ioc-investigation-summary.png" alt="IOC Investigation result with suspicious score, IOC type, AI-readable narrative summary, and evidence context" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Structured verdict and narrative summary for client-ready investigation notes.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/adversarygraph-v3/04-evidence-ranking-timeline-conflicts.png" alt="IOC Investigation evidence ranking, next pivots, source timeline, and source conflict panels" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Evidence ranking, next pivots, timeline, and source conflict review.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/adversarygraph-v3/05-urlscan-activity-ttp-leads.png" alt="urlscan activity analysis showing suspicious domain behavior, risk observations, and ATT&CK TTP leads" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>urlscan activity analysis with TTP leads and suspicious behavior notes.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/adversarygraph-v3/06-relationship-graph-node-panel.png" alt="Relationship graph with selected node panel, connected node action, investigate from node action, and node explanation cards" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Relationship graph for Tier 1, Tier 2, and Tier 3 source-backed pivots.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/adversarygraph-v3/07-focused-actor-node.png" alt="Focused relationship graph view showing an actor lead node connected to a root IOC with node meaning, maliciousness, TTP, and actor explanation panels" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Focused node review explains relationship meaning, maliciousness, TTP leads, and actor leads.</figcaption>
+</figure>
+</div>
+
+### Core Platform Screens
+
+<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))', gap: '16px', margin: '24px 0'}}>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/screenshots/15_upload_report.png" alt="AI Analysis upload screen for PDF DOCX and TXT reports" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>AI report intake from PDF, DOCX, TXT, and pasted report text.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/screenshots/17_results_techniques.png" alt="AI Analysis results showing extracted ATTACK techniques with evidence and review states" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Technique extraction with evidence, confidence, and analyst review state.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/screenshots/21_inject_navigator.png" alt="Action to inject AI extracted techniques into the Navigator as My TTPs" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Inject accepted analysis results into Navigator as My TTPs.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/screenshots/25_navigator_layers.png" alt="Navigator layer workflow with selected TTPs and ATTACK matrix coverage" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Navigator layers, selected TTPs, matrix coverage, and overlay work.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/screenshots/27_compare_groups1.png" alt="Group comparison screen showing overlap between selected techniques and threat actors" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Compare selected techniques with actor and group behavior.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/screenshots/31_compare_reports.png" alt="Report comparison workflow for overlap between stored analysis sessions" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Compare stored report sessions to find shared and unique behavior.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/screenshots/33_generating_reports.png" alt="Investigation report generation screen with selected sections and export controls" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Generate local or AI-assisted reports for analyst handoff.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/screenshots/34_ai_chat_assistant.png" alt="AI chat assistant for CTI investigation and ATTACK mapping questions" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>AI assistant for CTI questions, mapping support, and report refinement.</figcaption>
+</figure>
+</div>
+
+### Animated Use-Case Workflows
+
+<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))', gap: '16px', margin: '24px 0'}}>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/use-cases/usecase-01-check-one-ioc.gif" alt="Animated use case showing one IOC lookup workflow" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Check one IOC and inspect enrichment quickly.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/use-cases/usecase-04-search-ioc-library.gif" alt="Animated use case showing IOC Library search and filtering" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Search and filter the IOC Library by type, source, and actor.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/use-cases/usecase-08-run-deployment-selftest.gif" alt="Animated use case showing selftest popup and enabled API status" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Run deployment selftest and review API/feed readiness.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/use-cases/usecase-11-map-report-to-attack.gif" alt="Animated use case showing AI report mapping to ATTACK techniques" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Map a report to ATT&amp;CK techniques with evidence.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/use-cases/usecase-12-compare-incident-ttps-to-actors.gif" alt="Animated use case showing TTP comparison between an incident and threat actors" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Compare incident TTPs to actor behavior without overclaiming attribution.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/use-cases/usecase-13-build-sector-threat-brief.gif" alt="Animated use case showing sector threat brief creation" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Build a sector-specific threat brief for customer context.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/use-cases/usecase-14-enrich-actor-iocs.gif" alt="Animated use case showing actor IOC enrichment workflow" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Enrich actor IOCs and review source-backed context.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/use-cases/usecase-15-import-misp-json.gif" alt="Animated use case showing MISP JSON import into AdversaryGraph" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Import MISP JSON into the local IOC and feed workflow.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/use-cases/usecase-18-compare-two-reports.gif" alt="Animated use case showing comparison between two CTI reports" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Compare two reports to identify shared and unique techniques.</figcaption>
+</figure>
+</div>
+
 ## Capability Summary
 
 | Area | What It Provides |
