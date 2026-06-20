@@ -136,9 +136,12 @@ The current v3 workflow adds a dedicated IOC Investigation workbench. The screen
 | ATT&CK/ATLAS Navigator | Explore matrices, build My TTPs, overlay actors/campaigns, import/export layers |
 | Actor intelligence | Browse ATT&CK groups, aliases, descriptions, techniques, campaigns, reports, IOCs, platforms, and tactic coverage |
 | Sector intelligence | Rank actors by sector, region, technology/environment, and activity window |
+| IOC Investigation | Run Tier 1/Tier 2/Tier 3 pivots from one IP, domain, URL, hash, or suspicious artifact |
 | IOC Library | Search, filter, sort, enrich, export, and map indicators to actors and TTPs |
+| AI log and PCAP analysis | Extract IPs, domains, URLs, hashes, command lines, PowerShell, functions, suspicious activity, IOCs, and TTP leads from logs and packet captures |
 | Enrichment | VirusTotal, ThreatFox, OTX, Malpedia, MISP Galaxy, custom feeds, sandbox behavior, Sigma/YARA context |
 | Feed management | Central reference, IOC, rule, behavior, STIX/TAXII, MISP, and custom feed sync |
+| OpenCTI sync | Pull OpenCTI indicators, observables, reports, labels, and context; push AdversaryGraph indicators and reports back through the OpenCTI workflow |
 | IOC-to-TTP mapping | Prioritized evidence model: strict source first, enrichment metadata second, optional AI last |
 | Comparison | Compare selected TTPs to groups, campaigns, and stored reports |
 | DFIR examples | Indexed public DFIR examples for training and controlled analysis workflows |
@@ -256,6 +259,67 @@ Actor cards include buttons for:
 - IOC view
 - show relevant TTPs on the matrix
 
+## IOC Investigation
+
+IOC Investigation is the v3 artifact investigation workbench. It starts from one observable or suspicious artifact and expands the context into a structured, reviewable investigation.
+
+Supported inputs:
+
+- IP address
+- domain
+- URL
+- MD5
+- SHA1
+- SHA256
+- suspicious artifact string
+
+Investigation depth:
+
+- Tier 1: direct enrichment from configured sources
+- Tier 2: first-level connected pivots from source-backed relationships
+- Tier 3: deeper relationship expansion for infrastructure, actor, malware, tag, and behavior pivots
+
+Connected sources and pivots include:
+
+- local IOC database
+- VirusTotal
+- ThreatFox
+- AlienVault OTX
+- urlscan.io
+- GreyNoise Community
+- AbuseIPDB
+- Shodan
+- Censys host and web-property lookup
+- MalwareBazaar for hash-focused malware context
+- OpenCTI-imported indicators, reports, and labels
+- custom feeds
+- MISP and STIX/TAXII imports
+
+Investigation outputs:
+
+- IOC type and normalized artifact
+- suspiciousness score and verdict explanation
+- source-by-source enrichment status
+- relationship graph
+- Tier 1/Tier 2/Tier 3 nodes and edges
+- clickable nodes with reinvestigation actions
+- evidence ranking
+- next best pivots
+- source timeline
+- source conflict review
+- ATT&CK TTP leads
+- actor/APT leads when source evidence exists
+- kill-chain and tactic coverage
+- AI-readable investigation summary
+- saved previous investigations with delete support
+
+Important handling rules:
+
+- Actor leads are treated as leads, not attribution.
+- TTP leads are source-backed when possible and marked as possible when inferred from context.
+- Generic tags are hidden from the default graph to keep the view analyst-focused.
+- Every node can be opened or reinvestigated as a new starting point.
+
 ## IOC Library
 
 The IOC Library is the central observable workspace.
@@ -321,6 +385,65 @@ Available actions:
 - show discovered TTPs on the matrix
 - open linked actor page when matched
 
+## AI Log And PCAP Analysis
+
+AI Log and PCAP Analysis turns raw technical evidence into structured investigation inputs.
+
+Supported analysis targets:
+
+- plain logs
+- EDR-style event exports
+- proxy logs
+- DNS logs
+- firewall logs
+- authentication logs
+- PowerShell logs
+- command-line traces
+- shell history
+- suspicious process trees
+- packet capture summaries
+- extracted PCAP metadata
+- Zeek-style network logs when provided as text or uploaded files
+
+The workflow extracts:
+
+- IP addresses
+- domains
+- URLs
+- file hashes
+- usernames and hosts
+- process names
+- command lines
+- PowerShell commands
+- encoded payload indicators
+- suspicious functions or script blocks
+- beaconing and C2-like patterns
+- lateral movement indicators
+- exfiltration hints
+- malware or tool references
+
+The output can be used for:
+
+- IOC enrichment
+- IOC Investigation
+- ATT&CK mapping
+- Navigator coverage review
+- comparison against actor behavior
+- detection-rule planning
+- PDF/Markdown/TXT investigation reports
+
+Generated findings include:
+
+- likely malicious or suspicious activity
+- why the behavior is suspicious
+- extracted IOC list
+- possible TTPs with evidence notes
+- possible kill-chain phase
+- actor or malware leads only when supported by source context
+- recommended next pivots
+
+The AI result is a triage aid. It should be validated against raw logs, packet evidence, timestamps, and source telemetry before operational decisions.
+
 ## ThreatFox, OTX, Malpedia, And MISP Galaxy
 
 ThreatFox:
@@ -379,6 +502,47 @@ Structured CTI workflows include:
 - keep local source attribution on imported records
 
 This allows AdversaryGraph to sit before or beside a CTI platform: analysts can review, enrich, and validate before promoting data elsewhere.
+
+## OpenCTI Symmetric Sync
+
+OpenCTI integration is a bidirectional CTI workflow between AdversaryGraph and an OpenCTI instance.
+
+Pull from OpenCTI:
+
+- indicators
+- observables
+- reports
+- labels/tags
+- report descriptions
+- STIX-pattern indicators
+- source metadata
+- imported report context
+
+Push to OpenCTI:
+
+- local AdversaryGraph indicators
+- completed reports
+- STIX-compatible indicator objects
+- source labels identifying AdversaryGraph-originated data
+- report summaries suitable for OpenCTI review
+
+Sync modes:
+
+- check OpenCTI connection
+- pull from OpenCTI
+- push to OpenCTI
+- bidirectional sync
+
+Operational controls:
+
+- configurable `OPENCTI_URL`
+- configurable `OPENCTI_TOKEN`
+- configurable sync limit
+- connection status displayed in Feeds Management
+- sync result JSON showing inserted, updated, imported, pushed, skipped, and error counts
+- errors are shown through the platform error popup with troubleshooting links
+
+Use this when OpenCTI is the team CTI system of record and AdversaryGraph is the local analysis, enrichment, ATT&CK mapping, and report-preparation workbench.
 
 ## YARA, Sigma, And Sandbox Behavior
 
