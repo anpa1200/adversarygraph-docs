@@ -77,6 +77,20 @@ OTX_API_KEY=
 # VirusTotal on-demand IOC reputation and relationship lookup
 VIRUSTOTAL_API_KEY=
 
+# IOC Investigation pivots
+URLSCAN_API_KEY=
+GREYNOISE_API_KEY=
+SHODAN_API_KEY=
+ABUSEIPDB_API_KEY=
+CENSYS_API_KEY=
+CENSYS_ORG_ID=
+
+# OpenCTI symmetric sync
+OPENCTI_URL=
+OPENCTI_TOKEN=
+OPENCTI_SYNC_LIMIT=500
+OPENCTI_VERIFY_TLS=true
+
 # Daily dynamic DB refresh schedule in UTC
 DYNAMIC_DB_SYNC_HOUR=3
 DYNAMIC_DB_SYNC_MINUTE=30
@@ -233,7 +247,22 @@ The enrichment view can show:
 - actions to add relevant TTPs to My TTPs
 - actions to show relevant TTPs on the matrix
 
-## 12. Run The First Report Analysis
+## 12. Run The First IOC Investigation
+
+Open:
+
+```text
+http://localhost:3000/ioc-investigation
+```
+
+Submit an IP, domain, URL, hash, or suspicious artifact. Use Tier 1 / Tier 2
+for fast triage and Tier 3 when you need broader pivoting. Optional AI summary
+generation turns the gathered evidence into a report-ready analyst narrative.
+
+For the complete end-to-end example, see:
+[From Log to Report: IOC Investigation With AdversaryGraph](https://1200km.com/articles/adversarygraph-from-log-to-report-ioc-investigation.html).
+
+## 13. Run The First Report Analysis
 
 Open:
 
@@ -253,7 +282,7 @@ Choose a configured provider:
 
 Review every mapping. Accept only mappings supported by behavior evidence.
 
-## 13. Move Findings To The Matrix
+## 14. Move Findings To The Matrix
 
 After report analysis or IOC enrichment:
 
@@ -263,7 +292,7 @@ After report analysis or IOC enrichment:
 4. Overlay actor or campaign profiles.
 5. Export ATT&CK Navigator JSON if needed.
 
-## 14. Compare Against Actors, Campaigns, And Reports
+## 15. Compare Against Actors, Campaigns, And Reports
 
 Use Compare workflows to answer:
 
@@ -275,7 +304,7 @@ Use Compare workflows to answer:
 
 Similarity is an investigation lead, not attribution proof.
 
-## 15. Export Outputs
+## 16. Export Outputs
 
 Export analyst-ready deliverables:
 
@@ -286,7 +315,7 @@ Export analyst-ready deliverables:
 - CSV IOC exports
 - detection backlog material
 
-## 16. Operate The Platform
+## 17. Operate The Platform
 
 Regular operator workflow:
 

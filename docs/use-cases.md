@@ -12,6 +12,9 @@ This page organizes AdversaryGraph workflows into three levels:
 - **10 intermediate use cases**: three to five steps for structured CTI, SOC, and detection tasks.
 - **10 complex platform workflows**: full workflows using multiple modules. Five are investigation workflows and five are defense / MITRE coverage workflows.
 
+For a complete v3 walkthrough, read the public 1200km workflow article:
+[From Log to Report: IOC Investigation With AdversaryGraph](https://1200km.com/articles/adversarygraph-from-log-to-report-ioc-investigation.html).
+
 ## Simple Use Cases
 
 1. [Check One IOC](/use-cases/simple-check-an-ioc) - Check whether one IP, domain, URL, or hash has useful enrichment context.
@@ -45,14 +48,15 @@ This page organizes AdversaryGraph workflows into three levels:
 23. [Investigation: Cluster Multiple APT Reports](/use-cases/investigation-apt-campaign-cluster) - Assess whether several reports belong to one campaign cluster.
 24. [Investigation: Malware Family Behavior Mapping](/use-cases/investigation-malware-family) - Build an ATT&CK and IOC profile for a malware family.
 25. [Investigation: Validate A Third-Party CTI Report](/use-cases/investigation-third-party-report-validation) - Validate a vendor or public CTI report before using it operationally.
+26. [Investigation: From Log To Report](https://1200km.com/articles/adversarygraph-from-log-to-report-ioc-investigation.html) - Turn synthetic firewall and EDR telemetry into IOC extraction, enrichment, relationship graph review, ATT&CK leads, and an AI-assisted report.
 
 ## Complex Defense And MITRE Coverage Workflows
 
-26. [Defense: Build MITRE Coverage Baseline](/use-cases/defense-mitre-coverage-baseline) - Create a baseline of current coverage across MITRE ATT&CK.
-27. [Defense: Create Sector-Based Detection Roadmap](/use-cases/defense-sector-detection-roadmap) - Create a detection roadmap for a sector/customer environment.
-28. [Defense: Build IOC Enrichment Pipeline](/use-cases/defense-ioc-enrichment-pipeline) - Create a repeatable SOC enrichment pipeline for incoming IOCs.
-29. [Defense: Create Detection Content From CTI](/use-cases/defense-detection-content-from-intel) - Turn CTI findings into detection content candidates.
-30. [Defense: Executive Risk And Coverage Report](/use-cases/defense-executive-risk-coverage-report) - Produce an executive report showing threat relevance and coverage posture.
+27. [Defense: Build MITRE Coverage Baseline](/use-cases/defense-mitre-coverage-baseline) - Create a baseline of current coverage across MITRE ATT&CK.
+28. [Defense: Create Sector-Based Detection Roadmap](/use-cases/defense-sector-detection-roadmap) - Create a detection roadmap for a sector/customer environment.
+29. [Defense: Build IOC Enrichment Pipeline](/use-cases/defense-ioc-enrichment-pipeline) - Create a repeatable SOC enrichment pipeline for incoming IOCs.
+30. [Defense: Create Detection Content From CTI](/use-cases/defense-detection-content-from-intel) - Turn CTI findings into detection content candidates.
+31. [Defense: Executive Risk And Coverage Report](/use-cases/defense-executive-risk-coverage-report) - Produce an executive report showing threat relevance and coverage posture.
 
 
 ## Selection Guide

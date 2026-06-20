@@ -6,7 +6,7 @@ sidebar_position: 1
 
 # AI Analysis
 
-This is the core feature. Upload a threat report — or paste raw text — and AdversaryGraph extracts every ATT&CK technique the LLM identifies, with evidence snippets and confidence scores, in real time.
+This is the core feature. Upload a threat report, paste raw text, or submit log / PCAP-derived telemetry and AdversaryGraph extracts ATT&CK technique candidates, IOCs, suspicious commands, evidence snippets, and confidence signals in real time.
 
 ## Supported Input Formats
 
@@ -15,7 +15,7 @@ This is the core feature. Upload a threat report — or paste raw text — and A
 | `.pdf` | Text extraction via PyMuPDF |
 | `.docx` | Text extraction via python-docx |
 | `.txt` | Plain text, raw paste |
-| Paste area | Raw text, Slack messages, SIEM alerts, vendor advisories |
+| Paste area | Raw text, Slack messages, SIEM alerts, vendor advisories, firewall logs, EDR logs, and PCAP-derived text exports |
 
 Maximum file size: 50 MB.
 
@@ -94,6 +94,19 @@ Click **→ Inject into Navigator** to push all extracted techniques into your l
 - See the techniques highlighted on the full ATT&CK matrix
 - Overlay a group profile to visualise the behavioural overlap
 - Export as ATT&CK Navigator JSON or PDF
+
+## From Log To Report
+
+The v3 workflow can start from synthetic or real operational telemetry rather than a finished CTI report:
+
+1. Paste firewall, EDR, proxy, SIEM, or PCAP-derived text into AI Analysis.
+2. Extract IPs, domains, URLs, hashes, suspicious processes, PowerShell, command lines, and technique leads.
+3. Send extracted IOCs into IOC Investigation for Tier 1 / Tier 2 / Tier 3 pivots.
+4. Review the relationship graph, evidence ranking, source conflicts, actor leads, and ATT&CK leads.
+5. Generate a local or AI-assisted investigation report.
+
+Read the complete public walkthrough:
+[From Log to Report: IOC Investigation With AdversaryGraph](https://1200km.com/articles/adversarygraph-from-log-to-report-ioc-investigation.html).
 
 ## Download PDF Report
 
