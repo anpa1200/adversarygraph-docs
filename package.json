@@ -1,6 +1,6 @@
 {
   "name": "adversarygraph-docs",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "private": true,
   "description": "Documentation for AdversaryGraph, a self-hosted AI-assisted ATT&CK mapping, IOC enrichment, feed synchronization, and CTI-to-detection platform.",
   "scripts": {

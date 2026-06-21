@@ -13,7 +13,7 @@ This page organizes AdversaryGraph workflows into three levels:
 - **10 complex platform workflows**: full workflows using multiple modules. Five are investigation workflows and five are defense / MITRE coverage workflows.
 
 For a complete v3 walkthrough, read the public 1200km workflow article:
-[From Log to Report: IOC Investigation With AdversaryGraph](https://1200km.com/articles/adversarygraph-from-log-to-report-ioc-investigation.html).
+[From Log to Report: Using AdversaryGraph to Turn Firewall and EDR Noise Into a CTI Investigation](https://1200km.com/articles/adversarygraph-from-log-to-report-ioc-investigation.html).
 
 ## Simple Use Cases
 
@@ -43,20 +43,19 @@ For a complete v3 walkthrough, read the public 1200km workflow article:
 
 ## Complex Investigation Workflows
 
-21. [Investigation: Ransomware Intrusion Triage](/use-cases/investigation-ransomware-intrusion) - Investigate a ransomware report from intake to actor hypothesis and detection handoff.
+21. [Investigation: From Log To Report](/use-cases/investigation-ransomware-intrusion) - Turn firewall and EDR telemetry into IOC extraction, enrichment, relationship graph review, an Investigation workspace, ATT&CK leads, actor-overlap hypotheses, and an AI-assisted report.
 22. [Investigation: Cloud And Kubernetes Incident](/use-cases/investigation-cloud-incident) - Investigate a cloud/Kubernetes incident using sector, TTP, IOC, and detection context.
 23. [Investigation: Cluster Multiple APT Reports](/use-cases/investigation-apt-campaign-cluster) - Assess whether several reports belong to one campaign cluster.
 24. [Investigation: Malware Family Behavior Mapping](/use-cases/investigation-malware-family) - Build an ATT&CK and IOC profile for a malware family.
 25. [Investigation: Validate A Third-Party CTI Report](/use-cases/investigation-third-party-report-validation) - Validate a vendor or public CTI report before using it operationally.
-26. [Investigation: From Log To Report](https://1200km.com/articles/adversarygraph-from-log-to-report-ioc-investigation.html) - Turn synthetic firewall and EDR telemetry into IOC extraction, enrichment, relationship graph review, ATT&CK leads, and an AI-assisted report.
 
 ## Complex Defense And MITRE Coverage Workflows
 
-27. [Defense: Build MITRE Coverage Baseline](/use-cases/defense-mitre-coverage-baseline) - Create a baseline of current coverage across MITRE ATT&CK.
-28. [Defense: Create Sector-Based Detection Roadmap](/use-cases/defense-sector-detection-roadmap) - Create a detection roadmap for a sector/customer environment.
-29. [Defense: Build IOC Enrichment Pipeline](/use-cases/defense-ioc-enrichment-pipeline) - Create a repeatable SOC enrichment pipeline for incoming IOCs.
-30. [Defense: Create Detection Content From CTI](/use-cases/defense-detection-content-from-intel) - Turn CTI findings into detection content candidates.
-31. [Defense: Executive Risk And Coverage Report](/use-cases/defense-executive-risk-coverage-report) - Produce an executive report showing threat relevance and coverage posture.
+26. [Defense: Build MITRE Coverage Baseline](/use-cases/defense-mitre-coverage-baseline) - Create a baseline of current coverage across MITRE ATT&CK.
+27. [Defense: Create Sector-Based Detection Roadmap](/use-cases/defense-sector-detection-roadmap) - Create a detection roadmap for a sector/customer environment.
+28. [Defense: Build IOC Enrichment Pipeline](/use-cases/defense-ioc-enrichment-pipeline) - Create a repeatable SOC enrichment pipeline for incoming IOCs.
+29. [Defense: Create Detection Content From CTI](/use-cases/defense-detection-content-from-intel) - Turn CTI findings into detection content candidates.
+30. [Defense: Executive Risk And Coverage Report](/use-cases/defense-executive-risk-coverage-report) - Produce an executive report showing threat relevance and coverage posture.
 
 
 ## Selection Guide

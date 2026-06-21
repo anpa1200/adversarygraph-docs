@@ -14,6 +14,34 @@ The platform is designed for private analyst workstations, internal CTI teams, d
 
 The current v3 workflow adds a dedicated IOC Investigation workbench. The screenshots below show the main analyst path: submit an artifact, run Tier 1/Tier 2/Tier 3 pivots, review an AI-ready summary, inspect source evidence, map TTP leads, and pivot through a relationship graph.
 
+### From Log To Report Workflow
+
+The published workflow shows how AdversaryGraph turns firewall and EDR telemetry into a complete investigation: separate log analysis runs, source-tagged IOCs, suspicious behavior rows, ATT&CK technique leads, IOC enrichment, relationship graph pivots, matrix review, actor-overlap hypotheses, AI summary, and final report generation.
+
+<figure>
+<img src="/adversarygraph-docs/img/from-log-to-report/04-full-flow-presentation.gif" alt="Animated From Log to Report workflow in AdversaryGraph" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>From Log To Report: create an investigation, analyze firewall and EDR logs separately, enrich IOCs, review graph pivots, compare TTPs, and produce a report.</figcaption>
+</figure>
+
+<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))', gap: '16px', margin: '24px 0'}}>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/from-log-to-report/16-investigation-workspace.png" alt="Investigation workspace with log analysis, suspicious behaviors, TTPs, and IOCs" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Investigation workspace consolidates log analysis, suspicious behavior, TTPs, and IOCs.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/from-log-to-report/14-ioc-investigation-graph.png" alt="IOC Investigation relationship graph with source-backed pivots" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>IOC relationship graph links source-backed pivots and context nodes.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/from-log-to-report/20-final-report-preview.png" alt="Final investigation report preview generated from AdversaryGraph evidence" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Final report preview for analyst handoff.</figcaption>
+</figure>
+</div>
+
+Read the complete workflow: [From Log to Report: Using AdversaryGraph](https://1200km.com/articles/adversarygraph-from-log-to-report-ioc-investigation.html).
+
+### IOC Investigation Workflow
+
 <figure>
 <img src="/adversarygraph-docs/img/adversarygraph-v3/08-ioc-investigation-workflow.gif" alt="Animated AdversaryGraph IOC Investigation workflow showing artifact submission, enrichment, evidence review, and relationship graph pivots" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
 <figcaption>Animated IOC Investigation workflow: artifact input, enrichment, summary, graph review, and pivot actions.</figcaption>

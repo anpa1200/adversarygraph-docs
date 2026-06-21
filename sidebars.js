@@ -35,11 +35,6 @@ module.exports = {
         'use-cases/investigation-apt-campaign-cluster',
         'use-cases/investigation-malware-family',
         'use-cases/investigation-third-party-report-validation',
-        {
-          type: 'link',
-          label: 'Investigation: From Log To Report',
-          href: 'https://1200km.com/articles/adversarygraph-from-log-to-report-ioc-investigation.html',
-        },
         'use-cases/defense-mitre-coverage-baseline',
         'use-cases/defense-sector-detection-roadmap',
         'use-cases/defense-ioc-enrichment-pipeline',

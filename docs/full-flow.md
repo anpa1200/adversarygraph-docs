@@ -260,9 +260,32 @@ for fast triage and Tier 3 when you need broader pivoting. Optional AI summary
 generation turns the gathered evidence into a report-ready analyst narrative.
 
 For the complete end-to-end example, see:
-[From Log to Report: IOC Investigation With AdversaryGraph](https://1200km.com/articles/adversarygraph-from-log-to-report-ioc-investigation.html).
+[From Log to Report: Using AdversaryGraph to Turn Firewall and EDR Noise Into a CTI Investigation](https://1200km.com/articles/adversarygraph-from-log-to-report-ioc-investigation.html).
 
-## 13. Run The First Report Analysis
+![From Log to Report workflow in AdversaryGraph](/img/from-log-to-report/04-full-flow-presentation.gif)
+
+## 13. Build An Investigation-Centered Report
+
+Open:
+
+```text
+http://localhost:3000/report
+```
+
+Use the Investigation page as the case workspace:
+
+1. Create a new investigation.
+2. Upload or paste one log source into AI Analysis Log / PCAP mode, for example firewall logs.
+3. Add that analysis result to the investigation.
+4. Run the next log source separately, for example EDR logs, and add that result to the same investigation.
+5. Run additional IOC investigations and add useful results to the same investigation.
+6. Review the structured investigation buckets: logs, reports, TTP layer, IOC list, evidence nodes, and timeline.
+7. Send the investigation TTP layer to the matrix.
+8. Compare the investigation TTP layer with threat actors and save the result to the investigation.
+9. Generate an AI summary of the whole investigation.
+10. Generate the final investigation report and export it as PDF, Markdown, or TXT.
+
+## 14. Run The First Report Analysis
 
 Open:
 

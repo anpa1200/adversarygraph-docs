@@ -95,18 +95,27 @@ Click **→ Inject into Navigator** to push all extracted techniques into your l
 - Overlay a group profile to visualise the behavioural overlap
 - Export as ATT&CK Navigator JSON or PDF
 
-## From Log To Report
+## From Log to Report
 
 The v3 workflow can start from synthetic or real operational telemetry rather than a finished CTI report:
 
-1. Paste firewall, EDR, proxy, SIEM, or PCAP-derived text into AI Analysis.
-2. Extract IPs, domains, URLs, hashes, suspicious processes, PowerShell, command lines, and technique leads.
-3. Send extracted IOCs into IOC Investigation for Tier 1 / Tier 2 / Tier 3 pivots.
-4. Review the relationship graph, evidence ranking, source conflicts, actor leads, and ATT&CK leads.
-5. Generate a local or AI-assisted investigation report.
+![Animated firewall log analysis in AdversaryGraph Log / PCAP mode](/img/from-log-to-report/06-analyze-firewall-logs.gif)
+
+1. Create or open an Investigation workspace.
+2. Open AI Analysis and select Log / PCAP mode.
+3. Analyze one source at a time: firewall logs first, then EDR logs as a separate run. No manual prompt is needed; the mode uses a built-in AdversaryGraph system prompt.
+4. Add each AI analysis result to the active investigation.
+5. Send extracted IOCs into IOC Investigation for Tier 1 / Tier 2 / Tier 3 pivots.
+6. Add useful IOC Investigation results to the same investigation.
+7. Create a Navigator-like layer from all investigation TTPs and send it to the matrix.
+8. Compare the investigation TTP layer with threat actors and save the overlap result to the investigation.
+9. Generate an AI summary of the whole investigation.
+10. Create a local or AI-assisted investigation report and export it.
+
+![Investigation workspace with log analysis results, suspicious behaviors, TTPs, and IOCs](/img/from-log-to-report/16-investigation-workspace.png)
 
 Read the complete public walkthrough:
-[From Log to Report: IOC Investigation With AdversaryGraph](https://1200km.com/articles/adversarygraph-from-log-to-report-ioc-investigation.html).
+[From Log to Report: Using AdversaryGraph to Turn Firewall and EDR Noise Into a CTI Investigation](https://1200km.com/articles/adversarygraph-from-log-to-report-ioc-investigation.html).
 
 ## Download PDF Report
 
