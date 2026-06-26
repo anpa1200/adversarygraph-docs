@@ -13,12 +13,11 @@ const features = [
 
 export default function Home() {
   return <Layout title="AdversaryGraph Documentation — CTI-to-Detection Workbench | 1200km" description="Documentation for AdversaryGraph AI, a self-hosted CTI-to-detection platform for AI-assisted ATT&CK mapping, IOC enrichment, feed synchronization, and detection engineering handoff.">
-    <header className="hero hero--adversarygraph"><div className="container" style={{textAlign:'center',padding:'4rem 1rem 3rem'}}>
-      <img src="/adversarygraph-docs/img/adversarygraph-ai-banner.png" alt="AdversaryGraph AI" style={{maxWidth:'760px',width:'100%',borderRadius:'8px',marginBottom:'2rem'}} />
+    <header className="hero hero--adversarygraph"><div className="container hero--adversarygraph__content">
       <h1 className="hero__title">AdversaryGraph Documentation</h1>
       <p className="hero__subtitle">AI-assisted CTI-to-detection workbench for ATT&amp;CK mapping, group and campaign similarity, detection-gap analysis, and analyst-ready outputs.</p>
       <p>AdversaryGraph assists analysts but does not replace analyst validation. TTP overlap is an investigation lead, not attribution proof.</p>
-      <div style={{display:'flex',gap:'1rem',justifyContent:'center',flexWrap:'wrap'}}>
+      <div className="hero-actions">
         <Link className="button button--primary button--lg" to="/full-flow">Get Started</Link>
         <Link className="button button--secondary button--lg" to="/capabilities">Capabilities</Link>
         <Link className="button button--secondary button--lg" to="/use-cases">Use Cases</Link>

@@ -62,10 +62,10 @@ const config = {
       logo: { alt: 'AdversaryGraph AI', src: 'img/adversarygraph-ai-icon-192.png' },
       items: [
         { type: 'docSidebar', sidebarId: 'docsSidebar', position: 'left', label: 'Docs' },
-        { to: '/platform-guide', label: 'Platform Guide', position: 'left' },
-        { to: '/full-flow', label: 'Get Started', position: 'left' },
+        { to: '/platform-guide', label: 'Platform', position: 'left' },
+        { to: '/full-flow', label: 'Start', position: 'left' },
         { to: '/capabilities', label: 'Capabilities', position: 'left' },
-        { to: '/malware-analysis', label: 'Malware Analysis', position: 'left' },
+        { to: '/malware-analysis', label: 'Malware', position: 'left' },
         { to: '/use-cases', label: 'Use Cases', position: 'left' },
         { to: '/api/overview', label: 'API', position: 'left' },
         {
@@ -83,7 +83,7 @@ const config = {
         },
         { href: 'https://medium.com/@1200km', label: 'Medium', position: 'right' },
         { href: 'https://github.com/anpa1200/adversarygraph', label: 'GitHub', position: 'right' },
-        { href: 'https://1200km.com/', label: 'Main Page', position: 'right', className: 'navbar-portfolio-btn' },
+        { href: 'https://1200km.com/', label: 'Main', position: 'right', className: 'navbar-portfolio-btn' },
       ],
     },
     footer: {
