@@ -1,7 +1,7 @@
 // @ts-check
 const config = {
   title: 'AdversaryGraph Documentation — CTI-to-Detection Workbench | 1200km',
-  tagline: 'Self-hosted CTI-to-detection intelligence platform — investigate behavior, map ATT&CK evidence, enrich observables, compare overlap, and operationalize findings.',
+  tagline: 'Self-hosted CTI-to-detection intelligence platform — investigate behavior, map ATT&CK evidence, enrich observables, analyze malware, compare overlap, and operationalize findings.',
   favicon: 'img/favicon.png',
 
   url: 'https://1200km.com',
@@ -54,7 +54,7 @@ const config = {
     metadata: [
       {
         name: 'keywords',
-        content: 'cyber threat intelligence, MITRE ATT&CK, CTI-to-detection, detection engineering, threat hunting, TTP mapping, group similarity, campaign similarity, self-hosted CTI platform',
+        content: 'cyber threat intelligence, MITRE ATT&CK, MITRE ATLAS, malware analysis, CTI-to-detection, detection engineering, threat hunting, TTP mapping, group similarity, campaign similarity, IOC enrichment, self-hosted CTI platform',
       },
     ],
     navbar: {
@@ -62,8 +62,10 @@ const config = {
       logo: { alt: 'AdversaryGraph AI', src: 'img/adversarygraph-ai-icon-192.png' },
       items: [
         { type: 'docSidebar', sidebarId: 'docsSidebar', position: 'left', label: 'Docs' },
+        { to: '/platform-guide', label: 'Platform Guide', position: 'left' },
         { to: '/full-flow', label: 'Get Started', position: 'left' },
         { to: '/capabilities', label: 'Capabilities', position: 'left' },
+        { to: '/malware-analysis', label: 'Malware Analysis', position: 'left' },
         { to: '/use-cases', label: 'Use Cases', position: 'left' },
         { to: '/api/overview', label: 'API', position: 'left' },
         {
@@ -91,6 +93,7 @@ const config = {
           title: 'Getting Started',
           items: [
             { label: 'Introduction', to: '/intro' },
+            { label: 'Platform Guide', to: '/platform-guide' },
             { label: 'Setup (10 min)', to: '/getting-started' },
             { label: 'Full Deployment Flow', to: '/full-flow' },
             { label: 'Core Workflow', to: '/ai-analysis/overview' },
@@ -102,6 +105,7 @@ const config = {
             { label: 'Platform Capabilities', to: '/capabilities' },
             { label: 'Navigator', to: '/navigator/overview' },
             { label: 'Compare Modes', to: '/compare/overview' },
+            { label: 'Malware Analysis', to: '/malware-analysis' },
             { label: 'API Reference', to: '/api/overview' },
           ],
         },

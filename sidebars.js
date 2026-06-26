@@ -1,6 +1,9 @@
 module.exports = {
   docsSidebar: [
     'intro',
+    'platform-guide',
+    'malware-analysis',
+    'visual-guide',
     'full-flow',
     'capabilities',
     'getting-started',

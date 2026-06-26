@@ -1,98 +1,163 @@
 ---
 id: visual-guide
 title: Visual Guide
-sidebar_position: 3
+sidebar_position: 4
 ---
 
-# AdversaryGraph v2.5 Visual Guide
+# AdversaryGraph v4 Visual Guide
 
-Screenshots, diagrams, and workflow infographics from the published
-AdversaryGraph v2 article. These assets are mirrored locally in the official
-docs so the guide does not depend on Medium image hosting.
+This guide shows the current AdversaryGraph platform, not only the older
+article screenshots. The screenshots were captured from the local v4 UI and
+validated for dimensions and nonblank content before publication.
 
-Read the ecosystem article:
-[AdversaryGraph v2.5 - Self-Hosted AI CTI Platform](https://1200km.com/articles/adversarygraph-v2-self-hosted-ai-cti-platform.html).
+For the complete module-by-module explanation, read the [Platform Guide](/platform-guide).
+For the MalwareGraph-backed workflow, read [Malware Analysis](/malware-analysis).
 
-## Overview
+## Platform Overview
 
-![AdversaryGraph v2 article cover](/img/adversarygraph-v2/01-31Nq2VMJ9Mm9lgryHGJRQQ.webp)
+![Discover dashboard](/img/adversarygraph-v4-platform/01-discover-dashboard.png)
 
-![Problem overview: CTI reports to ATT&CK evidence](/img/adversarygraph-v2/02-69nMwI7Xj8eNIWHv_C_KVg.webp)
+The Discover dashboard is the front door to the workbench. It links the analyst
+to CTI discovery, Navigator, actor intelligence, AI Analysis, IOC workflows,
+malware analysis, investigations, operations, pipeline imports, and
+troubleshooting.
 
-![AdversaryGraph page and feature map](/img/adversarygraph-v2/03-7jquz_YKO0Odni3r3InzYw.webp)
+## ATT&CK And Actor Intelligence
 
-![Self-hosted Docker architecture](/img/adversarygraph-v2/10-a6c9YTdIktlPk1w0FRQHaA.webp)
+![ATT&CK Navigator matrix](/img/adversarygraph-v4-platform/02-navigator-matrix.png)
 
-## Setup And API
+Navigator is the central ATT&CK/ATLAS matrix. Analysts select techniques, review
+context, overlay actor behavior, manage layers, and export Navigator-compatible
+JSON.
 
-![Terminal command output](/img/adversarygraph-v2/09-z711T5SOrORpjITlM2IY9A.webp)
+![ATT&CK Group Library](/img/adversarygraph-v4-platform/03-apt-library.png)
 
-![Docker Compose startup logs](/img/adversarygraph-v2/11-z4L2KcZIixQjdkrcBt8OlA.webp)
+The ATT&CK Group Library provides actor profiles, aliases, campaigns, technique
+sets, source-backed IOC counts, and actions for loading or overlaying actor TTPs.
 
-![FastAPI Swagger documentation](/img/adversarygraph-v2/13-CsGSK7APVQvnvTDCLxXKNA.webp)
+![Group vs Group comparison](/img/adversarygraph-v4-platform/06-group-vs-group.png)
 
-## Discover And AI Analysis
+Group vs Group highlights shared and exclusive behavior across multiple actor
+profiles.
 
-![Discover Intelligence dashboard](/img/adversarygraph-v2/04-VAfpLRWhfkB0pwRR5C4Nlw.webp)
+## AI Analysis And Comparison
 
-![AI Analysis provider and upload panel](/img/adversarygraph-v2/05-Up-LNxuga22bScwyZiFuHA.webp)
+![AI Analysis](/img/adversarygraph-v4-platform/04-ai-analysis.png)
 
-![Local LLM provider option](/img/adversarygraph-v2/14-EsC2UAT23n0xRDPv29oEWg.webp)
+AI Analysis accepts pasted text and document uploads. It extracts mapping
+candidates while keeping provider choice, source text, evidence, confidence, and
+review state visible.
 
-![AI Analysis extracted structured output](/img/adversarygraph-v2/15-89fT-TuOac6OMSNdZ61vag.webp)
+![Compare reports and layers](/img/adversarygraph-v4-platform/05-compare-behavior.png)
 
-![APT matches tab](/img/adversarygraph-v2/16-FpAXPkiL1j3fiuOkL7tp8A.webp)
+Compare ranks overlap between selected TTPs, reports, groups, and campaigns.
+Use it for prioritization and hypothesis generation, not definitive attribution.
 
-![Raw AI analysis response](/img/adversarygraph-v2/19-T8D25vI8Mt2T7iWmqEJkfA.webp)
+## Sector And Knowledge Workflows
 
-![Review status controls](/img/adversarygraph-v2/33-Rai3eOrk1Upsd4zeHxtroA.webp)
+![Sector Intelligence](/img/adversarygraph-v4-platform/07-sector-intel.png)
 
-## Navigator And Actor Context
+Sector Intelligence ranks actors by client sector, region, technology,
+environment keywords, activity window, and available evidence.
 
-![Navigator matrix workspace](/img/adversarygraph-v2/06-4zLLN71CBFHIMCEPOrTxmw.webp)
+![RetroHunt](/img/adversarygraph-v4-platform/08-retrohunt.png)
 
-![Discover matrix view](/img/adversarygraph-v2/12-l_EPylZmZEnAaDF6JjQE4w.webp)
+RetroHunt searches historical local intelligence for repeated indicators,
+techniques, tool names, actor references, and evidence fragments.
 
-![Navigator selected TTP layer](/img/adversarygraph-v2/20-q9LHKlOmbS1119qTlPKjIA.webp)
+![Knowledge Library](/img/adversarygraph-v4-platform/09-knowledge-library.png)
 
-![Navigator overlay and technique detail](/img/adversarygraph-v2/21-QkMDTHSy82_j4PA96Q3j6A.webp)
+Knowledge Library stores reports, references, entities, and source material used
+by investigations and exports.
 
-![Domain and selected TTP controls](/img/adversarygraph-v2/34-lp9MmZunILgId0X7JHQVbw.webp)
+![Sector packs](/img/adversarygraph-v4-platform/19-sector-packs.png)
 
-![ATT&CK Group Library actor profile](/img/adversarygraph-v2/07-Dw7KTqHRijCEkYvUrdBMbQ.webp)
+Sector Packs package reusable sector context, actors, TTPs, and recommended
+review paths.
 
-![Tactic coverage chart](/img/adversarygraph-v2/28-lLkb-oRUX5Tns2S85SS16g.webp)
+## IOC Workflows
 
-## Comparison Workflows
+![IOC Library](/img/adversarygraph-v4-platform/10-ioc-library.png)
 
-![Compare mode landing page](/img/adversarygraph-v2/26-aJW4II93D-bLqFMexDlW1g.webp)
+IOC Library is the searchable observable store. It shows source attribution,
+freshness, enrichment, actor links, mapped TTPs, and export actions.
 
-![Group comparison graph](/img/adversarygraph-v2/27-_Dlqijzjnt_Ehr1ULHPmrg.webp)
+![IOC Investigation](/img/adversarygraph-v4-platform/11-ioc-investigation.png)
 
-![Campaign comparison page](/img/adversarygraph-v2/29-0dTCvSgZ4dMeQDXkbutXPA.webp)
+IOC Investigation performs one-observable pivoting for IPs, domains, URLs,
+hashes, reputation, relationships, timelines, and provider evidence.
 
-![Stored report comparison](/img/adversarygraph-v2/30-ecTDnydMYwWX8-Ncuk8GfQ.webp)
+![VirusTotal Lookup](/img/adversarygraph-v4-platform/12-virustotal-lookup.png)
 
-![Group vs Group comparison](/img/adversarygraph-v2/08-07j05Kn78RJY96S3Ga4IVQ.webp)
+VirusTotal Lookup adds on-demand enrichment for hashes, IPs, domains, and URLs
+when an operator configures a key.
 
-## DFIR Examples And Reference Sync
+![IOC node detail](/img/adversarygraph-v4-platform/20-ioc-node-detail.png)
 
-![DFIR Examples list](/img/adversarygraph-v2/17-aSqu_irokLlGQa1Njwa0fQ.webp)
+IOC Node Detail treats an observable as a graph node with evidence, links, and
+actions.
 
-![DFIR report analysis workflow](/img/adversarygraph-v2/18-RL5VY8-RMrIQv_SIZpwPQQ.webp)
+## Feeds, Operations, And Reporting
 
-![Reference Sync page](/img/adversarygraph-v2/25-lKoiwInK4AuBHDFSINWekA.webp)
+![Feeds Management](/img/adversarygraph-v4-platform/13-feeds-management.png)
 
-## Exports
+Feeds Management controls ATT&CK/ATLAS, IOC, OpenCTI, STIX/TAXII, MISP, custom,
+Sigma/YARA, and sandbox behavior sources.
 
-![PDF export control](/img/adversarygraph-v2/22-62_zstQMYPoqj4kSTn4nBg.webp)
+![Investigation report](/img/adversarygraph-v4-platform/14-investigation-report.png)
 
-![STIX/OpenCTI export flow](/img/adversarygraph-v2/23-XfbZTKCAGTSArnhi3tiMOA.webp)
+Investigation Report prepares evidence-backed output for analyst handoff.
 
-![ATT&CK Navigator export controls](/img/adversarygraph-v2/24-m1Zh30Hm7e6wmzZq1Mjdog.webp)
+![Operations](/img/adversarygraph-v4-platform/15-operations.png)
 
-![Previous report PDF actions](/img/adversarygraph-v2/32-oyHjzN-tAx7Lx19Xg0IPyA.webp)
+Operations manages investigations, tracked actors, detection lifecycle records,
+and operational task context.
 
-## End-to-End Workflow
+![Pipeline imports](/img/adversarygraph-v4-platform/16-pipeline.png)
 
-![Practical attribution workflow infographic](/img/adversarygraph-v2/31-JDE0azpONj0OVW95p9yZkg.webp)
+Pipeline imports external intelligence and detection content into local review
+workflows.
+
+![DFIR Examples](/img/adversarygraph-v4-platform/17-dfir-examples.png)
+
+DFIR Examples provides public material for demos, training, and workflow
+validation.
+
+![Troubleshooting](/img/adversarygraph-v4-platform/18-troubleshooting.png)
+
+Troubleshooting shows deployment health, self-test state, provider status, and
+recovery guidance.
+
+## Malware Analysis
+
+![Malware Analysis dashboard](/img/malware-analysis-v4/01-malware-analysis-dashboard.png)
+
+Malware Analysis starts from a case dashboard with upload controls, first static
+triage, hash check, safety record, and entropy visualization.
+
+![String Analyzer smart IOC and TTP leads](/img/malware-analysis-v4/06-string-analyzer-smart-iocs.png)
+
+String Analyzer classifies strings into IOC, API, registry, command, and TTP
+leads.
+
+![Unpacker packed sample](/img/malware-analysis-v4/08-unpacker-packed-sample.png)
+
+The unpacker shows packer detection, entropy, static unpack, AI unpack, and
+dynamic-unpack policy gates.
+
+![Debugger CPU view](/img/malware-analysis-v4/12-debugger-ollydbg-cpu-view.png)
+
+The debug workspace provides CPU-style disassembly, registers, stack, API
+context, memory context, and AI notes.
+
+![Dynamic Analysis function workflow](/img/malware-analysis-v4/16-dynamic-function-workflow.png)
+
+Dynamic-analysis workflow supports function stepping, branch context, and AI
+feedback-loop summaries in an isolated runtime profile.
+
+## Historical Visuals
+
+The older v2.5 article screenshots remain available under
+`/img/adversarygraph-v2/` and are still useful for historical context. The
+current module documentation above should be used for v4 screenshots and
+capability descriptions.

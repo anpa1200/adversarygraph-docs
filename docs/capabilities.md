@@ -10,9 +10,51 @@ AdversaryGraph is a self-hosted CTI-to-detection platform. It connects reports, 
 
 The platform is designed for private analyst workstations, internal CTI teams, detection engineering teams, and controlled self-hosted deployments.
 
-## Visual Capability Tour
+## Current v4 Visual Capability Tour
 
-The current v3 workflow adds a dedicated IOC Investigation workbench. The screenshots below show the main analyst path: submit an artifact, run Tier 1/Tier 2/Tier 3 pivots, review an AI-ready summary, inspect source evidence, map TTP leads, and pivot through a relationship graph.
+The current v4 documentation is screenshot-backed. The [Platform Guide](/platform-guide) walks through every main module, and [Malware Analysis](/malware-analysis) documents the MalwareGraph-backed workflow in detail.
+
+<figure>
+<img src="/adversarygraph-docs/img/adversarygraph-v4-platform/01-discover-dashboard.png" alt="AdversaryGraph Discover dashboard with module entry points" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Discover is the starting point for CTI, IOC, malware, investigation, pipeline, and operations workflows.</figcaption>
+</figure>
+
+<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))', gap: '16px', margin: '24px 0'}}>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/adversarygraph-v4-platform/02-navigator-matrix.png" alt="ATT&CK Navigator matrix in AdversaryGraph" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Navigator: select TTPs, inspect techniques, overlay actors, and export layers.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/adversarygraph-v4-platform/03-apt-library.png" alt="ATT&CK Group Library with actor profiles" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>ATT&CK Group Library: actor techniques, aliases, campaigns, reports, and IOC context.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/adversarygraph-v4-platform/04-ai-analysis.png" alt="AI Analysis report extraction page" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>AI Analysis: extract ATT&CK/ATLAS candidates from reports, logs, and telemetry.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/adversarygraph-v4-platform/10-ioc-library.png" alt="IOC Library with source-backed observable records" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>IOC Library: search observables, freshness, source attribution, actor links, and TTP mappings.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/adversarygraph-v4-platform/11-ioc-investigation.png" alt="IOC Investigation pivot workflow" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>IOC Investigation: pivot from one observable into reputation, DNS, graph, and provider evidence.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/adversarygraph-v4-platform/13-feeds-management.png" alt="Feeds Management sync and source controls" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Feeds Management: ATT&CK/ATLAS, IOC sources, OpenCTI, STIX/TAXII, MISP, Sigma/YARA, and sandbox feeds.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/adversarygraph-v4-platform/14-investigation-report.png" alt="Investigation report generation workspace" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Investigation Report: prepare evidence-backed handoff material.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/malware-analysis-v4/01-malware-analysis-dashboard.png" alt="Malware Analysis dashboard" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Malware Analysis: static triage, strings, unpacking, debug workspace, and dynamic-analysis preparation.</figcaption>
+</figure>
+</div>
+
+## From Log To Report Workflow
 
 ### From Log To Report Workflow
 
