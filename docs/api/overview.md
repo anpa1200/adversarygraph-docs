@@ -30,7 +30,13 @@ Interactive Swagger UI: **http://localhost:8000/docs**
 
 ## Authentication
 
-No authentication is built in — AdversaryGraph is designed for internal/intranet use. Protect the API with nginx, Caddy, or your identity provider if you deploy it for a team. See [Security](/security).
+AdversaryGraph does not provide standalone username/password identity
+management. For team deployments, identity should be provided by VPN, SSO,
+OAuth proxy, or an authenticating reverse proxy.
+
+When `AUTH_ENABLED=true`, AdversaryGraph can consume trusted identity headers
+from that proxy and enforce `admin`, `analyst`, and `viewer` roles. See
+[Security](/security).
 
 ## Content Types
 

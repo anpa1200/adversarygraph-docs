@@ -4,55 +4,77 @@ title: Roadmap
 sidebar_position: 12
 ---
 
-# What's Coming Next
+# Roadmap
 
-AdversaryGraph is functional and actively developed.
+Current release: **AdversaryGraph v5.0.0**.
 
-## Recently Shipped (v0.7.0)
+AdversaryGraph is functional and actively developed. The roadmap below separates
+what is already shipped from the next hardening and collaboration work.
 
-**Operational intelligence workbench** — persistent campaign/investigation workspaces,
-evidence graph records, report intake and analyst review, tracked-actor change monitoring,
-and detection engineering lifecycle management.
+## Recently Shipped
 
-**Operations API** — integrations can manage investigations, report intake, tracked actors,
-and detection candidates through `/api/operations`.
+### v5.0.0 — Attack Simulation And SIEM Validation
 
-**Web-workspace parity plus AI** — Docker now includes intelligence discovery, global actor/TTP/report search, correlated CTI/IR reports, detection and hunting guidance, evidence/maturity assessments, workspaces, coverage overlay, detection-backlog export, shareable entity links, and investigation-report export.
+- TTP-first Attack Simulation workflow with ATT&CK matrix selection.
+- Per-technique simulation pages with scenario description, telemetry source,
+  event structure, and detection focus.
+- Real-time attacked-server log view for lab web telemetry.
+- SIEM forwarding with saved non-secret destinations and source-format controls.
+- AI Attack Assistant for coherent, multi-phase detection drills.
+- Named kill-chain scenarios, attack-chain graph, and explain-attack view.
+- Screenshot-backed documentation and Medium release article.
 
-**Docker remains the superset product** — AI-assisted report extraction, LLM technique assistant, private report sessions, campaigns, saved server layers, APIs, PDF export, and automated ATT&CK synchronization remain Docker-only capabilities.
+### v4.1.0 — Asset Attack Surface Mapping
 
-**Known architecture gap** — the public web workspace has a static MITRE ATLAS matrix. Docker embeds and cross-links the Anomaly Detection Atlas reference book, but native MITRE ATLAS PostgreSQL ingestion still requires a dedicated adapter.
+- Asset inventory upload and normalization from CSV, JSON, CMDB exports, cloud
+  lists, scanner output, and hostname/IP lists.
+- AI-assisted attack-surface explanation, likely entry points, ATT&CK candidate
+  mapping, validation gaps, and saved asset cases.
+- White Navigator layer for asset-inventory-based TTP candidates.
 
-**Group vs Group** — compare up to 6 APT groups simultaneously: N×N Jaccard overlap matrix, combined ATT&CK view with per-group coloured dots, sortable technique table. [See docs →](/compare/group-vs-group)
+### v4.0.0 — Malware Analysis Workspace
 
-**Clickable TTP detail panels** — every technique ID in the UI (Navigator, ATT&CK Group Library, Compare, Group vs Group) opens a slide-in panel with description, detection guidance, Anomaly Detection Atlas links, ecosystem links, and CTI Field Manual. [See docs →](/navigator/ttp-details)
+- MalwareGraph-backed static triage, IOC extraction, hash feed checks, string
+  analysis, unpacking workflow, decompilation/debug IDE, and controlled
+  dynamic-analysis preparation.
+- AI-assisted function summaries, behavior summaries, validation gaps, and
+  malware-analysis reporting.
 
-**Ecosystem sidebar links** — one-click navigation to AdversaryGraph Web Tool (no-Docker browser version), CTI Knowledge Base, and 1200km.com directly from the sidebar.
+## Current Hardening Sprint
 
-## Also Shipped — AdversaryGraph Web
+- Keep `main`, release tags, docs, screenshots, and public site text aligned.
+- Continue route-level tests for user-facing API workflows.
+- Keep dependency audit, container scan, and secret scan green in CI.
+- Improve reviewer evidence: screenshots, safety boundaries, architecture notes,
+  validation pages, and reproducible demo data.
+- Close stale GitHub issues only after the code or documentation has been
+  verified.
 
-**Multi-domain ATT&CK** — the browser tool now covers four frameworks: Enterprise, Mobile, ICS, and MITRE ATLAS (AI/ML adversarial techniques). A domain switcher in the header lazy-loads each framework on first click and caches it for instant re-switching.
+## Planned v5.1 Work
 
-**Full technique descriptions** — every TTP detail panel now includes the complete MITRE description bundled at build time. No network round-trip; works offline.
+- Broader simulation coverage across web, identity, endpoint, cloud, proxy, DNS,
+  and firewall telemetry.
+- More production-style event fixtures for Windows Event Log, Sysmon, EDR, WAF,
+  NGINX/Apache, proxy, DNS, and firewall schemas.
+- Improved scenario scoring: expected detections, false-positive controls,
+  coverage gaps, and missed-stage explanations.
+- Exportable detection engineering exercises for SOC training and purple-team
+  validation.
+- Deeper integrations with OpenCTI, MISP, Sigma/YARA workflows, and SIEM
+  forwarding profiles.
 
-**Ecosystem article deep-links** — the detail panel now shows section-level links into the CTI Field Manual and ITDR Handbook, generated by scanning both documentation sites for technique ID mentions and recording the nearest heading. Each link jumps directly to the relevant paragraph.
+## Longer-Term Direction
 
-## On the Roadmap
-
-**TAXII/STIX import** — accept threat intelligence directly from TAXII feeds (MISP, OpenCTI, commercial CTI platforms) so you can analyse structured intelligence without manual copy-paste.
-
-**Team collaboration** — shared TTP layers with user namespacing; see who saved what and when.
-
-**Automatic APT tracking** — when ATT&CK releases a new version that adds techniques to a group you're tracking, send a notification (webhook or email).
-
-**Native MITRE ATLAS ingestion** — add an ATLAS-specific ingestion adapter and matrix domain to the Docker platform.
-
----
+- TAXII/STIX import from CTI platforms and commercial feeds.
+- Team collaboration with shared TTP layers and user namespacing.
+- Automatic tracked-actor change monitoring when ATT&CK releases new versions.
+- Native MITRE ATLAS ingestion adapter for the Docker platform.
 
 ## Contributing
 
-The project is source-available. Personal/private use is free; business or organizational use requires approval from Andrey Pautov.
+The project is source-available. Personal/private use is free; business or
+organizational use requires approval from Andrey Pautov.
 
-- **GitHub:** https://github.com/anpa1200/adversarygraph
-- **Issues and feature requests:** open an issue on GitHub
-- **Medium article:** [AdversaryGraph: I Built a Self-Hosted AI Threat Intelligence Platform](https://medium.com/km)
+- GitHub: https://github.com/anpa1200/adversarygraph
+- Issues and feature requests: open an issue on GitHub
+- Release article: [AdversaryGraph v5.0: From CTI Mapping to Attack Simulation and SIEM Validation](https://medium.com/@1200km/adversarygraph-v5-0-from-cti-mapping-to-attack-simulation-and-siem-validation-21873b2a6c39)

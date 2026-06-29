@@ -4,10 +4,10 @@ title: Visual Guide
 sidebar_position: 4
 ---
 
-# AdversaryGraph v4 Visual Guide
+# AdversaryGraph Visual Guide
 
 This guide shows the current AdversaryGraph platform, not only the older
-article screenshots. The screenshots were captured from the local v4 UI and
+article screenshots. The screenshots were captured from the local UI and
 validated for dimensions and nonblank content before publication.
 
 For the complete module-by-module explanation, read the [Platform Guide](/platform-guide).
@@ -159,5 +159,5 @@ feedback-loop summaries in an isolated runtime profile.
 
 The older v2.5 article screenshots remain available under
 `/img/adversarygraph-v2/` and are still useful for historical context. The
-current module documentation above should be used for v4 screenshots and
+current module documentation above should be used for current screenshots and
 capability descriptions.
