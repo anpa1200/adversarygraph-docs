@@ -82,6 +82,22 @@
   box-shadow: 0 0 0 1px var(--ifm-color-primary);
 }
 
+.tm-release {
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  background:
+    linear-gradient(135deg, rgba(233, 69, 96, 0.14), rgba(33, 150, 243, 0.08)),
+    var(--ifm-background-surface-color);
+}
+
+.tm-release h2 {
+  margin-top: 0.75rem;
+}
+
+.tm-release p {
+  max-width: 920px;
+}
+
 .tm-card h3 {
   margin-top: 0;
   font-size: 1rem;
