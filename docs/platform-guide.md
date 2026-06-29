@@ -23,20 +23,22 @@ sidebar_position: 2
 
 ## Visual Evidence
 
-Current v4 platform screenshots are stored in `/img/adversarygraph-v4-platform/`.
+Platform screenshots are stored in `/img/adversarygraph-v4-platform/`.
 The malware-analysis screenshot set is stored in `/img/malware-analysis-v4/`.
 The v5 Attack Simulation screenshot set is stored in
 `/img/attack-simulation-v5/`.
 
 Both screenshot packs include validation metadata. The platform set records
 route load, expected page text, `1920x1200` dimensions, byte size, mean RGB, and
-nonblank image checks in
-[`validation.json`](/img/adversarygraph-v4-platform/validation.json).
+nonblank image checks in `/img/adversarygraph-v4-platform/validation.json`.
 
 The v5 Attack Simulation screenshot set validates the TTP-first matrix, per-TTP
 configuration page, SIEM forwarding controls, AI scenario library, generated
 attack-chain graph, explain-attack panel, real-time log view, and saved SIEM
 destination history.
+
+Published v5 release article:
+[AdversaryGraph v5.0: From CTI Mapping to Attack Simulation and SIEM Validation](https://medium.com/@1200km/adversarygraph-v5-0-from-cti-mapping-to-attack-simulation-and-siem-validation-21873b2a6c39).
 
 ## Core Workflow
 

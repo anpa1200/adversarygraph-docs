@@ -32,3 +32,9 @@ Trusted-header authentication and `admin`, `analyst`, and `viewer` roles are sup
 - Rotate LLM API keys.
 
 AdversaryGraph is suitable for local labs, private analyst workstations, internal CTI workflows, and controlled self-hosted deployments. Internet-facing deployments require additional access control and hardening.
+
+## Attack Simulation Boundary
+
+Attack Simulation is for authorized lab validation only. Real telemetry comes from approved lab fixtures in the self-hosted Docker deployment. AI-generated telemetry is synthetic source-shaped data for SIEM parser, rule, and correlation exercises; it is not proof of exploit execution or production detection coverage.
+
+Do not point simulations or SIEM forwarding at unauthorized systems. Store SIEM collector URLs only when they are approved for the lab, and keep bearer tokens, passwords, and custom header values out of screenshots and commits.

@@ -42,6 +42,7 @@ export default function Home() {
         <p>AdversaryGraph v5 adds TTP-first attack simulation, real lab-target telemetry, SIEM forwarding, saved non-secret collector destinations, named coherent scenario templates, AI-generated attack-chain graphs, and explainable multi-source telemetry drills.</p>
         <div className="hero-actions">
           <Link className="button button--primary" to="/attack-simulation">Open Attack Simulation Guide</Link>
+          <Link className="button button--secondary" href="https://medium.com/@1200km/adversarygraph-v5-0-from-cti-mapping-to-attack-simulation-and-siem-validation-21873b2a6c39">Read Release Article</Link>
           <Link className="button button--secondary" to="/platform-guide#attack-simulation">See Platform Context</Link>
         </div>
       </div></section>

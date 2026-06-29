@@ -14,6 +14,9 @@ generate coherent multi-phase detection drills.
 The module is designed for defensive validation. It does not execute malware,
 run arbitrary commands, exploit user-supplied targets, or attack real users.
 
+Published release article:
+[AdversaryGraph v5.0: From CTI Mapping to Attack Simulation and SIEM Validation](https://medium.com/@1200km/adversarygraph-v5-0-from-cti-mapping-to-attack-simulation-and-siem-validation-21873b2a6c39).
+
 ## What It Solves
 
 Detection engineering often fails when the validation event is too small or too
