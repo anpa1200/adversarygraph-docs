@@ -3,6 +3,7 @@ module.exports = {
     'intro',
     'platform-guide',
     'malware-analysis',
+    'attack-simulation',
     'visual-guide',
     'full-flow',
     'capabilities',

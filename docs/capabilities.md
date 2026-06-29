@@ -10,9 +10,13 @@ AdversaryGraph is a self-hosted CTI-to-detection platform. It connects reports, 
 
 The platform is designed for private analyst workstations, internal CTI teams, detection engineering teams, and controlled self-hosted deployments.
 
-## Current v4 Visual Capability Tour
+## Current v5 Visual Capability Tour
 
-The current v4 documentation is screenshot-backed. The [Platform Guide](/platform-guide) walks through every main module, and [Malware Analysis](/malware-analysis) documents the MalwareGraph-backed workflow in detail.
+The current documentation is screenshot-backed. The [Platform Guide](/platform-guide)
+walks through the main modules, [Attack Simulation](/attack-simulation)
+documents ATT&CK validation and AI-assisted telemetry drills, and
+[Malware Analysis](/malware-analysis) documents the MalwareGraph-backed
+workflow in detail.
 
 <figure>
 <img src="/adversarygraph-docs/img/adversarygraph-v4-platform/01-discover-dashboard.png" alt="AdversaryGraph Discover dashboard with module entry points" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
@@ -51,6 +55,10 @@ The current v4 documentation is screenshot-backed. The [Platform Guide](/platfor
 <figure style={{margin: 0}}>
 <img src="/adversarygraph-docs/img/malware-analysis-v4/01-malware-analysis-dashboard.png" alt="Malware Analysis dashboard" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
 <figcaption>Malware Analysis: static triage, strings, unpacking, debug workspace, and dynamic-analysis preparation.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/attack-simulation-v5/05-ai-generated-attack-chain-graph.png" alt="Attack Simulation AI generated attack-chain graph" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Attack Simulation: TTP-first validation, real-time lab telemetry, SIEM forwarding, and AI-generated kill-chain drills.</figcaption>
 </figure>
 </div>
 

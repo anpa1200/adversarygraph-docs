@@ -6,7 +6,7 @@ sidebar_position: 2
 
 # AdversaryGraph Platform Guide
 
-> Current v4 platform documentation. AdversaryGraph is an analyst-assistance
+> Current v5 platform documentation. AdversaryGraph is an analyst-assistance
 > system: AI mappings, similarity scores, IOC enrichment, malware-analysis
 > output, and generated detections require human validation before operational
 > use.
@@ -17,18 +17,26 @@ sidebar_position: 2
 2. [Core Workflow](#core-workflow)
 3. [Modules and Abilities](#modules-and-abilities)
 4. [Module Walkthrough](#module-walkthrough)
-5. [Malware Analysis Extension](#malware-analysis-extension)
-6. [Operating Notes](#operating-notes)
+5. [Attack Simulation](#attack-simulation)
+6. [Malware Analysis Extension](#malware-analysis-extension)
+7. [Operating Notes](#operating-notes)
 
 ## Visual Evidence
 
 Current v4 platform screenshots are stored in `/img/adversarygraph-v4-platform/`.
 The malware-analysis screenshot set is stored in `/img/malware-analysis-v4/`.
+The v5 Attack Simulation screenshot set is stored in
+`/img/attack-simulation-v5/`.
 
 Both screenshot packs include validation metadata. The platform set records
 route load, expected page text, `1920x1200` dimensions, byte size, mean RGB, and
 nonblank image checks in
 [`validation.json`](/img/adversarygraph-v4-platform/validation.json).
+
+The v5 Attack Simulation screenshot set validates the TTP-first matrix, per-TTP
+configuration page, SIEM forwarding controls, AI scenario library, generated
+attack-chain graph, explain-attack panel, real-time log view, and saved SIEM
+destination history.
 
 ## Core Workflow
 
@@ -59,6 +67,7 @@ AI assistant should remain traceable back to evidence.
 | Compare | Compare current TTP layers, reports, groups, and campaigns; inspect overlap, matrix diff, tactic breakdown, and gap analysis. |
 | Group vs Group | Select multiple actor profiles; compare shared and exclusive techniques; view overlap matrix, combined matrix, and technique table. |
 | Sector Intel | Rank actors by sector, geography, technology, recency, campaign evidence, and MISP Galaxy context. |
+| Attack Simulation | Select ATT&CK TTPs, run approved lab simulations, view real-time attacked-server logs, forward telemetry to SIEM collectors, save recent destinations, generate AI-assisted multi-phase attack stories, review attack-chain graphs, and explain validation logic. |
 | RetroHunt | Search historical local intelligence, reports, indicators, techniques, and evidence for repeated patterns. |
 | Knowledge Library | Browse stored reports, references, entities, and investigation source material. |
 | IOC Library | Search observables, source attribution, freshness, enrichment fields, mapped TTPs, and actor links. |
@@ -219,6 +228,28 @@ provider configuration state, and recovery guidance.
 
 Sector Packs package reusable client or industry context: relevant actors,
 techniques, intelligence notes, and recommended review paths.
+
+## Attack Simulation
+
+Attack Simulation is the v5 detection-validation workspace. Analysts choose an
+ATT&CK technique first, open a dedicated configuration page, run approved lab
+scenarios, inspect target-side logs, and forward selected telemetry to a SIEM
+collector. The AI assistant can also generate coherent multi-phase telemetry
+stories for selected TTPs, actor-oriented drills, or Challenge Me exercises.
+
+See the dedicated [Attack Simulation](./attack-simulation.md) guide for the
+full workflow, screenshots, SIEM forwarding behavior, scenario library, and
+safety model.
+
+<figure>
+<img src="/adversarygraph-docs/img/attack-simulation-v5/01-attack-simulation-matrix.png" alt="Attack Simulation matrix" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Start with the ATT&amp;CK behavior and choose a runnable simulation cell.</figcaption>
+</figure>
+
+<figure>
+<img src="/adversarygraph-docs/img/attack-simulation-v5/05-ai-generated-attack-chain-graph.png" alt="Attack Simulation generated attack-chain graph" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>The AI assistant produces an ordered attack-chain graph with event counts, sources, formats, and detection goals.</figcaption>
+</figure>
 
 ### IOC Node Detail
 
