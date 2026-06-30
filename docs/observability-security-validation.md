@@ -76,6 +76,25 @@ Use these examples to prove the platform workflow, not to claim that a productio
 4. Forward the selected event stream to the approved SIEM collector.
 5. Confirm parser, field mapping, rule hit, and alert context in the SIEM.
 
+<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: '16px', margin: '24px 0'}}>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/attack-simulation-v5/01-attack-simulation-matrix.png" alt="Attack Simulation matrix showing available simulated ATTACK techniques as highlighted cells" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Select the technique from the ATT&CK-style simulation matrix.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/attack-simulation-v5/03-siem-forwarding-configuration.png" alt="Attack Simulation SIEM forwarding configuration with destination source and delivery controls" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Configure the approved SIEM destination, payload format, source, and auth mode.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/attack-simulation-v5/07-real-time-attack-logs.png" alt="Real-time Attack Simulation logs showing lab web access events" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Validate generated lab telemetry before sending it to the SIEM.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/attack-simulation-v5/08-siem-history-and-delivery.png" alt="Attack Simulation SIEM delivery history and saved forwarding targets" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Review delivery history and saved SIEM forwarding targets.</figcaption>
+</figure>
+</div>
+
 Relevant guide: [Attack Simulation](/attack-simulation).
 
 ### CVE To APT / TTP / IOC Correlation
@@ -84,6 +103,11 @@ Relevant guide: [Attack Simulation](/attack-simulation).
 2. Review CVSS, CWE, CPE, KEV status, and source metadata.
 3. Inspect strict CVE relationship evidence to actors, techniques, and indicators.
 4. Treat the relationship as an evidence link, not attribution proof.
+
+<figure>
+<img src="/adversarygraph-docs/img/adversarygraph-v5.3/cve-library.png" alt="CVE Library with NVD KEV CVSS filtering and strict correlation detail panel" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>CVE Library validation: sync status, CVSS/KEV metadata, and strict correlation review in one workspace.</figcaption>
+</figure>
 
 Relevant guide: [CVE Library](/cve-cvss-intelligence).
 
@@ -95,6 +119,17 @@ Relevant guide: [CVE Library](/cve-cvss-intelligence).
 4. Confirm role-gated access to operational modules.
 5. Remove bootstrap credentials from the runtime environment after permanent admin accounts exist.
 
+<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: '16px', margin: '24px 0'}}>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/adversarygraph-v5.3/login-page.png" alt="AdversaryGraph login page with username password fields and setup guide link" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Protected login page for private analyst workspaces.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/adversarygraph-v5.3/admin-users.png" alt="Admin Panel showing user creation role assignment account enablement and reset controls" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Admin Panel validates named users, roles, account status, and password reset flow.</figcaption>
+</figure>
+</div>
+
 Relevant section: [Authentication And User Management](/capabilities#authentication-and-user-management).
 
 ### Malware Analysis Boundary Validation
@@ -103,6 +138,17 @@ Relevant section: [Authentication And User Management](/capabilities#authenticat
 2. Review static triage, strings, recovered imports, unpacking hints, and debug workspace output.
 3. Confirm that gated dynamic-analysis steps are clearly marked and separated from static findings.
 4. Treat AI summaries as analyst-assistance output requiring validation.
+
+<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: '16px', margin: '24px 0'}}>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/malware-analysis-v4/01-malware-analysis-dashboard.png" alt="Malware Analysis dashboard with case controls hash check and analysis summary" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Malware Analysis case dashboard for static triage and analyst-controlled workflow.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/malware-analysis-v4/10-debugger-decompilation-ide.png" alt="Malware debugger decompilation IDE with recovered pseudocode entrypoint details and recovered APIs" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Decompilation/debug view separates static artifacts from runtime validation requirements.</figcaption>
+</figure>
+</div>
 
 Relevant guide: [Malware Analysis](/malware-analysis).
 
