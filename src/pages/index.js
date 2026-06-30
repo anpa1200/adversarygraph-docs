@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 const features = [
   ['Commercial Trust', 'Review implemented capabilities, boundaries, validation evidence, deployment posture, and commercial-readiness checklist.', '/commercial-trust'],
@@ -29,16 +30,60 @@ const trustProof = [
 ];
 
 const proofScreens = [
-  ['Attack Simulation', 'AI-generated kill-chain graph, SIEM forwarding, and telemetry validation workflow.', '/img/attack-simulation-v5/05-ai-generated-attack-chain-graph.png', '/attack-simulation'],
-  ['CVE Library', 'NVD/KEV sync controls, CVSS enrichment state, and strict relationship review.', '/img/adversarygraph-v5.3/cve-library.png', '/cve-cvss-intelligence'],
-  ['Protected Login', 'Native username/password entry point for protected analyst workspaces.', '/img/adversarygraph-v5.3/login-page.png', '/capabilities#authentication-and-user-management'],
-  ['Admin Panel', 'Named users, effective permissions, sessions, MFA state, audit history, and password reset.', '/img/adversarygraph-v5.3/admin-users.png', '/authentication-and-users'],
-  ['Observability', 'API health, request traces, redacted log tail, route metrics, and Prometheus preview.', '/img/adversarygraph-v5.4/observability-dashboard.png', '/observability-security-validation'],
-  ['Malware Analysis', 'Static triage, strings, unpacking, debugger, and AI summary workflow.', '/img/malware-analysis-v4/01-malware-analysis-dashboard.png', '/malware-analysis'],
-  ['IOC Investigation', 'Source-backed pivots, enrichment, graph review, and investigation handoff.', '/img/adversarygraph-v3/06-relationship-graph-node-panel.png', '/capabilities#ioc-investigation'],
+  {
+    title: 'Attack Simulation',
+    body: 'AI-generated kill-chain graph, SIEM forwarding, and telemetry validation workflow.',
+    src: 'img/attack-simulation-v5/05-ai-generated-attack-chain-graph.png',
+    href: '/attack-simulation',
+    alt: 'Attack Simulation page showing an AI-generated kill-chain graph with ordered phases and telemetry events',
+  },
+  {
+    title: 'CVE Library',
+    body: 'NVD/KEV sync controls, CVSS enrichment state, and strict relationship review.',
+    src: 'img/adversarygraph-v5.3/cve-library.png',
+    href: '/cve-cvss-intelligence',
+    alt: 'CVE Library page showing CVSS severity, CISA KEV status, CVE records, and a selected CVE detail panel',
+  },
+  {
+    title: 'Protected Login',
+    body: 'Native username/password entry point for protected analyst workspaces.',
+    src: 'img/adversarygraph-v5.3/login-page.png',
+    href: '/capabilities#authentication-and-user-management',
+    alt: 'Protected AdversaryGraph login page with username and password fields',
+  },
+  {
+    title: 'Admin Panel',
+    body: 'Named users, effective permissions, sessions, MFA state, audit history, and password reset.',
+    src: 'img/adversarygraph-v5.3/admin-users.png',
+    href: '/authentication-and-users',
+    alt: 'Admin Panel showing user management, role selection, account state, sessions, and audit controls',
+  },
+  {
+    title: 'Observability',
+    body: 'API health, request traces, redacted log tail, route metrics, and Prometheus preview.',
+    src: 'img/adversarygraph-v5.4/observability-dashboard.png',
+    href: '/observability-security-validation',
+    alt: 'Observability dashboard showing API health, route metrics, request traces, log tail, and Prometheus output',
+  },
+  {
+    title: 'Malware Analysis',
+    body: 'Static triage, strings, unpacking, debugger, and AI summary workflow.',
+    src: 'img/malware-analysis-v4/01-malware-analysis-dashboard.png',
+    href: '/malware-analysis',
+    alt: 'Malware Analysis dashboard showing case controls, analysis summary, hash checks, and sample workflow panels',
+  },
+  {
+    title: 'IOC Investigation',
+    body: 'Source-backed pivots, enrichment, graph review, and investigation handoff.',
+    src: 'img/adversarygraph-v3/06-relationship-graph-node-panel.png',
+    href: '/capabilities#ioc-investigation',
+    alt: 'IOC Investigation relationship graph showing a selected node, connected pivots, and source-backed context',
+  },
 ];
 
 export default function Home() {
+  const baseUrl = useBaseUrl('/');
+
   return <Layout title="AdversaryGraph — Commercial-Ready CTI-to-Detection Workbench | 1200km" description="Commercial trust documentation for AdversaryGraph AI: a self-hosted CTI-to-detection platform for ATT&CK mapping, IOC and CVE intelligence, malware analysis, attack simulation, observability, security validation, and detection engineering handoff.">
     <header className="hero hero--adversarygraph"><div className="container hero--adversarygraph__content">
       <span className="tm-badge">AdversaryGraph v5.5</span>
@@ -96,8 +141,8 @@ export default function Home() {
         <h2>Current Platform Proof</h2>
         <p className="tm-section-lead">Screenshots are taken from current v5.x local platform workflows. Some auth/CVE/malware screenshots are representative historical captures where the workflow remains current.</p>
         <div className="tm-screenshot-grid">
-          {proofScreens.map(([title, body, src, href]) => <Link className="tm-screenshot-card" to={href} key={title}>
-            <img src={src} alt={`${title} screenshot in AdversaryGraph`} loading="lazy" />
+          {proofScreens.map(({title, body, src, href, alt}) => <Link className="tm-screenshot-card" to={href} key={title}>
+            <img src={`${baseUrl}${src}`} alt={alt} loading="lazy" />
             <span><strong>{title}</strong>{body}</span>
           </Link>)}
         </div>
