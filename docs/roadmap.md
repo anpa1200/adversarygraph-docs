@@ -66,6 +66,28 @@ what is already shipped from the next hardening and collaboration work.
 - AI-assisted function summaries, behavior summaries, validation gaps, and
   malware-analysis reporting.
 
+## Version History From v2.5
+
+| Version | Release Theme | What Changed |
+|---|---|---|
+| v5.4.0 | Observability and commercial trust | Runtime observability dashboard, security scanning workflow, screenshot-backed validation examples, commercial trust package, architecture diagrams, and comparison pages |
+| v5.3.0 | Authentication and user operations | Native login, viewer/analyst/admin roles, bootstrap admin flow, admin user-management, and auth documentation |
+| v5.2.0 | QA hardening | Reproducible tests, frontend audit cleanup, local lint/test/audit/build validation, and release metadata cleanup |
+| v5.1.0 | Telemetry fidelity and CVE correlation | Source-correct Attack Simulation telemetry policy, raw STIX preservation, CVE Library, CVSS/CWE/CPE fields, and strict APT/TTP/IOC/CVE evidence links |
+| v5.0.0 | Attack Simulation and SIEM validation | TTP-first simulation matrix, real lab telemetry, SIEM forwarding, AI kill-chain drills, scenario library, and attack-chain graph |
+| v4.1.0 | Asset Attack Surface Mapping | Asset inventory ingestion, deterministic exposure scoring, ATT&CK candidates, saved asset cases, and white Navigator layers |
+| v4.0.0 | Malware Analysis platform release | Fully documented MalwareGraph-backed module, clickable findings, debugger-style review, dynamic-analysis preparation, and AI feedback loops |
+| v3.2.0 | MalwareGraph integration milestone | Integrated Malware Analysis module documentation, standalone MalwareGraph positioning, static triage flow, and gated runtime-debug policy |
+| v3.1.0 | From Log To Report workflow | Published log-to-report workflow with source-tagged IOCs/TTPs, graph pivots, actor-overlap review, AI summary, and final report generation |
+| v3.0.0 | Investigation workbench | IOC Investigation, relationship graph pivoting, evidence ranking, saved sessions, AI log/PCAP analysis, and ATT&CK handoff |
+| v2.7.0 | IOC Investigation workflow | Tiered enrichment pivots from one artifact, source status, TTP/actor leads, AI summary packaging, and local/external source collection |
+| v2.6.0 | Telemetry triage and use cases | AI-assisted log/PCAP analysis, richer Navigator layer handling, Discover launchers, and animated use-case documentation |
+| v2.5.9 | Detection Studio improvements | Default YARA/Sigma feed setup, YARA-L generation, and AI-assisted detection skeleton generation for Sigma, YARA, KQL, SPL, and EQL |
+| v2.5.8 | IOC enrichment drill-down | Clickable IOC detail pages, source metadata, actor/TTP links, enrichment values, and raw JSON audit view |
+| v2.5.7 | MiniMax provider support | MiniMax support across AI Analysis, Navigator AI chat, IOC-to-TTP fallback, Docker configuration, and self-test |
+| v2.5.4 | IOC normalization and evidence priority | Hash normalization, duplicate merge, explicit IOC-to-TTP priority model, and opt-in AI fallback |
+| v2.5.0 | IOC Library and connector hardening | IOC Library, global observable search, VirusTotal enrichment, STIX/TAXII/MISP/custom feeds, YARA/Sigma feeds, sandbox behavior feeds, and IOC-to-TTP mapping |
+
 ## Current Hardening Sprint
 
 - Keep `main`, release tags, docs, screenshots, and public site text aligned.
