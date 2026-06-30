@@ -89,6 +89,7 @@ module.exports = {
       ],
     },
     'two-databases',
+    'attack-data-model',
     'generating-reports',
     {
       type: 'category',
