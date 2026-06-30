@@ -63,7 +63,7 @@ export default function Home() {
       </div></section>
       <section className="tm-section"><div className="container">
         <h2>Current Platform Proof</h2>
-        <p className="tm-section-lead">Screenshots are taken from the current local v5.3 platform and show the modules documented in this guide.</p>
+        <p className="tm-section-lead">Screenshots are taken from the current local v5.4 platform and show the modules documented in this guide.</p>
         <div className="tm-screenshot-grid">
           {proofScreens.map(([title, body, src, href]) => <Link className="tm-screenshot-card" to={href} key={title}>
             <img src={src} alt={`${title} screenshot in AdversaryGraph`} loading="lazy" />

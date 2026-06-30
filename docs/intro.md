@@ -6,7 +6,7 @@ sidebar_position: 1
 
 # AdversaryGraph
 
-**Current release: v5.3.0** · [Project Hub](https://1200km.com/adversarygraph/) · [Platform Guide](/platform-guide) · [Attack Simulation](/attack-simulation) · [Capabilities](/capabilities) · [Observability](/observability-security-validation) · [Malware Analysis](/malware-analysis) · [Use Cases](/use-cases) · [GitHub](https://github.com/anpa1200/adversarygraph)
+**Current release: v5.4.0** · [Project Hub](https://1200km.com/adversarygraph/) · [Platform Guide](/platform-guide) · [Attack Simulation](/attack-simulation) · [Capabilities](/capabilities) · [Observability](/observability-security-validation) · [Malware Analysis](/malware-analysis) · [Use Cases](/use-cases) · [GitHub](https://github.com/anpa1200/adversarygraph)
 
 AdversaryGraph is an AI-assisted CTI-to-detection workbench for mapping threat reports, IOC context, malware-analysis evidence, and operational telemetry to MITRE ATT&CK / ATLAS. It helps analysts compare TTP overlap with known groups and campaigns, identify detection gaps, enrich observables, organize investigations, and export analyst-ready outputs.
 
