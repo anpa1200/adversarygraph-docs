@@ -41,6 +41,10 @@ workflow in detail.
 <figcaption>IOC Library: search observables, freshness, source attribution, actor links, and TTP mappings.</figcaption>
 </figure>
 <figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/adversarygraph-v5.3/cve-library.png" alt="CVE Library with NVD KEV CVSS search controls and strict correlation detail panel" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>CVE Library: sync NVD and CISA KEV, enrich CVSS, and review strict CVE-to-APT/TTP/IOC evidence links.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
 <img src="/adversarygraph-docs/img/adversarygraph-v4-platform/11-ioc-investigation.png" alt="IOC Investigation pivot workflow" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
 <figcaption>IOC Investigation: pivot from one observable into reputation, DNS, graph, and provider evidence.</figcaption>
 </figure>
@@ -59,6 +63,18 @@ workflow in detail.
 <figure style={{margin: 0}}>
 <img src="/adversarygraph-docs/img/attack-simulation-v5/05-ai-generated-attack-chain-graph.png" alt="Attack Simulation AI generated attack-chain graph" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
 <figcaption>Attack Simulation: TTP-first validation, real-time lab telemetry, SIEM forwarding, and AI-generated kill-chain drills.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/adversarygraph-v5.3/login-page.png" alt="AdversaryGraph protected workspace login page with authentication setup guide link" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Login: protected workspace entry point with direct access to the authentication setup guide.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/adversarygraph-v5.3/admin-users.png" alt="AdversaryGraph Admin Panel with user creation role selection and account management" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Admin Panel: native users, role assignment, account enablement, and password reset workflows.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/adversarygraph-v5.3/auth-guide.png" alt="AdversaryGraph Authentication Guide showing roles bootstrap and reverse proxy authentication" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Authentication Guide: operator-facing setup flow for native login, roles, bootstrap hardening, and reverse-proxy auth.</figcaption>
 </figure>
 </div>
 
@@ -216,6 +232,7 @@ Read the complete workflow: [From Log to Report: Using AdversaryGraph](https://1
 | Sector intelligence | Rank actors by sector, region, technology/environment, and activity window |
 | IOC Investigation | Run Tier 1/Tier 2/Tier 3 pivots from one IP, domain, URL, hash, or suspicious artifact |
 | IOC Library | Search, filter, sort, enrich, export, and map indicators to actors and TTPs |
+| CVE Library | Sync NVD and CISA KEV records, store CVSS/CWE/CPE fields, and correlate CVE evidence to APTs, TTPs, and IOCs |
 | AI log and PCAP analysis | Extract IPs, domains, URLs, hashes, command lines, PowerShell, functions, suspicious activity, IOCs, and TTP leads from logs and packet captures |
 | Enrichment | VirusTotal, ThreatFox, OTX, Malpedia, MISP Galaxy, custom feeds, sandbox behavior, Sigma/YARA context |
 | Feed management | Central reference, IOC, rule, behavior, STIX/TAXII, MISP, and custom feed sync |
@@ -224,6 +241,7 @@ Read the complete workflow: [From Log to Report: Using AdversaryGraph](https://1
 | Comparison | Compare selected TTPs to groups, campaigns, and stored reports |
 | DFIR examples | Indexed public DFIR examples for training and controlled analysis workflows |
 | Operations | Stored reports, investigations, pipeline workflows, selftest, troubleshooting, API access, exports |
+| Authentication and user management | Native username/password login, viewer/analyst/admin roles, bootstrap admin setup, sessions, and optional trusted reverse-proxy identity |
 | Outputs | PDF, JSON, CSV, STIX 2.1, ATT&CK Navigator layers, detection backlog material |
 
 ## AI Report Analysis
@@ -431,6 +449,37 @@ Library functions:
 - import MISP JSON
 - map IOC to actor
 - map IOC to TTP
+
+## CVE Library
+
+The CVE Library adds vulnerability intelligence to the same graph used for actors, techniques, reports, and observables. CVSS is treated as a score and vector inside the CVE record; the capability name is CVE Library because the workflow covers ingestion, enrichment, KEV tracking, and strict evidence-backed relationships.
+
+<figure>
+<img src="/adversarygraph-docs/img/adversarygraph-v5.3/cve-library.png" alt="CVE Library page with NVD KEV source controls CVSS fields and CVE records table" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>CVE Library stores vulnerability records, source sync state, KEV flags, CVSS fields, and correlation detail in one analyst view.</figcaption>
+</figure>
+
+Core functions:
+
+- sync recent NVD CVE API 2.0 records
+- sync CISA Known Exploited Vulnerabilities records
+- enrich missing CVSS score and vector fields by CVE ID
+- search by CVE ID, product, weakness, and description
+- filter by severity and CISA KEV status
+- store CWE, CPE, references, published and modified timestamps
+- show source sync status and enrichment errors without hiding partial data
+- open a CVE detail panel with strict relationship evidence
+- link CVEs to ATT&CK techniques, APT/actor records, and IOC records when source evidence explicitly supports the relationship
+
+Stored relationship model:
+
+- `CVE -> ATT&CK technique` when source text, imported IOC context, or analyst evidence includes both the CVE and technique
+- `CVE -> actor/APT` when an actor link is explicit in source material or inherited from strict CVE-tagged IOC evidence
+- `CVE -> IOC` when imported indicators, tags, descriptions, or enrichment fields explicitly mention the CVE
+
+The correlation model intentionally avoids broad vendor/product guessing. A high CVSS score or a KEV flag is not treated as actor attribution. It becomes useful when combined with exposed assets, observed IOCs, exploited products, or ATT&CK evidence.
+
+Read the detailed guide: [CVE Library](/cve-cvss-intelligence).
 
 ## VirusTotal Enrichment
 
@@ -714,6 +763,48 @@ Operational modules include:
 - health checks
 - scheduled sync jobs
 - API automation
+
+## Authentication And User Management
+
+AdversaryGraph supports native platform users for self-hosted deployments where analysts, reviewers, and administrators need different levels of access. Authentication is designed for local/private deployments first, with clear hardening steps before internet exposure.
+
+<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(320px,1fr))', gap: '16px', margin: '24px 0'}}>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/adversarygraph-v5.3/login-page.png" alt="Protected AdversaryGraph login page with username password fields and setup guide link" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Login page protects the analyst workspace and links directly to the setup guide.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/adversarygraph-v5.3/auth-guide.png" alt="Authentication Guide with viewer analyst admin roles bootstrap setup and reverse proxy authentication" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Auth Guide documents native login, roles, bootstrap setup, reverse-proxy headers, and production hardening.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/adversarygraph-v5.3/admin-users.png" alt="Admin Panel with create user form and users table" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Admin Panel lets administrators create named users, assign roles, enable accounts, and reset passwords.</figcaption>
+</figure>
+</div>
+
+Role model:
+
+- `viewer`: read-only workspace access for navigation, reports, IOC/CVE views, and lookups
+- `analyst`: viewer access plus operational workflows such as AI analysis, feeds, pipeline, attack simulation, asset surface, and cases
+- `admin`: analyst access plus user creation, role changes, account enable/disable, and password reset
+
+Access paths:
+
+- native username/password login with an HttpOnly browser session cookie
+- bearer token support for API clients after login
+- bootstrap administrator creation when auth is enabled and no users exist
+- optional trusted reverse-proxy header authentication for identity-aware proxy deployments
+
+Operational guidance:
+
+- replace bootstrap credentials with named admin accounts after first setup
+- clear bootstrap password variables after permanent users exist
+- keep `AUTH_ENABLED=false` deployments off untrusted networks
+- use TLS and a reverse proxy for production exposure
+- strip client-supplied identity headers before forwarding traffic to the API
+
+The local running app exposes the operator guide at `/auth-guide`; the Admin Panel is available at `/admin` for admin users.
 
 ## Two-Database Architecture
 
