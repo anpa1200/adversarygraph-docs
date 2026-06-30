@@ -9,6 +9,7 @@ const features = [
   ['Asset Attack Surface', 'Upload asset inventories, normalize exposure, score risk, map likely ATT&CK techniques, and create attack-surface cases for validation and prioritization.', '/platform-guide'],
   ['CVE Library', 'Sync NVD and CISA KEV, enrich CVSS fields, and review strict CVE-to-APT/TTP/IOC evidence links without treating vulnerability data as attribution.', '/cve-cvss-intelligence'],
   ['Authentication And Users', 'Enable native login, bootstrap an administrator, create viewer/analyst/admin users, and harden access for private team deployments.', '/capabilities#authentication-and-user-management'],
+  ['Observability And Validation', 'Review API health, request traces, redacted log tails, Prometheus metrics, security scanning, and validation examples.', '/observability-security-validation'],
   ['Platform Capabilities', 'Review the full capability map: AI analysis, actor intelligence, IOC/CVE libraries, enrichment, feeds, STIX/TAXII/MISP, attack simulation, malware analysis, exports, and APIs.', '/capabilities'],
   ['AI-Assisted Mapping', 'Ingest PDF, DOCX, TXT, or pasted reports through the LLM provider configured by the operator, then review evidence-backed ATT&CK mapping candidates.', '/ai-analysis/overview'],
   ['ATT&CK And ATLAS Navigator', 'Explore Enterprise, Mobile, ICS, and ATLAS matrices, build layers, review technique context, and plan coverage.', '/navigator/overview'],
@@ -21,6 +22,7 @@ const proofScreens = [
   ['CVE Library', 'NVD/KEV sync controls, CVSS enrichment state, and strict relationship review.', '/img/adversarygraph-v5.3/cve-library.png', '/cve-cvss-intelligence'],
   ['Protected Login', 'Native username/password entry point for protected analyst workspaces.', '/img/adversarygraph-v5.3/login-page.png', '/capabilities#authentication-and-user-management'],
   ['Admin Panel', 'Named users, role assignment, account enablement, and password reset.', '/img/adversarygraph-v5.3/admin-users.png', '/capabilities#authentication-and-user-management'],
+  ['Observability', 'API health, request traces, redacted log tail, route metrics, and Prometheus preview.', '/img/adversarygraph-v5.4/observability-dashboard.png', '/observability-security-validation'],
   ['Malware Analysis', 'Static triage, strings, unpacking, debugger, and AI summary workflow.', '/img/malware-analysis-v4/01-malware-analysis-dashboard.png', '/malware-analysis'],
   ['IOC Investigation', 'Source-backed pivots, enrichment, graph review, and investigation handoff.', '/img/adversarygraph-v3/06-relationship-graph-node-panel.png', '/capabilities#ioc-investigation'],
 ];
@@ -48,13 +50,14 @@ export default function Home() {
         <Link to="/full-flow">Follow the complete clone-to-feed-sync flow →</Link>
       </div></section>
       <section className="tm-section tm-release"><div className="container">
-        <span className="tm-badge">v5.3</span>
+        <span className="tm-badge">v5.x</span>
         <h2>Current Release Focus</h2>
-        <p>AdversaryGraph v5.x expands from CTI mapping into detection validation: attack simulation, real lab telemetry review, SIEM forwarding, AI-generated kill-chain drills, CVE Library correlations, native authentication, and admin user management.</p>
+        <p>AdversaryGraph v5.x expands from CTI mapping into detection validation and operations: attack simulation, real lab telemetry review, SIEM forwarding, AI-generated kill-chain drills, CVE Library correlations, native authentication, admin user management, and observability.</p>
         <div className="hero-actions">
           <Link className="button button--primary" to="/attack-simulation">Open Attack Simulation Guide</Link>
           <Link className="button button--secondary" to="/cve-cvss-intelligence">Review CVE Library</Link>
           <Link className="button button--secondary" to="/capabilities#authentication-and-user-management">Review Auth</Link>
+          <Link className="button button--secondary" to="/observability-security-validation">Review Observability</Link>
           <Link className="button button--secondary" href="https://medium.com/@1200km/adversarygraph-v5-0-from-cti-mapping-to-attack-simulation-and-siem-validation-21873b2a6c39">Read Release Article</Link>
         </div>
       </div></section>

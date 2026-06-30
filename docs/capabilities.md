@@ -16,7 +16,8 @@ The current documentation is screenshot-backed. The [Platform Guide](/platform-g
 walks through the main modules, [Attack Simulation](/attack-simulation)
 documents ATT&CK validation and AI-assisted telemetry drills, and
 [Malware Analysis](/malware-analysis) documents the MalwareGraph-backed
-workflow in detail.
+workflow in detail. [Observability and security validation](/observability-security-validation)
+documents runtime telemetry, scan coverage, and validation examples.
 
 <figure>
 <img src="/adversarygraph-docs/img/adversarygraph-v4-platform/01-discover-dashboard.png" alt="AdversaryGraph Discover dashboard with module entry points" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
@@ -75,6 +76,10 @@ workflow in detail.
 <figure style={{margin: 0}}>
 <img src="/adversarygraph-docs/img/adversarygraph-v5.3/auth-guide.png" alt="AdversaryGraph Authentication Guide showing roles bootstrap and reverse proxy authentication" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
 <figcaption>Authentication Guide: operator-facing setup flow for native login, roles, bootstrap hardening, and reverse-proxy auth.</figcaption>
+</figure>
+<figure style={{margin: 0}}>
+<img src="/adversarygraph-docs/img/adversarygraph-v5.4/observability-dashboard.png" alt="AdversaryGraph Observability dashboard with health metrics traces log tail and Prometheus preview" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Observability: API uptime, latency, status families, route counters, recent request traces, redacted logs, and Prometheus metrics.</figcaption>
 </figure>
 </div>
 
@@ -242,6 +247,7 @@ Read the complete workflow: [From Log to Report: Using AdversaryGraph](https://1
 | DFIR examples | Indexed public DFIR examples for training and controlled analysis workflows |
 | Operations | Stored reports, investigations, pipeline workflows, selftest, troubleshooting, API access, exports |
 | Authentication and user management | Native username/password login, viewer/analyst/admin roles, bootstrap admin setup, sessions, and optional trusted reverse-proxy identity |
+| Observability and security validation | Health dashboard, request traces, redacted API logs, Prometheus metrics, SAST, dependency audit, secret scanning, container scanning, and validation examples |
 | Outputs | PDF, JSON, CSV, STIX 2.1, ATT&CK Navigator layers, detection backlog material |
 
 ## AI Report Analysis
@@ -764,6 +770,26 @@ Operational modules include:
 - scheduled sync jobs
 - API automation
 
+## Observability And Security Validation
+
+The self-hosted platform includes an authenticated observability surface for operators and reviewers.
+
+<figure>
+<img src="/adversarygraph-docs/img/adversarygraph-v5.4/observability-dashboard.png" alt="AdversaryGraph Observability dashboard with operational health metrics and logs" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
+<figcaption>Observability dashboard for health checks, request metrics, route-level traces, redacted log review, and Prometheus output.</figcaption>
+</figure>
+
+It provides:
+
+- API uptime, request totals, status family counts, average latency, and maximum latency
+- recent request traces with route, method, status, duration, client host, and timestamp
+- top route counters for quick activity review
+- redacted API log tail for troubleshooting
+- Prometheus-style metrics endpoint for external monitoring
+- documented scan workflow for SAST, dependency audit, secret scanning, Docker validation, and container scanning
+
+Read the full operator guide: [Observability, Security Scanning, And Validation Examples](/observability-security-validation).
+
 ## Authentication And User Management
 
 AdversaryGraph supports native platform users for self-hosted deployments where analysts, reviewers, and administrators need different levels of access. Authentication is designed for local/private deployments first, with clear hardening steps before internet exposure.
@@ -868,6 +894,7 @@ Important controls:
 - back up PostgreSQL
 - define data retention
 - validate every AI-generated mapping
+- run the documented security scan workflow before release or public deployment
 
 ## What AdversaryGraph Does Not Do
 

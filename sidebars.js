@@ -7,6 +7,7 @@ module.exports = {
     'visual-guide',
     'full-flow',
     'capabilities',
+    'observability-security-validation',
     'getting-started',
     'functionality-parity',
     {

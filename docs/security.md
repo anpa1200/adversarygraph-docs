@@ -38,3 +38,9 @@ AdversaryGraph is suitable for local labs, private analyst workstations, interna
 Attack Simulation is for authorized lab validation only. Real telemetry comes from approved lab fixtures in the self-hosted Docker deployment. AI-generated telemetry is synthetic source-shaped data for SIEM parser, rule, and correlation exercises; it is not proof of exploit execution or production detection coverage.
 
 Do not point simulations or SIEM forwarding at unauthorized systems. Store SIEM collector URLs only when they are approved for the lab, and keep bearer tokens, passwords, and custom header values out of screenshots and commits.
+
+## Observability And Validation
+
+Use the authenticated Observability dashboard to review API health, request traces, route counters, latency, redacted log tails, and Prometheus metrics. Keep this dashboard behind the same access controls as the rest of the platform because operational metadata can still be sensitive.
+
+The full scan and validation workflow is documented in [Observability, Security Scanning, And Validation Examples](/observability-security-validation).
