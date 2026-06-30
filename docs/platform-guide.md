@@ -24,9 +24,12 @@ sidebar_position: 2
 ## Visual Evidence
 
 Platform screenshots are stored in `/img/adversarygraph-v4-platform/`; that
-folder name is historical and the guide is current for v5. The malware-analysis
-screenshot set is stored in `/img/malware-analysis-v4/`. The v5 Attack
-Simulation screenshot set is stored in `/img/attack-simulation-v5/`.
+folder name is historical and the screenshots remain representative of the
+current v5 platform surfaces unless a newer v5-specific screenshot set is listed
+below. The malware-analysis screenshot set is stored in
+`/img/malware-analysis-v4/`; those v4 screenshots remain representative for the
+current v5 Malware Analysis workflow. The v5 Attack Simulation screenshot set is
+stored in `/img/attack-simulation-v5/`.
 
 The screenshot packs include validation metadata. The platform set records route
 load, expected page text, `1920x1200` dimensions, byte size, mean RGB, and

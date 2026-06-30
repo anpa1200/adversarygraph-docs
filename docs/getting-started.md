@@ -26,21 +26,21 @@ You must create `.env` before running `docker compose up`. Without it the contai
 Open `.env` and add your keys. You only need one:
 
 ```env
-ANTHROPIC_API_KEY=sk-ant-...
-# OPENAI_API_KEY=sk-...
-# GEMINI_API_KEY=AIza...
-# MINIMAX_API_KEY=sk-...
+ANTHROPIC_API_KEY=
+# OPENAI_API_KEY=
+# GEMINI_API_KEY=
+# MINIMAX_API_KEY=
 # MINIMAX_MODEL=MiniMax-M3
 # MINIMAX_BASE_URL=https://api.minimax.io/v1
 
-DB_PASS=choose_a_strong_password
+DB_PASS=CHANGE_ME_STRONG_LOCAL_PASSWORD
 ```
 
 For local/private LLM analysis, use an OpenAI-compatible endpoint:
 
 ```env
 LOCAL_LLM_BASE_URL=http://host.docker.internal:11434/v1
-LOCAL_LLM_API_KEY=local
+LOCAL_LLM_API_KEY=
 LOCAL_LLM_MODEL=llama3.1:8b
 ```
 
@@ -48,15 +48,15 @@ Optional enrichment platform keys:
 
 ```env
 # abuse.ch ThreatFox recent IOC sync
-THREATFOX_AUTH_KEY=your_abuse_ch_auth_key
+THREATFOX_AUTH_KEY=
 AUTO_THREATFOX_SYNC_ON_STARTUP=true
 AUTO_THREATFOX_SYNC_DAYS=7
 
 # AlienVault OTX actor-attributed pulse enrichment
-OTX_API_KEY=your_otx_key
+OTX_API_KEY=
 
 # VirusTotal on-demand IOC reputation and relationship lookup
-VIRUSTOTAL_API_KEY=your_virustotal_key
+VIRUSTOTAL_API_KEY=
 
 # Daily dynamic DB refresh schedule in UTC
 DYNAMIC_DB_SYNC_HOUR=3
