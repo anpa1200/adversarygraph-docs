@@ -90,6 +90,7 @@ module.exports = {
     },
     'two-databases',
     'attack-data-model',
+    'cve-cvss-intelligence',
     'generating-reports',
     {
       type: 'category',
