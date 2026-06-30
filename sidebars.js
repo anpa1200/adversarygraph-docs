@@ -1,6 +1,9 @@
 module.exports = {
   docsSidebar: [
     'intro',
+    'commercial-trust',
+    'architecture',
+    'case-studies-validation',
     'platform-guide',
     'malware-analysis',
     'attack-simulation',
@@ -10,6 +13,18 @@ module.exports = {
     'observability-security-validation',
     'getting-started',
     'functionality-parity',
+    {
+      type: 'category',
+      label: 'Comparisons',
+      items: [
+        'comparisons/overview',
+        'comparisons/opencti',
+        'comparisons/misp',
+        'comparisons/attack-navigator',
+        'comparisons/atomic-red-team',
+        'comparisons/malware-sandboxes',
+      ],
+    },
     {
       type: 'category',
       label: 'Use Cases',

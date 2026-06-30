@@ -6,7 +6,7 @@ sidebar_position: 1
 
 # AdversaryGraph
 
-**Current release: v5.4.0** · [Project Hub](https://1200km.com/adversarygraph/) · [Platform Guide](/platform-guide) · [Attack Simulation](/attack-simulation) · [Capabilities](/capabilities) · [Observability](/observability-security-validation) · [Malware Analysis](/malware-analysis) · [Use Cases](/use-cases) · [GitHub](https://github.com/anpa1200/adversarygraph)
+**Current release: v5.4.0** · [Project Hub](https://1200km.com/adversarygraph/) · [Commercial Trust](/commercial-trust) · [Architecture](/architecture) · [Platform Guide](/platform-guide) · [Attack Simulation](/attack-simulation) · [Capabilities](/capabilities) · [Validation Examples](/case-studies-validation) · [GitHub](https://github.com/anpa1200/adversarygraph)
 
 AdversaryGraph is an AI-assisted CTI-to-detection workbench for mapping threat reports, IOC context, malware-analysis evidence, and operational telemetry to MITRE ATT&CK / ATLAS. It helps analysts compare TTP overlap with known groups and campaigns, identify detection gaps, enrich observables, organize investigations, and export analyst-ready outputs.
 
@@ -19,16 +19,16 @@ AdversaryGraph does not perform definitive attribution or final malware verdicts
 ## Start Here
 
 1. [Open the Project Hub](https://1200km.com/adversarygraph/)
-2. [Read the current platform guide](/platform-guide)
-3. [Review all platform capabilities](/capabilities)
-4. [Review Attack Simulation and SIEM validation](/attack-simulation)
-5. [Review observability and security validation](/observability-security-validation)
-6. [Review the Malware Analysis workspace](/malware-analysis)
-7. [Follow the full deployment flow](/full-flow)
-8. [Read the AI Analysis workflow](/ai-analysis/overview)
-9. [Review the visual guide](/visual-guide)
-10. [Review Group & Campaign Similarity](/compare/overview)
-11. [Export reports and detection backlog](/generating-reports)
+2. [Read the commercial trust package](/commercial-trust)
+3. [Review architecture diagrams](/architecture)
+4. [Review case studies and validation examples](/case-studies-validation)
+5. [Compare AdversaryGraph with related tools](/comparisons/overview)
+6. [Read the current platform guide](/platform-guide)
+7. [Review all platform capabilities](/capabilities)
+8. [Review Attack Simulation and SIEM validation](/attack-simulation)
+9. [Review observability and security validation](/observability-security-validation)
+10. [Review the Malware Analysis workspace](/malware-analysis)
+11. [Follow the full deployment flow](/full-flow)
 
 ## Full Self-Hosted Platform
 

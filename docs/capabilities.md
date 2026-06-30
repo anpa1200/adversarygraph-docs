@@ -17,7 +17,10 @@ walks through the main modules, [Attack Simulation](/attack-simulation)
 documents ATT&CK validation and AI-assisted telemetry drills, and
 [Malware Analysis](/malware-analysis) documents the MalwareGraph-backed
 workflow in detail. [Observability and security validation](/observability-security-validation)
-documents runtime telemetry, scan coverage, and validation examples.
+documents runtime telemetry, scan coverage, and validation examples. For buyer
+and reviewer orientation, start with [Commercial Trust](/commercial-trust),
+[Architecture Diagrams](/architecture), [Case Studies And Validation Examples](/case-studies-validation),
+and the [Comparison Overview](/comparisons/overview).
 
 <figure>
 <img src="/adversarygraph-docs/img/adversarygraph-v4-platform/01-discover-dashboard.png" alt="AdversaryGraph Discover dashboard with module entry points" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />

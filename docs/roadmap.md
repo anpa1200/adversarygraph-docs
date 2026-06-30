@@ -6,12 +6,38 @@ sidebar_position: 12
 
 # Roadmap
 
-Current release: **AdversaryGraph v5.0.0**.
+Current release: **AdversaryGraph v5.4.0**.
 
 AdversaryGraph is functional and actively developed. The roadmap below separates
 what is already shipped from the next hardening and collaboration work.
 
 ## Recently Shipped
+
+### v5.4.0 — Observability, Security Scanning, And Commercial Trust
+
+- Authenticated Observability dashboard with API health, request metrics,
+  recent traces, redacted log tail, top routes, and Prometheus-compatible
+  metrics.
+- Backend SAST coverage, dependency/security scanning guidance, and local
+  `make security-scan` workflow.
+- Screenshot-backed validation examples for Attack Simulation, CVE correlation,
+  authentication/admin, malware analysis, and operator readiness.
+- Commercial trust, architecture, and comparison documentation for reviewer and
+  buyer evaluation.
+
+### v5.3.0 — Authentication And User Operations
+
+- Native username/password login, viewer/analyst/admin roles, bootstrap admin
+  setup, and admin user-management workflows.
+- Local authentication setup guide reachable from the running app and login
+  page.
+
+### v5.1.0 — Telemetry Fidelity And CVE Correlation
+
+- Source-correct telemetry policy for Attack Simulation.
+- Raw ATT&CK/STIX preservation and normalized query tables.
+- CVE Library with NVD/CISA KEV sync, CVSS/CWE/CPE fields, and strict
+  APT/TTP/IOC/CVE evidence links.
 
 ### v5.0.0 — Attack Simulation And SIEM Validation
 
@@ -50,10 +76,12 @@ what is already shipped from the next hardening and collaboration work.
 - Close stale GitHub issues only after the code or documentation has been
   verified.
 
-## Planned v5.1 Work
+## Planned v5.5 Work
 
-- Broader simulation coverage across web, identity, endpoint, cloud, proxy, DNS,
-  and firewall telemetry.
+- Windows Lab Agent planning for real Windows Event Log, Sysmon, Defender,
+  PowerShell, registry, process, and ETW telemetry.
+- Broader Attack Simulation scenario coverage across web, identity, endpoint,
+  cloud, proxy, DNS, and firewall telemetry.
 - More production-style event fixtures for Windows Event Log, Sysmon, EDR, WAF,
   NGINX/Apache, proxy, DNS, and firewall schemas.
 - Improved scenario scoring: expected detections, false-positive controls,

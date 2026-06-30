@@ -63,6 +63,7 @@ const config = {
       items: [
         { type: 'docSidebar', sidebarId: 'docsSidebar', position: 'left', label: 'Docs' },
         { to: '/platform-guide', label: 'Platform', position: 'left' },
+        { to: '/commercial-trust', label: 'Trust', position: 'left' },
         { to: '/full-flow', label: 'Start', position: 'left' },
         { to: '/capabilities', label: 'Capabilities', position: 'left' },
         { to: '/malware-analysis', label: 'Malware', position: 'left' },
@@ -103,6 +104,9 @@ const config = {
           title: 'Features',
           items: [
             { label: 'Platform Capabilities', to: '/capabilities' },
+            { label: 'Commercial Trust', to: '/commercial-trust' },
+            { label: 'Architecture', to: '/architecture' },
+            { label: 'Validation Examples', to: '/case-studies-validation' },
             { label: 'Navigator', to: '/navigator/overview' },
             { label: 'Compare Modes', to: '/compare/overview' },
             { label: 'Malware Analysis', to: '/malware-analysis' },
@@ -127,6 +131,17 @@ const config = {
             { label: 'Medium', href: 'https://medium.com/@1200km' },
             { label: 'GitHub', href: 'https://github.com/anpa1200' },
             { label: 'LinkedIn', href: 'https://www.linkedin.com/in/andrey-pautov/' },
+          ],
+        },
+        {
+          title: 'Compare',
+          items: [
+            { label: 'Comparison Overview', to: '/comparisons/overview' },
+            { label: 'OpenCTI', to: '/comparisons/opencti' },
+            { label: 'MISP', to: '/comparisons/misp' },
+            { label: 'ATT&CK Navigator', to: '/comparisons/attack-navigator' },
+            { label: 'Atomic Red Team', to: '/comparisons/atomic-red-team' },
+            { label: 'Malware Sandboxes', to: '/comparisons/malware-sandboxes' },
           ],
         },
       ],
