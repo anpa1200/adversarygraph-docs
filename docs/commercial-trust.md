@@ -15,7 +15,7 @@ AdversaryGraph is being shaped as a commercial-grade, self-hosted CTI-to-detecti
 | Deployment model | Self-hosted Docker platform for local labs, private analyst workstations, and controlled internal deployments |
 | Main value | Turn CTI, IOCs, CVEs, malware-analysis evidence, asset inventory, and validation telemetry into reviewed ATT&CK/ATLAS mappings and detection-engineering outputs |
 | Data ownership | Operator-controlled database and local deployment; reports are sent only to the configured LLM provider |
-| Access control | Native username/password auth, viewer/analyst/admin roles, bootstrap admin setup, optional trusted reverse-proxy identity |
+| Access control | Native username/password auth, expanded RBAC roles, per-user permissions, MFA workflow support, session administration, audit history, bootstrap admin setup, optional trusted OIDC/SAML reverse-proxy identity |
 | Evidence model | AI output is reviewable assistance; ATT&CK mapping, actor similarity, CVE relationships, and detection content require analyst validation |
 | Security validation | CI includes tests, lint, SAST, dependency audit, Docker build check, container scan, and secret scan |
 | Observability | Authenticated dashboard with API uptime, latency, status counters, recent traces, redacted log tail, and Prometheus-compatible metrics |
@@ -42,7 +42,7 @@ AdversaryGraph currently includes:
 - Asset Attack Surface mapping from inventory files
 - Malware Analysis backed by MalwareGraph for static triage, strings, unpacking, decompilation/debug review, and AI summaries
 - Attack Simulation with lab telemetry, SIEM forwarding, source-shaped AI telemetry, and attack-chain graphs
-- Authentication, admin panel, user roles, and observability
+- Authentication, Admin Panel, expanded RBAC, sessions, MFA workflow support, audit history, and observability
 - API workflows, exports, and operational pipeline views
 
 ## What Is Not Claimed

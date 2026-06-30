@@ -6,8 +6,8 @@ sidebar_position: 2
 
 # Intelligence Pipeline
 
-AdversaryGraph v0.8.0 adds an analyst-controlled collection, enrichment, and detection
-engineering pipeline to the self-hosted Docker platform. Open **Pipeline** in the sidebar.
+AdversaryGraph includes an analyst-controlled collection, enrichment, and detection
+engineering pipeline in the self-hosted Docker platform. Open **Pipeline** in the sidebar.
 
 ## Collection
 

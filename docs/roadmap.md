@@ -6,12 +6,26 @@ sidebar_position: 12
 
 # Roadmap
 
-Current release: **AdversaryGraph v5.4.0**.
+Current release: **AdversaryGraph v5.5.0**.
 
 AdversaryGraph is functional and actively developed. The roadmap below separates
 what is already shipped from the next hardening and collaboration work.
 
 ## Recently Shipped
+
+### v5.5.0 — Enterprise Access Controls
+
+- Expanded RBAC roles for viewer, analyst, threat intelligence, detection
+  engineering, incident response, audit, security administration, service
+  account, and full admin workflows.
+- Per-user permission overrides layered on role defaults.
+- Session inventory, session expiry, self-service revoke-all, and admin
+  session revocation.
+- MFA workflow support for local users.
+- Authentication audit history covering login, failed login, MFA, logout, user
+  changes, password resets, session revocation, exports, feed sync, SIEM
+  forwarding, and uploads.
+- Trusted proxy SSO metadata for OIDC/SAML-aware reverse-proxy deployments.
 
 ### v5.4.0 — Observability, Security Scanning, And Commercial Trust
 
@@ -27,8 +41,9 @@ what is already shipped from the next hardening and collaboration work.
 
 ### v5.3.0 — Authentication And User Operations
 
-- Native username/password login, viewer/analyst/admin roles, bootstrap admin
-  setup, and admin user-management workflows.
+- Native username/password login, expanded RBAC, per-user permissions,
+  session inventory/revocation, MFA workflow state, trusted proxy SSO metadata,
+  bootstrap admin setup, and admin user-management workflows.
 - Local authentication setup guide reachable from the running app and login
   page.
 
@@ -70,8 +85,9 @@ what is already shipped from the next hardening and collaboration work.
 
 | Version | Release Theme | What Changed |
 |---|---|---|
+| v5.5.0 | Enterprise access controls | Expanded RBAC, per-user permissions, session inventory/revocation, MFA workflow support, audit history, trusted proxy SSO metadata, and Admin Panel updates |
 | v5.4.0 | Observability and commercial trust | Runtime observability dashboard, security scanning workflow, screenshot-backed validation examples, commercial trust package, architecture diagrams, and comparison pages |
-| v5.3.0 | Authentication and user operations | Native login, viewer/analyst/admin roles, bootstrap admin flow, admin user-management, and auth documentation |
+| v5.3.0 | Authentication and user operations | Native login, initial viewer/analyst/admin roles, bootstrap admin flow, admin user-management, and auth documentation |
 | v5.2.0 | QA hardening | Reproducible tests, frontend audit cleanup, local lint/test/audit/build validation, and release metadata cleanup |
 | v5.1.0 | Telemetry fidelity and CVE correlation | Source-correct Attack Simulation telemetry policy, raw STIX preservation, CVE Library, CVSS/CWE/CPE fields, and strict APT/TTP/IOC/CVE evidence links |
 | v5.0.0 | Attack Simulation and SIEM validation | TTP-first simulation matrix, real lab telemetry, SIEM forwarding, AI kill-chain drills, scenario library, and attack-chain graph |
@@ -98,7 +114,7 @@ what is already shipped from the next hardening and collaboration work.
 - Close stale GitHub issues only after the code or documentation has been
   verified.
 
-## Planned v5.5 Work
+## Planned v5.6 Work
 
 - Windows Lab Agent planning for real Windows Event Log, Sysmon, Defender,
   PowerShell, registry, process, and ETW telemetry.

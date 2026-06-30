@@ -99,7 +99,7 @@ Goal: prove that the platform is healthy, authenticated, observable, and reviewa
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: '16px', margin: '24px 0'}}>
 <figure style={{margin: 0}}>
 <img src="/adversarygraph-docs/img/adversarygraph-v5.3/admin-users.png" alt="Admin Panel showing users roles account enablement and reset controls" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
-<figcaption>Admin Panel validates users, roles, and account management.</figcaption>
+<figcaption>Admin Panel validates users, effective permissions, sessions, MFA state, audit history, and account management.</figcaption>
 </figure>
 <figure style={{margin: 0}}>
 <img src="/adversarygraph-docs/img/adversarygraph-v5.4/observability-dashboard.png" alt="Observability dashboard with API metrics traces and log tail" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />

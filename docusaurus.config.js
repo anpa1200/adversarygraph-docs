@@ -1,7 +1,7 @@
 // @ts-check
 const config = {
   title: 'AdversaryGraph Documentation — CTI-to-Detection Workbench | 1200km',
-  tagline: 'Self-hosted CTI-to-detection intelligence platform — investigate behavior, map ATT&CK evidence, enrich observables, analyze malware, compare overlap, and operationalize findings.',
+  tagline: 'Self-hosted CTI-to-detection intelligence platform — map ATT&CK evidence, enrich IOC/CVE context, analyze malware, validate telemetry, and manage protected analyst workflows.',
   favicon: 'img/favicon.png',
 
   url: 'https://1200km.com',
@@ -66,6 +66,7 @@ const config = {
         { to: '/commercial-trust', label: 'Trust', position: 'left' },
         { to: '/full-flow', label: 'Start', position: 'left' },
         { to: '/capabilities', label: 'Capabilities', position: 'left' },
+        { to: '/authentication-and-users', label: 'Auth', position: 'left' },
         { to: '/malware-analysis', label: 'Malware', position: 'left' },
         { to: '/use-cases', label: 'Use Cases', position: 'left' },
         { to: '/api/overview', label: 'API', position: 'left' },

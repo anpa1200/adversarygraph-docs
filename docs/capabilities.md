@@ -74,11 +74,11 @@ and the [Comparison Overview](/comparisons/overview).
 </figure>
 <figure style={{margin: 0}}>
 <img src="/adversarygraph-docs/img/adversarygraph-v5.3/admin-users.png" alt="AdversaryGraph Admin Panel with user creation role selection and account management" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
-<figcaption>Admin Panel: native users, role assignment, account enablement, and password reset workflows.</figcaption>
+<figcaption>Admin Panel: native users, effective permissions, sessions, MFA state, audit history, account enablement, and password reset workflows.</figcaption>
 </figure>
 <figure style={{margin: 0}}>
 <img src="/adversarygraph-docs/img/adversarygraph-v5.3/auth-guide.png" alt="AdversaryGraph Authentication Guide showing roles bootstrap and reverse proxy authentication" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
-<figcaption>Authentication Guide: operator-facing setup flow for native login, roles, bootstrap hardening, and reverse-proxy auth.</figcaption>
+<figcaption>Authentication Guide: operator-facing setup flow for native login, RBAC roles, bootstrap hardening, session control, MFA workflow support, audit history, and trusted reverse-proxy SSO.</figcaption>
 </figure>
 <figure style={{margin: 0}}>
 <img src="/adversarygraph-docs/img/adversarygraph-v5.4/observability-dashboard.png" alt="AdversaryGraph Observability dashboard with health metrics traces log tail and Prometheus preview" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
@@ -249,7 +249,7 @@ Read the complete workflow: [From Log to Report: Using AdversaryGraph](https://1
 | Comparison | Compare selected TTPs to groups, campaigns, and stored reports |
 | DFIR examples | Indexed public DFIR examples for training and controlled analysis workflows |
 | Operations | Stored reports, investigations, pipeline workflows, selftest, troubleshooting, API access, exports |
-| Authentication and user management | Native username/password login, viewer/analyst/admin roles, bootstrap admin setup, sessions, and optional trusted reverse-proxy identity |
+| Authentication and user management | Native username/password login, expanded RBAC roles, per-user permissions, bootstrap admin setup, sessions, MFA workflow support, audit history, and optional trusted OIDC/SAML reverse-proxy identity |
 | Observability and security validation | Health dashboard, request traces, redacted API logs, Prometheus metrics, SAST, dependency audit, secret scanning, container scanning, and validation examples |
 | Outputs | PDF, JSON, CSV, STIX 2.1, ATT&CK Navigator layers, detection backlog material |
 
@@ -795,7 +795,7 @@ Read the full operator guide: [Observability, Security Scanning, And Validation 
 
 ## Authentication And User Management
 
-AdversaryGraph supports native platform users for self-hosted deployments where analysts, reviewers, and administrators need different levels of access. Authentication is designed for local/private deployments first, with clear hardening steps before internet exposure.
+AdversaryGraph supports native platform users for self-hosted deployments where analysts, reviewers, service accounts, auditors, security administrators, and platform administrators need different levels of access. Authentication is designed for local/private deployments first, with clear hardening steps before internet exposure.
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(320px,1fr))', gap: '16px', margin: '24px 0'}}>
 <figure style={{margin: 0}}>
@@ -804,11 +804,11 @@ AdversaryGraph supports native platform users for self-hosted deployments where 
 </figure>
 <figure style={{margin: 0}}>
 <img src="/adversarygraph-docs/img/adversarygraph-v5.3/auth-guide.png" alt="Authentication Guide with viewer analyst admin roles bootstrap setup and reverse proxy authentication" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
-<figcaption>Auth Guide documents native login, roles, bootstrap setup, reverse-proxy headers, and production hardening.</figcaption>
+<figcaption>Auth Guide documents native login, RBAC roles, bootstrap setup, sessions, MFA workflow support, reverse-proxy headers, and production hardening.</figcaption>
 </figure>
 <figure style={{margin: 0}}>
 <img src="/adversarygraph-docs/img/adversarygraph-v5.3/admin-users.png" alt="Admin Panel with create user form and users table" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
-<figcaption>Admin Panel lets administrators create named users, assign roles, enable accounts, and reset passwords.</figcaption>
+<figcaption>Admin Panel lets administrators create named users, review effective permissions, revoke sessions, reset local MFA state, enable accounts, and reset passwords.</figcaption>
 </figure>
 </div>
 
@@ -816,14 +816,21 @@ Role model:
 
 - `viewer`: read-only workspace access for navigation, reports, IOC/CVE views, and lookups
 - `analyst`: viewer access plus operational workflows such as AI analysis, feeds, pipeline, attack simulation, asset surface, and cases
-- `admin`: analyst access plus user creation, role changes, account enable/disable, and password reset
+- `threat_intel`, `detection_engineer`, `incident_responder`, and `auditor`: workflow-specific roles for team separation
+- `security_admin`: user, session, MFA, and security administration
+- `service_account`: API-oriented automation role
+- `admin`: full platform administration
 
 Access paths:
 
 - native username/password login with an HttpOnly browser session cookie
 - bearer token support for API clients after login
 - bootstrap administrator creation when auth is enabled and no users exist
-- optional trusted reverse-proxy header authentication for identity-aware proxy deployments
+- per-user permission overrides layered on role defaults
+- password policy settings, session expiry, session inventory, and session revocation
+- local MFA setup/confirm/disable workflow support
+- audit history for authentication, user changes, exports, feed sync, SIEM forwarding, and uploads
+- optional trusted reverse-proxy header authentication for identity-aware OIDC/SAML proxy deployments
 
 Operational guidance:
 
@@ -832,6 +839,9 @@ Operational guidance:
 - keep `AUTH_ENABLED=false` deployments off untrusted networks
 - use TLS and a reverse proxy for production exposure
 - strip client-supplied identity headers before forwarding traffic to the API
+- review audit history and session inventory during security checks
+
+Read the full guide: [Authentication And Users](/authentication-and-users).
 
 The local running app exposes the operator guide at `/auth-guide`; the Admin Panel is available at `/admin` for admin users.
 

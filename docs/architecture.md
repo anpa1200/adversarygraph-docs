@@ -184,7 +184,7 @@ Lab-backed logs and AI-generated telemetry are labeled separately. AI telemetry 
 <div className="ag-security-grid">
   <div className="ag-node ag-node-primary">
     <strong>Authenticated UI</strong>
-    <span>Native login, viewer/analyst/admin roles, admin panel</span>
+    <span>Native login, expanded RBAC, per-user permissions, sessions, MFA workflow support, audit history, admin panel</span>
   </div>
   <div className="ag-node">
     <strong>Observability Dashboard</strong>

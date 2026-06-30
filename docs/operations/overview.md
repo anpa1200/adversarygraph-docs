@@ -51,5 +51,5 @@ Operational APIs are available under `/api/operations`:
 - `/detections`
 - `/tracked-actors`
 
-AdversaryGraph v0.8.0 also adds the [Intelligence Pipeline](./intelligence-pipeline.md) for
+The current platform also includes the [Intelligence Pipeline](./intelligence-pipeline.md) for
 reviewed collection, observables, enrichment, versioned detection rules, team identity, and audit.

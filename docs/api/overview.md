@@ -30,13 +30,21 @@ Interactive Swagger UI: **http://localhost:8000/docs**
 
 ## Authentication
 
-AdversaryGraph does not provide standalone username/password identity
-management. For team deployments, identity should be provided by VPN, SSO,
-OAuth proxy, or an authenticating reverse proxy.
+AdversaryGraph v5.5 supports native username/password login for controlled
+self-hosted deployments. When `AUTH_ENABLED=true`, browser clients receive an
+HttpOnly session cookie after login and API clients can use the returned bearer
+token for scripted workflows.
 
-When `AUTH_ENABLED=true`, AdversaryGraph can consume trusted identity headers
-from that proxy and enforce `admin`, `analyst`, and `viewer` roles. See
-[Security](/security).
+The access model includes role defaults, explicit per-user permissions, session
+expiry, session revocation, password policy settings, MFA workflow support, and
+audit history. Supported roles include `viewer`, `analyst`, `threat_intel`,
+`detection_engineer`, `incident_responder`, `auditor`, `security_admin`,
+`service_account`, and `admin`.
+
+For enterprise SSO, place AdversaryGraph behind a trusted OIDC/SAML-aware
+reverse proxy that strips client-supplied identity headers and forwards signed
+identity metadata to the API. See [Authentication and Users](/authentication-and-users)
+and [Security](/security).
 
 ## Content Types
 

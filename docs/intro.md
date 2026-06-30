@@ -6,11 +6,11 @@ sidebar_position: 1
 
 # AdversaryGraph
 
-**Current release: v5.4.0** · [Project Hub](https://1200km.com/adversarygraph/) · [Commercial Trust](/commercial-trust) · [Architecture](/architecture) · [Platform Guide](/platform-guide) · [Attack Simulation](/attack-simulation) · [Capabilities](/capabilities) · [Validation Examples](/case-studies-validation) · [GitHub](https://github.com/anpa1200/adversarygraph)
+**Current release: v5.5.0** · [Project Hub](https://1200km.com/adversarygraph/) · [Commercial Trust](/commercial-trust) · [Architecture](/architecture) · [Platform Guide](/platform-guide) · [Attack Simulation](/attack-simulation) · [Capabilities](/capabilities) · [Authentication](/authentication-and-users) · [Validation Examples](/case-studies-validation) · [GitHub](https://github.com/anpa1200/adversarygraph)
 
 AdversaryGraph is an AI-assisted CTI-to-detection workbench for mapping threat reports, IOC context, malware-analysis evidence, and operational telemetry to MITRE ATT&CK / ATLAS. It helps analysts compare TTP overlap with known groups and campaigns, identify detection gaps, enrich observables, organize investigations, and export analyst-ready outputs.
 
-Current v5.x releases add Attack Simulation, SIEM validation, CVE Library correlation, native users and roles, and observability. The documented workflow now covers Discover, Navigator, AI Analysis, ATT&CK Group Library, Compare, Group vs Group, Sector Intel, Asset Surface, Attack Simulation, RetroHunt, Knowledge Library, IOC Library, IOC Investigation, CVE Library, VirusTotal Lookup, Feeds Management, Investigation Report, Operations, Pipeline, DFIR Examples, Troubleshooting, Sector Packs, IOC node details, and Malware Analysis.
+Current v5.x releases add Attack Simulation, SIEM validation, CVE Library correlation, enterprise access controls, session/audit workflows, MFA support, and observability. The documented workflow now covers Discover, Navigator, AI Analysis, ATT&CK Group Library, Compare, Group vs Group, Sector Intel, Asset Surface, Attack Simulation, RetroHunt, Knowledge Library, IOC Library, IOC Investigation, CVE Library, VirusTotal Lookup, Feeds Management, Investigation Report, Operations, Pipeline, DFIR Examples, Troubleshooting, Sector Packs, IOC node details, Admin Panel, Observability, and Malware Analysis.
 
 AdversaryGraph does not perform definitive attribution or final malware verdicts. TTP overlap, Jaccard similarity, IOC enrichment, generated detections, AI summaries, and malware-analysis output are analytical signals for hypothesis generation, prioritization, and further investigation.
 
@@ -25,10 +25,11 @@ AdversaryGraph does not perform definitive attribution or final malware verdicts
 5. [Compare AdversaryGraph with related tools](/comparisons/overview)
 6. [Read the current platform guide](/platform-guide)
 7. [Review all platform capabilities](/capabilities)
-8. [Review Attack Simulation and SIEM validation](/attack-simulation)
-9. [Review observability and security validation](/observability-security-validation)
-10. [Review the Malware Analysis workspace](/malware-analysis)
-11. [Follow the full deployment flow](/full-flow)
+8. [Review authentication and enterprise access](/authentication-and-users)
+9. [Review Attack Simulation and SIEM validation](/attack-simulation)
+10. [Review observability and security validation](/observability-security-validation)
+11. [Review the Malware Analysis workspace](/malware-analysis)
+12. [Follow the full deployment flow](/full-flow)
 
 ## Full Self-Hosted Platform
 

@@ -115,7 +115,7 @@ Relevant guide: [CVE Library](/cve-cvss-intelligence).
 
 1. Enable native authentication.
 2. Bootstrap the first administrator.
-3. Create named viewer, analyst, and admin users.
+3. Create named viewer, analyst, workflow-specific, security-admin, and admin users.
 4. Confirm role-gated access to operational modules.
 5. Remove bootstrap credentials from the runtime environment after permanent admin accounts exist.
 
@@ -126,11 +126,11 @@ Relevant guide: [CVE Library](/cve-cvss-intelligence).
 </figure>
 <figure style={{margin: 0}}>
 <img src="/adversarygraph-docs/img/adversarygraph-v5.3/admin-users.png" alt="Admin Panel showing user creation role assignment account enablement and reset controls" loading="lazy" style={{width: '100%', borderRadius: '8px', border: '1px solid var(--ifm-color-emphasis-300)'}} />
-<figcaption>Admin Panel validates named users, roles, account status, and password reset flow.</figcaption>
+<figcaption>Admin Panel validates named users, effective permissions, sessions, MFA state, audit history, account status, and password reset flow.</figcaption>
 </figure>
 </div>
 
-Relevant section: [Authentication And User Management](/capabilities#authentication-and-user-management).
+Relevant section: [Authentication And Users](/authentication-and-users).
 
 ### Malware Analysis Boundary Validation
 

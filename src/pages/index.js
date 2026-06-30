@@ -12,7 +12,7 @@ const features = [
   ['Malware Analysis', 'Analyze Windows samples through the MalwareGraph-backed workflow: static triage, strings, unpacking, decompilation, debug workspaces, AI summaries, and gated dynamic analysis.', '/malware-analysis'],
   ['Asset Attack Surface', 'Upload asset inventories, normalize exposure, score risk, map likely ATT&CK techniques, and create attack-surface cases for validation and prioritization.', '/platform-guide'],
   ['CVE Library', 'Sync NVD and CISA KEV, enrich CVSS fields, and review strict CVE-to-APT/TTP/IOC evidence links without treating vulnerability data as attribution.', '/cve-cvss-intelligence'],
-  ['Authentication And Users', 'Enable native login, bootstrap an administrator, create viewer/analyst/admin users, and harden access for private team deployments.', '/capabilities#authentication-and-user-management'],
+  ['Authentication And Users', 'Enable native login, bootstrap named administrators, manage RBAC permissions, sessions, MFA workflow state, audit history, and trusted proxy SSO metadata.', '/authentication-and-users'],
   ['Observability And Validation', 'Review API health, request traces, redacted log tails, Prometheus metrics, security scanning, and validation examples.', '/observability-security-validation'],
   ['Platform Capabilities', 'Review the full capability map: AI analysis, actor intelligence, IOC/CVE libraries, enrichment, feeds, STIX/TAXII/MISP, attack simulation, malware analysis, exports, and APIs.', '/capabilities'],
   ['AI-Assisted Mapping', 'Ingest PDF, DOCX, TXT, or pasted reports through the LLM provider configured by the operator, then review evidence-backed ATT&CK mapping candidates.', '/ai-analysis/overview'],
@@ -32,7 +32,7 @@ const proofScreens = [
   ['Attack Simulation', 'AI-generated kill-chain graph, SIEM forwarding, and telemetry validation workflow.', '/img/attack-simulation-v5/05-ai-generated-attack-chain-graph.png', '/attack-simulation'],
   ['CVE Library', 'NVD/KEV sync controls, CVSS enrichment state, and strict relationship review.', '/img/adversarygraph-v5.3/cve-library.png', '/cve-cvss-intelligence'],
   ['Protected Login', 'Native username/password entry point for protected analyst workspaces.', '/img/adversarygraph-v5.3/login-page.png', '/capabilities#authentication-and-user-management'],
-  ['Admin Panel', 'Named users, role assignment, account enablement, and password reset.', '/img/adversarygraph-v5.3/admin-users.png', '/capabilities#authentication-and-user-management'],
+  ['Admin Panel', 'Named users, effective permissions, sessions, MFA state, audit history, and password reset.', '/img/adversarygraph-v5.3/admin-users.png', '/authentication-and-users'],
   ['Observability', 'API health, request traces, redacted log tail, route metrics, and Prometheus preview.', '/img/adversarygraph-v5.4/observability-dashboard.png', '/observability-security-validation'],
   ['Malware Analysis', 'Static triage, strings, unpacking, debugger, and AI summary workflow.', '/img/malware-analysis-v4/01-malware-analysis-dashboard.png', '/malware-analysis'],
   ['IOC Investigation', 'Source-backed pivots, enrichment, graph review, and investigation handoff.', '/img/adversarygraph-v3/06-relationship-graph-node-panel.png', '/capabilities#ioc-investigation'],
@@ -41,7 +41,7 @@ const proofScreens = [
 export default function Home() {
   return <Layout title="AdversaryGraph — Commercial-Ready CTI-to-Detection Workbench | 1200km" description="Commercial trust documentation for AdversaryGraph AI: a self-hosted CTI-to-detection platform for ATT&CK mapping, IOC and CVE intelligence, malware analysis, attack simulation, observability, security validation, and detection engineering handoff.">
     <header className="hero hero--adversarygraph"><div className="container hero--adversarygraph__content">
-      <span className="tm-badge">AdversaryGraph v5.4</span>
+      <span className="tm-badge">AdversaryGraph v5.5</span>
       <h1 className="hero__title">CTI-to-detection workbench for teams that need evidence, not guesswork</h1>
       <p className="hero__subtitle">Self-hosted platform for ATT&amp;CK/ATLAS mapping, IOC and CVE intelligence, malware-analysis triage, asset attack-surface review, Attack Simulation, SIEM validation, observability, and analyst-ready outputs.</p>
       <p>Built for controlled deployments, private analysis, and detection-engineering handoff. AI assists the workflow; analysts validate the evidence.</p>
@@ -65,19 +65,19 @@ export default function Home() {
         <ol><li>Read the commercial trust and boundary page</li><li>Review architecture diagrams and deployment posture</li><li>Check screenshot-backed validation examples</li><li>Compare fit against OpenCTI, MISP, ATT&amp;CK Navigator, Atomic Red Team, and sandboxes</li><li>Clone the repository, configure `.env`, start Docker, and run selftest</li><li>Sync ATT&amp;CK/ATLAS, analyze a report or IOC, validate evidence, and export outputs</li></ol>
       </div></section>
       <section className="tm-section"><div className="container"><h2>Self-Hosted Platform</h2>
-        <p><strong>AdversaryGraph Docker</strong> is the supported full platform: private AI-assisted extraction, stored analyses, native users and roles, APIs, PDF reports, IOC enrichment, CVE Library, STIX/TAXII/MISP workflows, YARA/Sigma sync, malware-analysis handoff, attack simulation, and scheduled reference synchronization.</p>
-        <p>Report content is sent only to the LLM provider configured by the operator. For fully private analysis, use a local or private OpenAI-compatible gateway. Native authentication can protect the workspace with viewer, analyst, and admin roles.</p>
+        <p><strong>AdversaryGraph Docker</strong> is the supported full platform: private AI-assisted extraction, stored analyses, enterprise access controls, APIs, PDF reports, IOC enrichment, CVE Library, STIX/TAXII/MISP workflows, YARA/Sigma sync, malware-analysis handoff, attack simulation, and scheduled reference synchronization.</p>
+        <p>Report content is sent only to the LLM provider configured by the operator. For fully private analysis, use a local or private OpenAI-compatible gateway. Native authentication can protect the workspace with RBAC roles, per-user permissions, session controls, MFA workflow support, audit history, and trusted proxy SSO metadata.</p>
         <Link to="/full-flow">Follow the complete clone-to-feed-sync flow →</Link>
       </div></section>
       <section className="tm-section tm-release"><div className="container">
         <span className="tm-badge">v5.x</span>
         <h2>Current Release Focus</h2>
-        <p>AdversaryGraph v5.x expands from CTI mapping into detection validation and operations: attack simulation, real lab telemetry review, SIEM forwarding, AI-generated kill-chain drills, CVE Library correlations, native authentication, admin user management, and observability.</p>
+        <p>AdversaryGraph v5.x expands from CTI mapping into detection validation and operations: attack simulation, real lab telemetry review, SIEM forwarding, AI-generated kill-chain drills, CVE Library correlations, enterprise access controls, admin/user operations, audit history, and observability.</p>
         <div className="hero-actions">
           <Link className="button button--primary" to="/commercial-trust">Review Trust Package</Link>
           <Link className="button button--primary" to="/attack-simulation">Open Attack Simulation Guide</Link>
           <Link className="button button--secondary" to="/cve-cvss-intelligence">Review CVE Library</Link>
-          <Link className="button button--secondary" to="/capabilities#authentication-and-user-management">Review Auth</Link>
+          <Link className="button button--secondary" to="/authentication-and-users">Review Auth</Link>
           <Link className="button button--secondary" to="/observability-security-validation">Review Observability</Link>
           <Link className="button button--secondary" href="https://medium.com/@1200km/adversarygraph-v5-0-from-cti-mapping-to-attack-simulation-and-siem-validation-21873b2a6c39">Read Release Article</Link>
         </div>
@@ -94,7 +94,7 @@ export default function Home() {
       </div></section>
       <section className="tm-section"><div className="container">
         <h2>Current Platform Proof</h2>
-        <p className="tm-section-lead">Screenshots are taken from the current local v5.4 platform and show the modules documented in this guide.</p>
+        <p className="tm-section-lead">Screenshots are taken from current v5.x local platform workflows. Some auth/CVE/malware screenshots are representative historical captures where the workflow remains current.</p>
         <div className="tm-screenshot-grid">
           {proofScreens.map(([title, body, src, href]) => <Link className="tm-screenshot-card" to={href} key={title}>
             <img src={src} alt={`${title} screenshot in AdversaryGraph`} loading="lazy" />
