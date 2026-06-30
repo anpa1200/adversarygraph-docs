@@ -21,6 +21,19 @@ The full MITRE ATT&CK description for the technique, plus a direct link to the A
 ### Detection
 MITRE's detection guidance for the technique.
 
+### Telemetry Readiness Score
+
+Every TTP includes a **Telemetry Coverage Matrix** that converts ATT&CK context
+into detection-engineering prerequisites.
+
+| Technique | Required Data Components | Available Logs | Missing Telemetry | Detection Feasibility |
+|---|---|---|---|---|
+| T1059.001 PowerShell | Process Creation, Command Execution, Script Block Logging, Module Load | Sysmon Event ID 1, Windows Security 4688, EDR command-line telemetry | PowerShell Script Block Logging 4104 | Medium |
+
+The score answers a practical question: do you have enough telemetry to validate
+this technique, or is the mapping still theoretical? The gap field gives the
+next action, for example **Enable Script Block Logging**.
+
 ### Data Sources
 The log sources and telemetry types recommended for detecting this technique.
 
